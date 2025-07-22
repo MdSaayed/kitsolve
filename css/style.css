@@ -1,3 +1,24 @@
+/*------------------------------------------------------------------
+Template Name: Maxfix – Digital Agency Portfolio HTML Template
+Template URL: https://extraordinary-fairy-c25c85.netlify.app
+Description: Maxfix is a next-generation HTML template converted from a premium Figma design, crafted for digital agencies, design studios, digital marketing agencies, personal portfolios, and creative professionals. It includes 14+ well-structured pages based on a 1770px grid system, featuring 2+ beautifully designed home pages. The codebase is clean, customizable, and organized for seamless editing and scalability across various business and personal website needs.
+Author: UiBazar
+Author URL: https://themeforest.net/user/kitdokan
+Version: 1.0
+-------------------------------------------------------------------
+
+CSS INDEX
+===================
+
+1. Reset Styles
+2. Basic Style
+3. Header One
+4. Hero One
+5. Services One
+
+
+------------------------------------------------------------------*/
+
 @import url("https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap");
 
 /* .inter-tight-<uniquifier> {
@@ -9,10 +30,70 @@
 
 :root {
   --green-dark: #1c5540;
+  --clr-base-dark: #0d1615;
+  --clr-deep-green: #1c5540;
+  --clr-lime-green: #bce955;
+  --clr-cream: #f1eee6;
   --white: #fff;
   --dark: #000;
   --gray: #626262;
   --green-black: #182120;
+  --font-primary: "Inter Tight", sans-serif;
+}
+
+/* =============================
+* 1. Reset Style
+============================= */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  font-family: var(--font-primary);
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+p {
+  text-wrap: pretty;
+}
+
+#root,
+#__next {
+  isolation: isolate;
 }
 
 /* =============================
@@ -21,6 +102,37 @@
 .container {
   max-width: 1920px;
   padding: 120px 200px;
+}
+
+.title-xl {
+  font-size: 3.5rem;
+  font-weight: 600;
+  line-height: 1.3;
+  letter-spacing: 0.28px;
+  max-width: 760px;
+  text-align: center;
+  margin: 0 auto;
+  color: var(--dark);
+}
+
+.title-lg {
+  font-size: 3rem;
+  font-weight: 600;
+  line-height: 1.3;
+  letter-spacing: 0.24px;
+  color: var(--white);
+}
+
+.text-desc {
+  color: var(--dark);
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.6;
+  letter-spacing: 0.6px;
+  text-align: center;
+  max-width: 730px;
+  margin: 0 auto;
+  margin-top: 1rem;
 }
 
 .btn-primary {
@@ -43,7 +155,11 @@
 }
 
 /* =============================
-* 2. Hero Home One
+* 3. Header One
+============================= */
+
+/* =============================
+* 4. Hero One
 ============================= */
 .hero--one {
   background-size: cover;
@@ -97,6 +213,7 @@
 .hero--one .hero__bottom {
   margin-top: 3rem;
   margin-left: 0;
+  margin-right: 0;
 }
 
 .hero--one .hero__testimonial {
@@ -166,6 +283,9 @@
   line-height: 1.6;
   letter-spacing: 0.18px;
   color: var(--white);
+  display: flex;
+  align-items: center;
+  gap: 6px;
 }
 
 .hero--one .hero__review-source {
@@ -211,21 +331,258 @@
 .hero--one .tns-nav-active {
   background: var(--green-dark) !important;
 }
- 
+
+/* =============================
+* 5. Services One
+============================= */
+.service--one {
+  background-color: var(--clr-lime-green);
+}
+
+.service--one .services__grid {
+  margin-top: 5rem;
+  gap: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.service--one .services__item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 480px;
+  width: calc(33.333% - 2rem);
+  transition: width 0.3s ease;
+  padding: 2rem;
+  position: relative;
+  border-radius: 10px;
+  color: var(--white);
+  background: var(--clr-base-dark) url("../img/services/services-shape-1.png")
+    no-repeat top left;
+}
+
+.service--one .services__item:first-child {
+  background: var(--clr-base-dark) url("../img/services/services-shape-1.png")
+    no-repeat top left;
+}
+
+.service--one .services__item:last-child {
+  background: var(--clr-base-dark) url("../img/services/services-shape-2.png")
+    no-repeat top right;
+}
+
+.service--one .services__grid:has(.services__item:hover) .services__item {
+  width: calc(30% - 2rem);
+}
+
+.service--one .services__item:hover {
+  width: calc(40% - 2rem);
+}
+
+.service--one .services__item:hover .services__item-top svg,
+.service--one .services__item:hover .services__item-top .services__item-title,
+.service--one .services__item:hover .services__item-bottom {
+  scale: 0;
+}
+
+.service--one .services__item:hover .services__item-icon-wrap {
+  justify-content: end !important;
+}
+
+.service--one .services__grid:hover .services__item:hover {
+  width: calc(40% - 2rem);
+}
+
+.service--one .services__item-icon-wrap {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+  align-items: center;
+}
+
+.service--one .service__readmore-icon {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 0;
+  border-radius: 40px;
+  cursor: pointer;
+  text-decoration: none;
+  color: var(--white);
+  background-color: transparent;
+  transition: background-color 0.4s ease, transform 0.4s ease,
+    max-width 0.6s ease, padding 0.6s ease;
+  position: relative;
+  max-width: 48px;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.service--one .service__readmore-icon:hover {
+  background-color: var(--white);
+  transform: translateY(-2px);
+  padding: 0 20px;
+  max-width: 300px;
+}
+
+.service--one .service__readmore-icon i {
+  font-size: 20px;
+  font-weight: 400;
+  background-color: var(--clr-deep-green);
+  height: 48px;
+  width: 48px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: transform 0.4s ease, background-color 0.4s ease, color 0.4s ease;
+  flex-shrink: 0;
+}
+
+.service--one .service__readmore-icon:hover i {
+  transform: scale(0.7);
+  background-color: var(--clr-cream);
+  color: var(--dark);
+}
+
+.service--one .service__readmore-text {
+  opacity: 0;
+  transform: translateX(-10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  color: var(--dark);
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1.6;
+  letter-spacing: 0.16px;
+}
+
+.service--one .service__readmore-icon:hover .service__readmore-text {
+  opacity: 1;
+  transform: translateX(0);
+  transition-delay: 0.2s;
+}
+
+.service--one .services__item-title {
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 1.3;
+  letter-spacing: 0.16px;
+}
+
+.service--one .services__item-desc {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.6;
+  letter-spacing: 0.2px;
+}
+
+/* Services Flip */
+.service--one .services__flip {
+  background-color: var(--clr-lime-green);
+  padding: 1.5rem;
+  border-radius: 20px;
+  color: var(--dark);
+  position: absolute;
+  width: 90%;
+  bottom: 2rem;
+  left: 50%;
+  transform: translate(-50%, 30px);
+  opacity: 0;
+  visibility: hidden;
+  transition: transform 0.6s ease, opacity 0.6s ease;
+  z-index: 1;
+}
+
+.service--one .services__flip svg path {
+  stroke: var(--dark);
+}
+
+.service--one .services__flip .services__item-title {
+  font-size: 1.7rem;
+}
+
+.service--one .services__item:hover .services__flip {
+  opacity: 1;
+  transform: translate(-50%, 0);
+  visibility: visible;
+}
+
+.service--one .services__flip .services__item-desc {
+  margin-top: 1rem;
+}
+
+/* =============================
+* 2. Team One
+============================= */
+.team--one {
+  background: var(--clr-base-dark);
+}
+
+.team--one .team__title {
+  max-width: 560px;
+}
+
+.team--one .team__grid {
+  margin: 0;
+  margin-top: 5rem;
+}
+
+.team--one .team__member {
+  min-height: 300px;
+  position: relative;
+}
+
+.team--one .team__member-img {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+}
+
+.team--one .team__member-content {
+  position: absolute;
+  top: 40;
+  left: 0;
+  display: grid;
+  place-items: center;
+  width: 100%;
+  height: 100%;
+  background: var(--clr-lime-green);
+  padding: 1.7rem;
+  overflow: hidden;
+}
+
+.team--one .team__member-top{}
+.team--one .team__member-bottom{
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
 /* =============================
 * 2. Responsive
 ============================= */
 
-
-
- @media (max-width: 1400px) {
+@media (max-width: 1400px) {
+  /* Container */
   .container {
     padding: 100px 120px;
   }
 
-  /* Hero Slider One */
+  /* Hero One */
   .hero--one .tns-nav {
     right: 120px;
+  }
+
+  /* Services One */
+  .service--one .services__grid {
+    gap: 1.2rem;
+  }
+
+  .service--one .services__item {
+    width: calc(50% - 1.2rem) !important;
   }
 }
 
@@ -233,18 +590,19 @@
   .container {
     padding: 60px;
   }
-   /* Hero Slider One */
+  /* Hero One Slider */
   .hero--one .tns-nav {
     right: 60px;
   }
 }
 
 @media (max-width: 992px) {
+  /* Container */
   .container {
     padding: 60px 40px;
   }
 
-   /* Hero Slider One */
+  /* Hero One Slider */
   .hero--one .tns-nav {
     right: 40px;
   }
@@ -255,15 +613,53 @@
   }
 }
 
-
 @media (max-width: 768px) {
+  /* Hero One Slider */
+  .hero--one .tns-nav {
+    right: 20px;
+  }
+  .hero--one .tns-nav button {
+    width: 25px;
+    height: 25px;
+  }
   .hero--one .hero__title {
     font-size: 3rem;
+  }
+  .hero--one .hero__content {
+    margin-right: 4rem;
+  }
+
+  .hero--one .hero__review {
+    margin-bottom: 20px;
+  }
+
+  .hero--one .hero__testimonial-nav {
+    right: 50%;
+    bottom: 10px;
+    transform: translate(50%, -10px);
+  }
+
+  /* Service One */
+  .service--one .services__item {
+    width: 100% !important;
   }
 }
 
 @media (max-width: 576px) {
+  /* Container */
   .container {
     padding: 60px 20px;
+  }
+
+  /* Hero One */
+  .hero--one .hero__content {
+    margin-right: 0;
+  }
+  .hero--one .tns-nav {
+    display: none;
+  }
+  .hero--one .hero__testimonial {
+    padding: 3rem 1rem;
+    padding-top: 2rem;
   }
 }

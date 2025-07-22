@@ -21,47 +21,51 @@ document.addEventListener("DOMContentLoaded", function () {
 /* =============================
 * 2. Hero Slider Home One
 ============================= */
-const bgSlider = tns({
-  container: ".hero__bg-slider",
-  items: 1,
-  slideBy: "page",
-  autoplay: true,
-  autoplayTimeout: 4000,
-  autoplayButtonOutput: false,
-  controls: false,
-  nav: true,
-  loop: true,
-  mouseDrag: false,
-  touch: false,
-  speed: 1000,
-  slideBy: "page",
-});
+document.addEventListener("DOMContentLoaded", function () {
+  const bgSlider = tns({
+    container: ".hero__bg-slider",
+    items: 1,
+    slideBy: "page",
+    autoplay: true,
+    autoplayTimeout: 4000,
+    autoplayButtonOutput: false,
+    controls: false,
+    nav: true,
+    loop: true,
+    mouseDrag: false,
+    touch: false,
+    speed: 1000,
+    slideBy: "page",
+  });
 
-const heroSection = document.querySelector(".hero.hero--one");
+  const heroSection = document.querySelector(".hero.hero--one");
 
-// Set background image based on current slide
-function updateHeroBackground(index) {
-  const currentSlide = document.querySelectorAll(".hero__bg-slide")[index];
-  const bg = currentSlide.getAttribute("data-bg");
-  heroSection.style.backgroundImage = `url(${bg})`;
-}
+  // Set background image based on current slide
+  function updateHeroBackground(index) {
+    const currentSlide = document.querySelectorAll(".hero__bg-slide")[index];
+    const bg = currentSlide.getAttribute("data-bg");
+    heroSection.style.backgroundImage = `url(${bg})`;
+  }
 
-updateHeroBackground(bgSlider.getInfo().index);
-bgSlider.events.on("indexChanged", function (info) {
-  updateHeroBackground(info.index);
+  updateHeroBackground(bgSlider.getInfo().index);
+  bgSlider.events.on("indexChanged", function (info) {
+    updateHeroBackground(info.index);
+  });
 });
 
 /* =============================
 * 2. Hero One testimonial Slide
 ============================= */
-var testimonialSlider = tns({
-  container: ".hero__testimonial-slider",
-  autoHeight: true,
-  items: 1,
-  swipeAngle: false,
-  speed: 400,
-  nav: false,
-  gutter: 20,
-  prevButton: document.querySelector(".nav-prev"),
-  nextButton: document.querySelector(".nav-next"),
+document.addEventListener("DOMContentLoaded", function () {
+  var testimonialSlider = tns({
+    container: ".hero__testimonial-slider",
+    autoHeight: true,
+    items: 1,
+    swipeAngle: false,
+    speed: 400,
+    nav: false,
+    gutter: 20,
+    prevButton: document.querySelector(".nav-prev"),
+    nextButton: document.querySelector(".nav-next"),
+  });
 });
