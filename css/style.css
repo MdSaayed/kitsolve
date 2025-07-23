@@ -531,8 +531,9 @@ p {
 }
 
 .team--one .team__member {
-  min-height: 300px;
+  max-height: 300px;
   position: relative;
+  overflow: hidden;
 }
 
 .team--one .team__member-img {
@@ -543,7 +544,7 @@ p {
 
 .team--one .team__member-content {
   position: absolute;
-  top: 40;
+  top: 1000px;
   left: 0;
   display: grid;
   place-items: center;
@@ -552,13 +553,163 @@ p {
   background: var(--clr-lime-green);
   padding: 1.7rem;
   overflow: hidden;
+  transition: top 0.6s ease;
 }
 
-.team--one .team__member-top{}
-.team--one .team__member-bottom{
+.team--one .team__member:hover .team__member-content {
+  top: 0;
+}
+
+.team--one .team__member-top {
+  text-align: center;
+}
+
+.team--one .team__member-bottom {
   display: flex;
   align-items: center;
-  gap: 1rem;
+  justify-content: center;
+  gap: 15px;
+  min-height: 70px;
+  width: 100%;
+  background: url("../img/team/team-card-shap-1.png") no-repeat center center;
+  background-size: contain;
+}
+
+.team--one .team__member-name {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.6;
+  letter-spacing: 0.6px;
+  color: var(--dark);
+  text-transform: capitalize;
+  padding-left: 30px;
+  position: relative;
+}
+
+.team--one .team__member-name::before {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 27px;
+  top: 50%;
+  left: -3px;
+  transform: translateY(-50%);
+  background-color: var(--dark);
+}
+
+.team--one .team__member-position {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.6;
+  letter-spacing: 0.16px;
+}
+
+.team--one .team__member-social-link {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: 30px;
+  height: 30px;
+  border: 1px solid var(--dark);
+  border-radius: 50%;
+}
+
+.team--one .team__member-social-link:hover {
+  background-color: var(--dark);
+}
+
+.team--one .team__member-social-link:hover svg path {
+  fill: var(--white);
+  transition: 0.6s ease;
+}
+
+/* =============================
+* 2. Contact One
+============================= */
+.contact--one {
+  position: relative;
+  background-color: var(--clr-base-dark);
+}
+
+.contact--one::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    transparent 0%,
+    rgba(94, 90, 90, 0.415) 25%,
+    rgba(13, 22, 21, 1) 65%
+  );
+  z-index: 2;
+  pointer-events: none;
+}
+
+.contact__bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: 1 !important;
+  height: 700px;
+  width: 100%;
+}
+
+.contact--one .container {
+  position: relative;
+  z-index: 2;
+}
+
+.contact--one .contact__col {
+  min-height: 800px;
+}
+
+.contact--one .contact__form-wrapper {
+  background-color: var(--clr-cream);
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  border-radius: 20px;
+  max-width: 850px;
+  height: 100%;
+  z-index: 1;
+}
+
+.contact--one .contact__heading {
+  color: var(--dark);
+  font-size: 3rem;
+  letter-spacing: 0.24px;
+  max-width: 600px;
+}
+
+.contact--one .contact__form-input,
+.contact--one .contact__form-textarea {
+  border-radius: 10px;
+  font-size: 1rem;
+  padding: 1rem 1.5rem;
+  background-color: transparent;
+  border: 0.5px solid #8f9897;
+}
+
+.contact--one .contact__form-input:focus,
+.contact--one .contact__form-textarea:focus {
+  outline: 1px solid var(--dark);
+  outline-offset: 0;
+  border: none;
+  box-shadow: none;
+}
+
+.contact--one .contact__form-btn {
+  background-color: var(--clr-deep-green);
+  color: var(--white);
+  font-weight: 500;
+  border-radius: 80px;
+  padding: 1rem;
+  line-height: 1.6;
+  letter-spacing: 0.16px;
 }
 
 /* =============================
@@ -593,6 +744,11 @@ p {
   /* Hero One Slider */
   .hero--one .tns-nav {
     right: 60px;
+  }
+
+  /* Contact One */
+  .contact--one .contact__heading {
+    font-size: 2.5rem;
   }
 }
 
@@ -643,6 +799,11 @@ p {
   .service--one .services__item {
     width: 100% !important;
   }
+
+  /* Contact One */
+  .contact--one .contact__heading {
+    font-size: 2rem;
+  }
 }
 
 @media (max-width: 576px) {
@@ -661,5 +822,10 @@ p {
   .hero--one .hero__testimonial {
     padding: 3rem 1rem;
     padding-top: 2rem;
+  }
+
+  /* Contact One */
+  .contact--one .contact__heading {
+    font-size: 1.8rem;
   }
 }
