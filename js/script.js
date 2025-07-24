@@ -70,32 +70,152 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+/* =============================
+* 6. Faq One
+============================= */
+document.querySelectorAll(".faq__toggle").forEach((toggle) => {
+  toggle.addEventListener("click", function () {
+    const item = this.closest(".faq__item");
+    const answer = item.querySelector(".faq__answer");
+    const isActive = item.classList.contains("faq__item--active");
+
+    // Collapse all items first
+    document.querySelectorAll(".faq__item").forEach((i) => {
+      const a = i.querySelector(".faq__answer");
+      a.style.height = "0px";
+      i.classList.remove("faq__item--active");
+    });
+
+    if (!isActive) {
+      item.classList.add("faq__item--active");
+      answer.style.height = answer.scrollHeight + "px";
+
+      answer.addEventListener(
+        "transitionend",
+        () => {
+          if (item.classList.contains("faq__item--active")) {
+            answer.style.height = "auto";
+          }
+        },
+        { once: true }
+      );
+    }
+  });
+});
 
 /* =============================
 * 6. Faq One
 ============================= */
-document.querySelectorAll('.faq__toggle').forEach(toggle => {
-  toggle.addEventListener('click', function () {
-    const item = this.closest('.faq__item');
-    const answer = item.querySelector('.faq__answer');
-    const isActive = item.classList.contains('faq__item--active');
+document.addEventListener("DOMContentLoaded", function () {
+  const slider = tns({
+    container: ".my-slider",
+    items: 1,
+    slideBy: "page",
+    autoplay: false,
+    controls: false,
+    nav: false,
+    speed: 500,
+    gutter: 20,
+    mouseDrag: true,
+  });
 
-    // Collapse all items first
-    document.querySelectorAll('.faq__item').forEach(i => {
-      const a = i.querySelector('.faq__answer');
-      a.style.height = '0px';
-      i.classList.remove('faq__item--active');
+  const prevBtn = document.querySelector(".prev-btn");
+  const nextBtn = document.querySelector(".next-btn");
+
+  if (prevBtn && nextBtn && slider) {
+    prevBtn.addEventListener("click", () => {
+      slider.goTo("prev");
     });
 
-    if (!isActive) {
-      item.classList.add('faq__item--active');
-      answer.style.height = answer.scrollHeight + 'px';
+    nextBtn.addEventListener("click", () => {
+      slider.goTo("next");
+    });
+  } else {
+    console.warn("Tiny Slider or buttons not found.");
+  }
+});
 
-      answer.addEventListener('transitionend', () => {
-        if (item.classList.contains('faq__item--active')) {
-          answer.style.height = 'auto';
-        }
-      }, { once: true });
-    }
+/* =============================
+* 6. Testimonials One Area
+============================= */
+document.addEventListener("DOMContentLoaded", function () {
+  const testimonials = [
+    {
+      text: "From the first consultation, I knew we were in capable hands. They approached our financial concerns with professionalism and precision, helping us restructure our planning and reduce unnecessary costs. Their team wasn't just knowledgeable—they were patient, thorough.",
+      author: "David K.",
+      title: "Managing Director",
+      imageUrl: "../img/testimonials/testimonials-1.png",
+    },
+    {
+      text: "Elevix transformed our marketing strategy. Their innovative approach and deep understanding of market trends led to a significant increase in our customer engagement and conversion rates. Highly recommend their services!",
+      author: "Sarah L.",
+      title: "Marketing Lead",
+      imageUrl: "../img/testimonials/testimonials-2.png",
+    },
+    {
+      text: "The team at Elevix provided exceptional support in developing our new software. Their technical expertise and commitment to quality were evident throughout the project, delivering a robust and user-friendly solution.",
+      author: "Michael B.",
+      title: "CTO",
+      imageUrl: "../img/testimonials/testimonials-3.png",
+    },
+  ];
+
+  const testimonialSliderContainer = document.getElementById("testimonialSlider");
+  const prevImageElement = document.getElementById("prevImage");
+  const nextAvatarElement = document.getElementById("nextAvatar");
+
+  // Dynamically populate slider with testimonial cards
+  testimonials.forEach((testimonial) => {
+    const cardHtml = `
+                    <div class="testimonial-card">
+                      <div class="testimonial-card__content">
+                        <p class="testimonial-card__text">${testimonial.text}</p>
+                        <p class="testimonial-card__author">— ${testimonial.author}</p>
+                        <p class="testimonial-card__title">${testimonial.title}</p>
+                      </div>
+                      <div class="testimonial-card__large-quote">”</div>
+                    </div>
+                `;
+    testimonialSliderContainer.insertAdjacentHTML("beforeend", cardHtml);
   });
+
+  // Initialize Tiny Slider
+  var slider = tns({
+    container: "#testimonialSlider",
+    items: 1,  
+    slideBy: "page",  
+    autoplay: false,  
+    controls: false, 
+    nav: false,  
+    loop: true, 
+    speed: 400,  
+  });
+
+  // Get custom navigation buttons
+  var prevButton = document.getElementById("prevButton");
+  var nextButton = document.getElementById("nextButton");
+
+  // Function to update the preview images
+  function updatePreviewImages(info) {
+    const currentIndex = info.index;
+    const totalSlides = testimonials.length;
+
+    const prevIndex = (currentIndex + 1 + totalSlides) % totalSlides;
+    const nextIndex = (currentIndex - 1) % totalSlides;
+    prevImageElement.src = testimonials[prevIndex].imageUrl;
+    nextAvatarElement.src = testimonials[nextIndex].imageUrl;
+  }
+
+  // Initial update of preview images
+  updatePreviewImages({ index: slider.getInfo().index });
+
+  prevButton.onclick = function () {
+    slider.goTo("prev");
+  };
+
+  nextButton.onclick = function () {
+    slider.goTo("next");
+  };
+
+  slider.events.on("indexChanged", updatePreviewImages);
 });
