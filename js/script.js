@@ -69,3 +69,33 @@ document.addEventListener("DOMContentLoaded", function () {
     nextButton: document.querySelector(".nav-next"),
   });
 });
+
+
+/* =============================
+* 6. Faq One
+============================= */
+document.querySelectorAll('.faq__toggle').forEach(toggle => {
+  toggle.addEventListener('click', function () {
+    const item = this.closest('.faq__item');
+    const answer = item.querySelector('.faq__answer');
+    const isActive = item.classList.contains('faq__item--active');
+
+    // Collapse all items first
+    document.querySelectorAll('.faq__item').forEach(i => {
+      const a = i.querySelector('.faq__answer');
+      a.style.height = '0px';
+      i.classList.remove('faq__item--active');
+    });
+
+    if (!isActive) {
+      item.classList.add('faq__item--active');
+      answer.style.height = answer.scrollHeight + 'px';
+
+      answer.addEventListener('transitionend', () => {
+        if (item.classList.contains('faq__item--active')) {
+          answer.style.height = 'auto';
+        }
+      }, { once: true });
+    }
+  });
+});

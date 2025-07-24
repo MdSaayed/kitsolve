@@ -31,6 +31,7 @@ CSS INDEX
 :root {
   --green-dark: #1c5540;
   --clr-base-dark: #0d1615;
+  --clr-midnight: #192221;
   --clr-deep-green: #1c5540;
   --clr-lime-green: #bce955;
   --clr-cream: #f1eee6;
@@ -538,6 +539,192 @@ p {
 .service--one .services__flip .services__item-desc {
   margin-top: 1rem;
 }
+ 
+/* =============================
+* 2. Faq One Area
+============================= */
+.faq--one {
+  background-color: var(--clr-base-dark);
+  position: relative;
+}
+
+.faq--one .faq__container{
+  position: relative;
+  z-index: 1;
+}
+
+.faq--one .faq__grid{
+  position: relative;
+  z-index: 2;
+}
+
+.faq__container::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(13, 22, 21, 0.3) 0%,
+    rgba(13, 22, 21, 0.8) 55.06%,
+    #0d1615 100%
+  );
+  z-index: 2;
+}
+
+.faq__bg-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  z-index: 1 !important;
+}
+
+.faq--one .faq__bg-shape{
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 600px;
+  width:600px ;
+  z-index: 1 !important;
+}
+
+.faq--one .faq__title {
+  color: var(--white);
+  text-align: left;
+  margin-left: 0;
+}
+
+.faq--one .faq__desc {
+  color: var(--white);
+  text-align: left;
+  margin-left: 0;
+}
+
+.faq--one .faq__button {
+  margin-top: 2.2rem;
+}
+
+.faq--one .faq__button-icon {
+  margin-left: 0.5rem;
+}
+
+.faq--one .faq__content {
+  /* flex: 2 1 600px; */
+  position: relative;
+  z-index: 6;
+}
+
+.faq--one .faq__item {
+  padding: 2rem;
+  overflow: hidden;
+  background-color: var(--clr-midnight);
+  border-radius: 10px;
+  transition: padding 0.6s ease, background-color 0.6s ease;
+  margin-bottom: 3rem;
+}
+
+.faq--one .faq__item--active {
+  background: var(--clr-lime-green);
+  border-radius: 10px;
+  padding: 2rem;
+}
+
+.faq--one .faq__answer {
+  overflow: hidden;
+  height: 0;
+  opacity: 0;
+  margin-top: 0;
+  font-size: 1rem;
+  color: var(--dark);
+  transition: height 0.4s ease, opacity 0.4s ease, margin-top 0.4s ease,
+    color 0.4s ease;
+}
+
+.faq--one .faq__item--active .faq__answer {
+  height: auto;
+  opacity: 1;
+  margin-top: 2rem;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+.faq--one .faq__answer-text {
+  margin-bottom: 0 !important;
+}
+
+.faq--one .faq__question-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  width: calc(100% - 50px);
+}
+
+.faq--one .faq__question {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 2rem;
+}
+
+.faq--one .faq__number {
+  font-weight: 600;
+  color: var(--white);
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 1.3;
+  letter-spacing: 01.12px;
+  transition: color 0.4s ease;
+}
+
+.faq--one .faq__item--active .faq__number {
+  color: var(--dark);
+}
+
+.faq--one .faq__question-text {
+  flex: 1;
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 1.3;
+  letter-spacing: 01.12px;
+  color: var(--white);
+  margin-bottom: 0;
+  transition: color 0.4s ease;
+}
+
+.faq--one .faq__item--active .faq__question-text {
+  color: var(--dark);
+}
+
+.faq--one .faq__toggle {
+  background: var(--white);
+  color: var(--dark);
+  font-size: 1rem;
+  border: none;
+  border-radius: 50%;
+  width: 2rem;
+  height: 2rem;
+  cursor: pointer;
+  transition: color 0.4s ease, background 0.4s ease;
+}
+
+.faq--one .faq__item--active .faq__toggle {
+  background-color: var(--dark);
+  color: var(--white);
+}
+
+.faq--one .faq__toggle-icon {
+  transition: transform 0.4s ease;
+  transform-origin: center center;
+}
+
+.faq--one .faq__item--active .faq__toggle-icon {
+  transform: rotate(315deg);
+}
 
 /* =============================
 * 2. CTA One Area
@@ -546,15 +733,22 @@ p {
   background-color: var(--clr-lime-green);
   position: relative;
 }
-.cta__container{
+
+.faq--one .cta__container {
   position: relative;
 }
 
 .cta--one .cta__content {
   position: relative;
   z-index: 1;
-  overflow: hidden;
   border-radius: 10px;
+  overflow: hidden;
+  z-index: 1 !important;
+}
+
+.cta--one .cta__content-wrap {
+  position: relative;
+  z-index: 1;
 }
 
 .cta--one .cta__content::before {
@@ -591,12 +785,13 @@ p {
 .cta--one .cta__title {
   max-width: 840px;
 }
-.cta--one  .cta__desc {
+
+.cta--one .cta__desc {
   color: var(--white);
   max-width: 840px;
 }
 
-.cta__shape {
+.faq--one .cta__shape {
   height: 180px;
   width: 330px;
   right: -6rem;
@@ -606,6 +801,45 @@ p {
   background-repeat: no-repeat !important;
   z-index: 3 !important;
 }
+
+.cta--one .cta__social-links {
+  position: absolute;
+  top: -55px;
+  left: -4rem;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: end;
+  max-width: 350px;
+}
+
+.cta--one .cta__social-link {
+  position: relative;
+  font-size: 1.5rem;
+  font-weight: normal;
+  line-height: 1.6;
+  letter-spacing: 0.24px;
+  color: var(--dark);
+  padding: 5px 1rem;
+  padding-left: 2rem;
+  border: 0.5px solid var(--dark);
+  border-radius: 50px;
+  text-decoration: none;
+  z-index: 6;
+}
+
+.cta--one .cta__social-link::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 1rem;
+  width: 6px;
+  height: 6px;
+  transform: translateY(-50%);
+  background-color: var(--dark);
+  border-radius: 50%;
+}
+
 /* =============================
 * 2. Team One
 ============================= */
@@ -852,23 +1086,23 @@ p {
 }
 
 /* Keyword Cta */
-.keyword--cta{
+.keyword--cta {
   background-color: transparent !important;
   z-index: 6;
   position: relative;
 }
 
-.keyword--cta .keywords__item{
+.keyword--cta .keywords__item {
   font-size: 2rem;
 }
 
-.keyword--cta svg{
-   width: 2rem;
-   height: 2rem;
+.keyword--cta svg {
+  width: 2rem;
+  height: 2rem;
 }
 
-.keyword--cta svg path{
-  fill:var(--clr-lime-green);
+.keyword--cta svg path {
+  fill: var(--clr-lime-green);
 }
 
 /* Animation */
@@ -1042,6 +1276,19 @@ p {
     right: 60px;
   }
 
+  /* Faq One */
+  /* .faq--one .faq__grid {
+    flex-wrap: wrap;
+  } */
+
+  .faq--one .faq__item {
+    margin-bottom: 2rem;
+  }
+
+  /* .faq--one .faq__content{
+    padding-left: 0 !important;
+  } */
+
   /* Contact One */
   .contact--one .contact__heading {
     font-size: 2.5rem;
@@ -1072,6 +1319,21 @@ p {
   .hero--one .hero__title {
     font-size: 3.5rem;
     line-height: 1.2;
+  }
+
+  /* Faq One Area */
+  .faq--one .faq__item {
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .faq--one .faq__question-inner {
+    width: 100%;
+  }
+
+  .faq--one .faq__question-inner {
+    flex-direction: column;
+    align-items: start;
   }
 }
 
@@ -1106,6 +1368,20 @@ p {
     width: 100% !important;
   }
 
+  /* Faq One Are */
+  .faq--one .faq__question {
+    gap: 20px;
+  }
+  .faq--one .faq__question-text,
+  .faq--one .faq__number {
+    font-size: 1.4rem;
+  }
+
+  /* Cta One */
+  .cta--one .cta__social-links {
+    left: -3rem;
+  }
+
   /* Contact One */
   .contact--one .contact__heading {
     font-size: 2rem;
@@ -1138,6 +1414,25 @@ p {
   .hero--one .hero__testimonial {
     padding: 3rem 1rem;
     padding-top: 2rem;
+  }
+
+  /* Faq One */
+  .faq--one .faq__item {
+    padding: 20px;
+  }
+
+  .faq--one .faq__question-text,
+  .faq--one .faq__number {
+    font-size: 1.2rem;
+  }
+
+  /* Cta One */
+  .cta--one .cta__text {
+    padding-top: 4rem;
+  }
+
+  .cta--one .cta__social-links {
+    display: none;
   }
 
   /* Contact One */
