@@ -165,7 +165,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const activeAvatarElements = document.getElementById("slide__avatar-active");
 
   // Populate testimonial cards
-  testimonials.forEach((testimonial, index) => {
+  testimonials?.forEach((testimonial, index) => {
     const cardHtml = `
       <div class="testimonial-card">
         <div class="testimonial-card__content">
@@ -202,20 +202,20 @@ document.addEventListener("DOMContentLoaded", function () {
   const nextButton = document.getElementById("nextButton");
 
   function updatePreviewImages(info) {
-  const displayIndex = (info?.displayIndex || 1) - 1;
-  const currentIndex = displayIndex >= testimonials.length ? 0 : displayIndex;
-  const totalSlides = testimonials.length;
+    const displayIndex = (info?.displayIndex || 1) - 1;
+    const currentIndex = displayIndex >= testimonials?.length ? 0 : displayIndex;
+    const totalSlides = testimonials?.length;
 
-  const prevIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+    const prevIndex = (currentIndex - 1 + totalSlides) % totalSlides;
 
-  if (prevImageElement) {
-    prevImageElement.src = testimonials[prevIndex].imageUrl;
+    if (prevImageElement) {
+      prevImageElement.src = testimonials[prevIndex].imageUrl;
+    }
+
+    if (activeAvatarElements) {
+      activeAvatarElements.src = testimonials[currentIndex]?.imageUrl;
+    }
   }
-
-  if (activeAvatarElements) {
-    activeAvatarElements.src = testimonials[currentIndex].imageUrl;
-  }
-}
 
 
   updatePreviewImages({ index: slider.getInfo().index });

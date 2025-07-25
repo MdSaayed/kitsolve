@@ -30,9 +30,10 @@ CSS INDEX
 
 :root {
   --green-dark: #1c5540;
+  --clr-deep-green: #1c5540;
+  --clr-deep-teal: #131C1B;
   --clr-base-dark: #0d1615;
   --clr-midnight: #192221;
-  --clr-deep-green: #1c5540;
   --clr-lime-green: #bce955;
   --clr-cream: #f1eee6;
   --white: #fff;
@@ -174,7 +175,21 @@ p {
   color: var(--dark);
 }
 
+
+.subtitle {
+  display: block;
+  text-align: center;
+  color: var(--clr-lime-green);
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+
 /* Utility Class */
+.spacing-t {
+  margin-top: 5rem;
+}
+
 .fw-medium {
   font-weight: 500;
 }
@@ -375,6 +390,7 @@ p {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  flex-grow: 1;
   min-height: 480px;
   width: calc(33.333% - 2rem);
   transition: width 0.3s ease;
@@ -536,10 +552,138 @@ p {
 }
 
 /* =============================
+* 2. Process One Area
+============================= */
+.process--one {
+  background-color: var(--clr-base-dark);
+  overflow-x: hidden;
+}
+
+.process--one .process__container {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.process--one .process__title {
+  color: var(--white);
+  max-width: 1090px;
+}
+
+.process--one .process__item {
+  position: relative;
+  background-color: var(--clr-deep-teal);
+  border-radius: 8px;
+  padding: 5rem 2rem;
+  min-width: 450px;
+  width: 100%;
+}
+
+.process--one .process__item::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url("../img/global/process-item-bg.jpg") center center / cover no-repeat;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  z-index: 0;
+  border-radius: 10px;
+}
+
+.process--one .process__item::after {
+  content: "";
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  width: 101%;
+  height: 101%;
+  border-radius: 8px;
+  background: rgba(19, 28, 27, 0.90);
+}
+
+.process--one .process__item:hover::before {
+  opacity: 1;
+}
+
+.process--one .process__item>* {
+  position: relative;
+  z-index: 1;
+}
+
+.process--one .process__item-title {
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 1.3;
+  letter-spacing: 0.16px;
+  margin-bottom: 2rem;
+}
+
+.process--one .process__item-desc {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.6;
+  letter-spacing: 0.16px;
+}
+
+.process--one .process__number-area {
+  position: relative;
+}
+
+.process--one .process__number-area::before {
+  position: absolute;
+  content: "";
+  height: 100px;
+  width: 100px;
+  top: 0;
+  left: 50%;
+  background-color: var(--clr-base-dark);
+  transform: translate(-50%, 28%);
+  border-radius: 300px;
+}
+
+
+.process--one .process__number-wrap {
+  position: absolute;
+  bottom: -60px;
+  left: 50%;
+  transform: translate(-50%);
+  width: 100px;
+  max-height: 100px;
+  height: 100%;
+  border-radius: 300px;
+  display: grid;
+  place-items: center;
+  transition: max-height 0.4s ease;
+}
+
+.process--one .process__number-wrap svg {
+  max-height: 0;
+  opacity: 0;
+  transition: max-height 0.4s ease, opacity 0.4s ease, margin 0.4s ease;
+}
+
+.process--one .process__item:hover .process__number-wrap svg {
+  max-height: 100px;
+  opacity: 1;
+  margin-bottom: 5px;
+  margin-top: 10px;
+}
+
+.process--one .process__item:hover .process__number-wrap {
+  max-height: 200px;
+}
+
+.process--one .process__number {
+  font-size: 1.5rem;
+  line-height: 1.3;
+  font-weight: 600;
+  letter-spacing: 0.12px;
+}
+
+
+/* =============================
 * 2. Testimonials One Area
 ============================= */
 
-/* ============================================================================================================= */
 .testimonials--one {
   background-color: var(--clr-cream);
 }
@@ -604,9 +748,9 @@ p {
   overflow: hidden;
 }
 
- .testimonials--one .testimonials-card-avatar {
-    display: none;
-  }
+.testimonials--one .testimonials-card-avatar {
+  display: none;
+}
 
 .testimonials--one .slider__avatar {
   width: 100%;
@@ -1545,6 +1689,11 @@ img.testimonials-avatar.slider__avatar--active {
     line-height: 1.2;
   }
 
+  /* Process One Area */
+  .process--one .process__item {
+    min-width: 350px;
+  }
+
   /* Testimonials - Style One Area */
   .testimonials--one .slider__preview {
     display: none;
@@ -1602,6 +1751,11 @@ img.testimonials-avatar.slider__avatar--active {
     width: 100% !important;
   }
 
+  /* Process One Area */
+  .process--one .process__item {
+    min-width: 300px;
+  }
+
   /* Testimonials One Area */
   .testimonials--one .testimonial-display__next-avatar {
     display: none;
@@ -1616,7 +1770,7 @@ img.testimonials-avatar.slider__avatar--active {
     display: none !important;
   }
 
-  .testimonials--one .testimonial-card{
+  .testimonials--one .testimonial-card {
     padding-bottom: 1.5rem;
   }
 
@@ -1670,6 +1824,11 @@ img.testimonials-avatar.slider__avatar--active {
   .hero--one .hero__testimonial {
     padding: 3rem 1rem;
     padding-top: 2rem;
+  }
+
+  /* Process One Area */
+  .process--one .process__item {
+    min-width: fit-content;
   }
 
   /* Testimonials - Style One Area */
