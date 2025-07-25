@@ -162,19 +162,32 @@ document.addEventListener("DOMContentLoaded", function () {
 
   const testimonialSliderContainer = document.getElementById("testimonialSlider");
   const prevImageElement = document.getElementById("prevImage");
-  const nextAvatarElement = document.getElementById("nextAvatar");
+  const nextAvatarElements = document.querySelectorAll(".next-avatar");
+
 
   // Dynamically populate slider with testimonial cards
   testimonials.forEach((testimonial) => {
     const cardHtml = `
-                    <div class="testimonial-card">
-                      <div class="testimonial-card__content">
-                        <p class="testimonial-card__text">${testimonial.text}</p>
-                        <p class="testimonial-card__author">— ${testimonial.author}</p>
-                        <p class="testimonial-card__title">${testimonial.title}</p>
+                  <div class="testimonial-card">
+                    <div class="testimonial-card__content">
+                      <p class="testimonial-card__text">${testimonial.text}</p>
+
+                      <!-- Avatar -->
+                      <div class="testimonials-card-avatar">
+                        <img class="testimonials-avatar next-avatar" src=${testimonial.imageUrl} alt="Next Testimonial User" />
                       </div>
-                      <div class="testimonial-card__large-quote">”</div>
+
+                      <p class="testimonial-card__author">— ${testimonial.author}</p>
+                      <p class="testimonial-card__title">${testimonial.title}</p>
                     </div>
+                    <div class="testimonial-card__quote">
+                      <svg width="49" height="35" viewBox="0 0 49 35" fill="none">
+                        <path
+                          d="M3.90324 34.2857H14.189L21.0461 20.5714V0H0.47467V20.5714H10.7604L3.90324 34.2857ZM31.3318 34.2857H41.6175L48.4747 20.5714V0H27.9032V20.5714H38.189L31.3318 34.2857Z"
+                          fill="black" />
+                      </svg>
+                    </div>
+                  </div>
                 `;
     testimonialSliderContainer.insertAdjacentHTML("beforeend", cardHtml);
   });
@@ -182,13 +195,13 @@ document.addEventListener("DOMContentLoaded", function () {
   // Initialize Tiny Slider
   var slider = tns({
     container: "#testimonialSlider",
-    items: 1,  
-    slideBy: "page",  
-    autoplay: false,  
-    controls: false, 
-    nav: false,  
-    loop: true, 
-    speed: 400,  
+    items: 1,
+    slideBy: "page",
+    autoplay: false,
+    controls: false,
+    nav: false,
+    loop: true,
+    speed: 400,
   });
 
   // Get custom navigation buttons
@@ -201,10 +214,15 @@ document.addEventListener("DOMContentLoaded", function () {
     const totalSlides = testimonials.length;
 
     const prevIndex = (currentIndex + 1 + totalSlides) % totalSlides;
-    const nextIndex = (currentIndex - 1) % totalSlides;
+    const nextIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+
     prevImageElement.src = testimonials[prevIndex].imageUrl;
-    nextAvatarElement.src = testimonials[nextIndex].imageUrl;
+
+    nextAvatarElements.forEach((img) => {
+      img.src = testimonials[nextIndex].imageUrl;
+    });
   }
+
 
   // Initial update of preview images
   updatePreviewImages({ index: slider.getInfo().index });
