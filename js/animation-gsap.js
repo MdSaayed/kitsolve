@@ -6,7 +6,7 @@ gsap.to(grid, {
   x: () => -(grid.scrollWidth - window.innerWidth) + "px",
   ease: "none",
   scrollTrigger: {
-    trigger: ".process--one",
+    trigger: ".process__grid",
     start: "center center",
     end: () => "+=" + (grid.scrollWidth - window.innerWidth),
     pin: true,

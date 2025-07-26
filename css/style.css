@@ -554,6 +554,158 @@ p {
 /* =============================
 * 2. Process One Area
 ============================= */
+.about--one {
+  background: var(--clr-base-dark);
+  position: relative;
+  overflow: hidden;
+}
+
+.about--one .about__title {
+  color: var(--white);
+}
+
+.about--one .about__desc {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.6;
+  letter-spacing: 0.16px;
+  color: var(--white);
+}
+
+.about--one .about__content {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 3rem;
+}
+
+.about--one .about__text-content {
+  grid-column: span 4;
+}
+
+.about--one .about__stats {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  color: var(--white);
+  width: 100%;
+}
+
+.about--one .about__stat {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  flex-grow: 1;
+  padding: 1rem 1.5rem;
+  border: 1px solid #293231;
+  border-radius: 20px;
+}
+
+.about--one .about__stat-number {
+  font-size: 3rem;
+  font-weight: 600;
+  line-height: 1.3;
+  letter-spacing: 0.24px;
+}
+
+.about--one .about__stat-text {
+  font-size: 18px;
+  font-weight: normal;
+  line-height: 1.6;
+  letter-spacing: 0.16px;
+}
+
+.about--one .about__col-right {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.about--one .about__flip-wrapper {
+  grid-column: span 6;
+  position: relative;
+  border-radius: 10px;
+  background-position: top center;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.about--one .about__flip-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.about--one .about__flip-wrapper>*,
+.about--one .about__container>* {
+  position: relative;
+  z-index: 3;
+}
+
+.about--one .about__flip-wrapper::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 120%;
+  height: 120%;
+  border-radius: 8px;
+  background: linear-gradient(180deg, rgba(13, 22, 21, 0.30) 0%, rgba(13, 22, 21, 0.80) 55.06%, #0D1615 100%);
+  z-index: 4;
+}
+
+.about--one .about__flip {
+  position: absolute;
+  left: 50%;
+  bottom: 2rem;
+  transform: translateX(-50%);
+  width: calc(100% - 2rem);
+  padding: 2rem;
+  background: var(--white);
+  border-radius: 20px;
+  z-index: 6;
+}
+
+.about--one .about__flip svg path {
+  stroke: var(--dark);
+}
+
+.about--one .about__flip svg {
+  width: 48px;
+  height: 45px;
+}
+
+.about--one .about__flip-title {
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 1.3;
+  letter-spacing: 0.16px;
+  color: var(--dark);
+}
+
+.about--one .about__image-content {
+  grid-column: span 2;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.about--one .about__background {
+  height: 600px;
+  width: 600px;
+  position: absolute;
+  top: -50px;
+  left: -50px;
+  z-index: 1 !important;
+  background-size: contain !important;
+  background-repeat: no-repeat !important;
+}
+
+
+/* =============================
+* 2. Process One Area
+============================= */
 .process--one {
   background-color: var(--clr-base-dark);
   overflow-x: hidden;
@@ -746,6 +898,7 @@ p {
   max-width: 280px;
   position: relative;
   overflow: hidden;
+  border-radius: 10px;
 }
 
 .testimonials--one .testimonials-card-avatar {
@@ -783,6 +936,8 @@ img.testimonials-avatar.slider__avatar--active {
   flex: 1 1 0%;
   min-width: 0;
   background-color: var(--white);
+  border-radius: 10px;
+  overflow: hidden;
 }
 
 .testimonials--one .testimonial-card {
@@ -1059,6 +1214,7 @@ img.testimonials-avatar.slider__avatar--active {
 }
 
 .faq--one .faq__toggle {
+  flex-shrink: 0;
   background: var(--white);
   color: var(--dark);
   font-size: 1rem;
@@ -1601,7 +1757,24 @@ img.testimonials-avatar.slider__avatar--active {
 
 @media (max-width: 1600px) {
 
-  /* Testimonials - Style One */
+  /* About One */
+  .about--one .about__desc {
+    max-width: 700px;
+  }
+
+  .about--one .about__text-content {
+    grid-column: span 12;
+  }
+
+  .about--one .about__flip-wrapper {
+    grid-column: span 9;
+  }
+
+  .about--one .about__image-content {
+    grid-column: span 3;
+  }
+
+  /* Testimonials One */
   .testimonials--one .testimonials__stats {
     flex-wrap: wrap;
     gap: 1.5rem;
@@ -1619,6 +1792,7 @@ img.testimonials-avatar.slider__avatar--active {
   }
 }
 
+@media (max-width: 1500px) {}
 
 @media (max-width: 1400px) {
 
@@ -1652,6 +1826,12 @@ img.testimonials-avatar.slider__avatar--active {
     right: 60px;
   }
 
+  /* Testimonials One Area */
+  .testimonials--one .slider__preview {
+    display: none;
+  }
+
+  /* Faq One Area */
   .faq--one .faq__item {
     margin-bottom: 2rem;
   }
@@ -1693,12 +1873,6 @@ img.testimonials-avatar.slider__avatar--active {
   .process--one .process__item {
     min-width: 350px;
   }
-
-  /* Testimonials - Style One Area */
-  .testimonials--one .slider__preview {
-    display: none;
-  }
-
 
   /* Faq One Area */
   .faq--one .faq__item {
@@ -1756,6 +1930,44 @@ img.testimonials-avatar.slider__avatar--active {
     min-width: 300px;
   }
 
+  /* About One */
+  .about--one .about__content {
+    column-gap: 0;
+    row-gap: 2rem;
+  }
+
+  .about--one .about__text-content,
+  .about--one .about__flip-wrapper,
+  .about--one .about__image-content {
+    grid-column: span 12;
+    width: 100%;
+  }
+
+  .about--one .about__stat {
+    align-items: center;
+    justify-content: center;
+  }
+
+  .about--one .about__flip-wrapper {
+    min-height: 500px;
+  }
+
+  .about--one .about__image-content {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .about--one .about__image-arrow {
+    max-width: 200px;
+    height: auto;
+    align-self: flex-start;
+  }
+
+  .about--one .about__background {
+    height: 400px;
+    width: 400px;
+  }
+
   /* Testimonials One Area */
   .testimonials--one .testimonial-display__next-avatar {
     display: none;
@@ -1772,6 +1984,10 @@ img.testimonials-avatar.slider__avatar--active {
 
   .testimonials--one .testimonial-card {
     padding-bottom: 1.5rem;
+  }
+
+  .testimonials--one .testimonials__nav {
+    padding: 1rem 2rem;
   }
 
   /* Faq One Are */
@@ -1828,7 +2044,7 @@ img.testimonials-avatar.slider__avatar--active {
 
   /* Process One Area */
   .process--one .process__item {
-    min-width: fit-content;
+    min-width: 350px;
   }
 
   /* Testimonials - Style One Area */
@@ -1869,4 +2085,13 @@ img.testimonials-avatar.slider__avatar--active {
   .contact--one .contact__heading {
     font-size: 1.8rem;
   }
+}
+
+@media (max-width: 350px) {
+
+  /* Process One Area */
+  .process--one .process__item {
+    min-width: min-content;
+  }
+
 }

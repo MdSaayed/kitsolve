@@ -141,19 +141,19 @@ document.addEventListener("DOMContentLoaded", function () {
 document.addEventListener("DOMContentLoaded", function () {
   const testimonials = [
     {
-      text: "From the first consultation, I knew we were in capable hands. They approached our financial concerns with professionalism and precision, helping us restructure our planning and reduce unnecessary costs. Their team wasn't just knowledgeable—they were patient, thorough.",
+      text: "From the first consultation, I knew we were in capable hands. They handled our financial concerns with care and helped reduce unnecessary costs effectively. Their transparent communication, deep expertise, and consistent follow-through made the entire experience seamless, empowering our business with renewed financial confidence.",
       author: "David K.",
       title: "Managing Director",
       imageUrl: "../img/testimonials/testimonials-1.png",
     },
     {
-      text: "Elevix transformed our marketing strategy. Their innovative approach and deep understanding of market trends led to a significant increase in our customer engagement and conversion rates. Highly recommend their services!",
+      text: "Elevix transformed our marketing strategy with smart, data-driven insights. Their approach boosted our engagement, conversions, and overall brand performance quickly and efficiently. We saw measurable improvements across campaigns, channels, and long-term brand positioning, along with invaluable support that made implementation faster and results-driven.",
       author: "Sarah L.",
       title: "Marketing Lead",
       imageUrl: "../img/testimonials/testimonials-2.png",
     },
     {
-      text: "The team at Elevix provided exceptional support in developing our new software. Their technical expertise and commitment to quality were evident throughout the project, delivering a robust and user-friendly solution.",
+      text: "Elevix delivered a solid, user-friendly software solution on time. Their attention to detail, reliability, and support exceeded our expectations throughout the development process. They provided regular updates, handled challenges with ease, and ensured that the final product aligned perfectly with our goals and vision.",
       author: "Michael B.",
       title: "CTO",
       imageUrl: "../img/testimonials/testimonials-3.png",
