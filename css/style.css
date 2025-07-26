@@ -652,19 +652,70 @@ p {
   height: 120%;
   border-radius: 8px;
   background: linear-gradient(180deg, rgba(13, 22, 21, 0.30) 0%, rgba(13, 22, 21, 0.80) 55.06%, #0D1615 100%);
-  z-index: 4;
+  z-index: 5;
 }
 
-.about--one .about__flip {
+.about--one .about__flip-items {
   position: absolute;
-  left: 50%;
+  left: 0;
   bottom: 2rem;
-  transform: translateX(-50%);
+  transform: translate(-50%);
   width: calc(100% - 2rem);
+  z-index: 19;
+}
+
+.about--one .about__flip-inner {
+  padding-right: 20px;
   padding: 2rem;
   background: var(--white);
   border-radius: 20px;
-  z-index: 6;
+}
+
+.about--one #tns3-mw {
+  height: 0 !important;
+}
+
+.about--one .tns-outer {
+  padding: 0 !important;
+  z-index: 6 !important;
+}
+
+.about--one #tns3>.tns-item {
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
+.about--one .about__flip-nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 1rem;
+  position: absolute !important;
+  top: -151px;
+  right: 2rem;
+  z-index: 100 !important;
+  display: flex;
+  flex-direction: column;
+}
+
+.about--one .nav-dot {
+  width: 15px;
+  height: 15px;
+  background: #F1EEE6;
+  box-shadow: 0 0 1px var(--dark);
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.about--one .nav-dot.active {
+  background: var(--clr-deep-green);
+}
+
+.about--one .about__slider-wrap {
+  position: relative !important;
+  z-index: 15 !important;
 }
 
 .about--one .about__flip svg path {

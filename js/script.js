@@ -71,6 +71,67 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 /* =============================
+* 6. About Slider One
+============================= */
+// document.addEventListener("DOMContentLoaded", function () {
+//   var servicesFlip = tns({
+//     container: ".about__flip-items",
+//     autoHeight: true,
+//     items: 1,
+//     swipeAngle: false,
+//     speed: 400,
+//     nav: true,
+//     gutter: 20,
+//     controls: false,
+//   });
+// });
+
+
+document.addEventListener("DOMContentLoaded", function () {
+  const servicesFlip = tns({
+    container: ".about__flip-items",
+    items: 1,
+    autoHeight: true,
+    swipeAngle: false,
+    speed: 400,
+    gutter: 20,
+    controls: false,
+    nav: false,
+  });
+
+  // Get number of slides
+  const slideCount = servicesFlip.getInfo().slideCount;
+
+  // Select nav container
+  const navContainer = document.querySelector(".about__flip-nav");
+
+  // Generate nav dots dynamically
+  for (let i = 0; i < slideCount; i++) {
+    const dot = document.createElement("button");
+    dot.classList.add("nav-dot");
+    if (i === 0) dot.classList.add("active");
+    dot.setAttribute("data-slide", i);
+    navContainer.appendChild(dot);
+
+    // Add click event
+    dot.addEventListener("click", function () {
+      servicesFlip.goTo(i);
+    });
+  }
+
+  // Update active class when slide changes
+  servicesFlip.events.on("indexChanged", function (info) {
+    const currentIndex = info.displayIndex - 1; // displayIndex is 1-based
+    document.querySelectorAll(".nav-dot").forEach(dot => {
+      dot.classList.remove("active");
+    });
+    const activeDot = document.querySelector(`.nav-dot[data-slide="${currentIndex}"]`);
+    if (activeDot) activeDot.classList.add("active");
+  });
+});
+
+
+/* =============================
 * 6. Faq One
 ============================= */
 document.querySelectorAll(".faq__toggle").forEach((toggle) => {
