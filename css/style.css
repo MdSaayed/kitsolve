@@ -378,6 +378,15 @@ p {
   color: #000;
 }
 
+.portfolio__heading{
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   flex-wrap: wrap;
+   row-gap: 2rem;
+   column-gap: 3rem;
+}
+
 .portfolio__subtitle {
   text-align: left;
   color: var(--clr-deep-green);
@@ -414,18 +423,6 @@ p {
   z-index: 3;
 }
 
-.portfolio-list__item--active::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 100px;
-  height: 100px;
-  transform: translate(+20%, -20%);
-  background-color:var(--clr-lime-green);
-  border-radius: 50%;
-  z-index: 10;
-}
 .portfolio-list__item::after {
   content: "";
   position: absolute;
@@ -434,14 +431,18 @@ p {
   width: 100px;
   height: 100px;
   transform: translate(+20%, -20%);
-  background-color:var(--clr-cream);
+  background-color: var(--clr-cream);
   border-radius: 50%;
   z-index: 10;
 }
 
+.portfolio-list__item--active::after {
+  background-color: var(--clr-lime-green);
+}
+
 .portfolio-list__item>* {
   position: relative;
-  z-index: 6;
+  z-index: 15;
 }
 
 .portfolio-list__item--active {
@@ -511,28 +512,6 @@ p {
   height: 100%;
   object-fit: cover;
 }
-
-.portfolio__btn {
-  background-color: #003d29;
-  color: #fff;
-  border-radius: 50px;
-  font-weight: 500;
-  font-size: 0.875rem;
-  text-decoration: none;
-}
-
-.portfolio__btn-icon {
-  background-color: #000;
-  color: #fff;
-  border-radius: 50%;
-  width: 1.75rem;
-  height: 1.75rem;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 0.75rem;
-}
-
 
 /* =============================
 * 5. Services One
@@ -2132,6 +2111,12 @@ img.testimonials-avatar.slider__avatar--active {
     right: 50%;
     bottom: 10px;
     transform: translate(50%, -10px);
+  }
+
+  /* Portfolio One Area */
+  .portfolio-list__item::after {
+    width: 70px;
+    height: 70px;
   }
 
   /* Service One */
