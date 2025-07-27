@@ -54,6 +54,34 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 /* =============================
+* 2. Portfolio One
+============================= */
+document.addEventListener("DOMContentLoaded", function () {
+    const items = document.querySelectorAll(".portfolio-list__item");
+    const image = document.getElementById("portfolio-image");
+    const text = document.getElementById("portfolio-text");
+
+    items.forEach((item) => {
+      item.addEventListener("click", () => {
+        // Remove active class from all
+        items.forEach((el) =>
+          el.classList.remove("portfolio-list__item--active")
+        );
+
+        // Add to clicked one
+        item.classList.add("portfolio-list__item--active");
+
+        // Update right side image and text
+        const newImage = item.getAttribute("data-image");
+        const newText = item.getAttribute("data-text");
+
+        image.src = newImage;
+        text.textContent = newText;
+      });
+    });
+  });
+
+/* =============================
 * 2. Hero One testimonial Slide
 ============================= */
 document.addEventListener("DOMContentLoaded", function () {
@@ -69,23 +97,6 @@ document.addEventListener("DOMContentLoaded", function () {
     nextButton: document.querySelector(".nav-next"),
   });
 });
-
-/* =============================
-* 6. About Slider One
-============================= */
-// document.addEventListener("DOMContentLoaded", function () {
-//   var servicesFlip = tns({
-//     container: ".about__flip-items",
-//     autoHeight: true,
-//     items: 1,
-//     swipeAngle: false,
-//     speed: 400,
-//     nav: true,
-//     gutter: 20,
-//     controls: false,
-//   });
-// });
-
 
 document.addEventListener("DOMContentLoaded", function () {
   const servicesFlip = tns({
