@@ -1439,16 +1439,20 @@ img.testimonials-avatar.slider__avatar--active {
 /* =============================
 * 11. CTA One Area
 ============================= */
-.cta--one {
+.cta {
   background-color: var(--clr-lime-green);
   position: relative;
+}
+
+.cta--two {
+  background-color: var(--clr-base-dark);
 }
 
 .faq--one .cta__container {
   position: relative;
 }
 
-.cta--one .cta__content {
+.cta__content {
   position: relative;
   z-index: 1;
   border-radius: 10px;
@@ -1456,12 +1460,12 @@ img.testimonials-avatar.slider__avatar--active {
   z-index: 1 !important;
 }
 
-.cta--one .cta__content-wrap {
+.cta__content-wrap {
   position: relative;
   z-index: 1;
 }
 
-.cta--one .cta__content::before {
+.cta__content::before {
   content: "";
   position: absolute;
   top: 0;
@@ -1475,7 +1479,7 @@ img.testimonials-avatar.slider__avatar--active {
   z-index: 2;
 }
 
-.cta--one .cta__text {
+.cta__text {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1490,11 +1494,11 @@ img.testimonials-avatar.slider__avatar--active {
   position: relative;
 }
 
-.cta--one .cta__title {
+.cta__title {
   max-width: 840px;
 }
 
-.cta--one .cta__desc {
+.cta__desc {
   color: var(--white);
   max-width: 840px;
 }
@@ -1510,7 +1514,7 @@ img.testimonials-avatar.slider__avatar--active {
   z-index: 3 !important;
 }
 
-.cta--one .cta__social-links {
+.cta__social-links {
   position: absolute;
   top: -55px;
   left: -4rem;
@@ -1521,7 +1525,7 @@ img.testimonials-avatar.slider__avatar--active {
   max-width: 350px;
 }
 
-.cta--one .cta__social-link {
+.cta__social-link {
   position: relative;
   font-size: 1.5rem;
   font-weight: normal;
@@ -1534,9 +1538,14 @@ img.testimonials-avatar.slider__avatar--active {
   border-radius: 50px;
   text-decoration: none;
   z-index: 6;
+  border-color: var(--white);
 }
 
-.cta--one .cta__social-link::before {
+.cta--two .cta__social-link {
+  color: var(--white);
+}
+
+.cta__social-link::before {
   content: "";
   position: absolute;
   top: 50%;
@@ -1546,6 +1555,10 @@ img.testimonials-avatar.slider__avatar--active {
   transform: translateY(-50%);
   background-color: var(--dark);
   border-radius: 50%;
+}
+
+.cta--two .cta__social-link::before {
+  background-color: var(--white);
 }
 
 /* =============================
@@ -1659,7 +1672,7 @@ img.testimonials-avatar.slider__avatar--active {
 /* =============================
 * 13. Contact One Area
 ============================= */
-.contact--one {
+  {
   position: relative;
   background-color: var(--clr-base-dark);
 }
@@ -1688,16 +1701,16 @@ img.testimonials-avatar.slider__avatar--active {
   width: 100%;
 }
 
-.contact--one .container {
+.container {
   position: relative;
   z-index: 2;
 }
 
-.contact--one .contact__col {
+.contact__col {
   min-height: 800px;
 }
 
-.contact--one .contact__form-wrapper {
+.contact__form-wrapper {
   background-color: var(--clr-cream);
   position: absolute;
   top: 50%;
@@ -1709,15 +1722,15 @@ img.testimonials-avatar.slider__avatar--active {
   z-index: 1;
 }
 
-.contact--one .contact__heading {
+.contact__heading {
   color: var(--dark);
   font-size: 3rem;
   letter-spacing: 0.24px;
   max-width: 600px;
 }
 
-.contact--one .contact__form-input,
-.contact--one .contact__form-textarea {
+.contact__form-input,
+.contact__form-textarea {
   border-radius: 10px;
   font-size: 1rem;
   padding: 1rem 1.5rem;
@@ -1725,15 +1738,15 @@ img.testimonials-avatar.slider__avatar--active {
   border: 0.5px solid #8f9897;
 }
 
-.contact--one .contact__form-input:focus,
-.contact--one .contact__form-textarea:focus {
+.contact__form-input:focus,
+.contact__form-textarea:focus {
   outline: 1px solid var(--dark);
   outline-offset: 0;
   border: none;
   box-shadow: none;
 }
 
-.contact--one .contact__form-btn {
+.contact__form-btn {
   background-color: var(--clr-deep-green);
   color: var(--white);
   font-weight: 500;
@@ -2033,7 +2046,7 @@ img.testimonials-avatar.slider__avatar--active {
   transition: 0.4s ease;
 }
 
-.footer--one .footer__social-btn:hover{
+.footer--one .footer__social-btn:hover {
   color: var(--clr-lime-green);
 }
 
@@ -2075,8 +2088,100 @@ img.testimonials-avatar.slider__avatar--active {
   text-align: center;
 }
 
-.footer__email{
+.footer__email {
   display: block;
+}
+
+/* =============================
+* 17. Contact Two Area
+============================= */
+.contact--two {
+  background: var(--clr-lime-green);
+}
+
+.contact__info{
+  background-color: #C8F561;
+  padding: 3.5rem 2rem;
+  border-radius: 20px;
+}
+
+.contact__info-title {
+  font-size: 2.5rem;
+  color: var(--dark);
+  margin-bottom: 1rem;
+}
+
+.contact__info-text {
+  font-size: 1rem;
+  color: var(--dark);
+}
+
+.contact__info-cards {
+  column-gap: 2rem;
+  row-gap: 1.5rem;
+}
+
+.contact__info-card {
+  background-color: var(--dark);
+  color: var(--white);
+  padding: 1.5rem;
+  border-radius: 20px 20px 0 20px;
+  flex-grow: 1;
+}
+
+.contact__info-icon {
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.contact__info-icon svg {
+  position: relative;
+  z-index: 10;
+}
+
+.contact__info-icon-inner {
+  position: relative;
+}
+
+.contact__info-icon-inner::before {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: var(--white);
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.contact__info-content {
+  padding-left: 1rem;
+}
+
+.contact__info-number {
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 1.3;
+  letter-spacing: 0.12px;
+  color: var(--white);
+  word-break: break-word;
+  overflow-wrap: break-word;
+}
+
+.contact__info-label {
+  font-size: 20px;
+  line-height: 1.6;
+  letter-spacing: 0.1px;
+  font-weight: normal;
+  margin-bottom: 0;
+}
+
+.contact--two .contact__form-wrapper {
+  position: static;
+  transform: translate(0);
+  max-width: 100%;
 }
 
 /* =============================
@@ -2161,7 +2266,7 @@ img.testimonials-avatar.slider__avatar--active {
   }
 
   /* Contact One Area */
-  .contact--one .contact__heading {
+  .contact__heading {
     font-size: 2.5rem;
   }
 
@@ -2225,11 +2330,11 @@ img.testimonials-avatar.slider__avatar--active {
   }
 
   /* Contact One Area */
-  .contact--one .contact__form-wrapper {
+  .contact__form-wrapper {
     height: auto;
   }
 
-  .contact--one .contact__heading {
+  .contact__heading {
     font-size: 2rem;
   }
 
@@ -2375,17 +2480,17 @@ img.testimonials-avatar.slider__avatar--active {
   }
 
   /* Cta One Area */
-  .cta--one .cta__social-links {
+  .cta__social-links {
     left: -3rem;
   }
 
   /* Contact One Area */
-  .contact--one .contact__heading {
+  .contact__heading {
     font-size: 2rem;
   }
 
-  .contact--one .contact__form-input,
-  .contact--one .contact__form-textarea {
+  .contact__form-input,
+  .contact__form-textarea {
     padding: 10px 1rem;
   }
 
@@ -2478,16 +2583,16 @@ img.testimonials-avatar.slider__avatar--active {
   }
 
   /* Cta One Area */
-  .cta--one .cta__text {
+  .cta__text {
     padding-top: 4rem;
   }
 
-  .cta--one .cta__social-links {
+  .cta__social-links {
     display: none;
   }
 
   /* Contact One Area */
-  .contact--one .contact__heading {
+  .contact__heading {
     font-size: 1.8rem;
   }
 }
@@ -2520,7 +2625,7 @@ img.testimonials-avatar.slider__avatar--active {
   }
 
   /* Contact One Area */
-  .contact--one .contact__heading {
+  .contact__heading {
     font-size: 1.2rem;
   }
 
