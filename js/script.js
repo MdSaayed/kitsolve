@@ -241,12 +241,12 @@ document.addEventListener("DOMContentLoaded", function () {
     const cardHtml = `
       <div class="testimonial-card">
         <div class="testimonial-card__content">
-          <p class="testimonial-card__text">${testimonial.text}</p>
+          <p class="testimonial-card__text">${testimonial?.text}</p>
           <div class="testimonials-card-avatar">
-            <img class="testimonials-avatar slider__avatar--active" src="${testimonial.imageUrl}" alt="Next Testimonial User" />
+            <img class="testimonials-avatar slider__avatar--active" src="${testimonial?.imageUrl}" alt=${testimonial?.author} />
           </div>
-          <p class="testimonial-card__author">— ${testimonial.author}</p>
-          <p class="testimonial-card__title">${testimonial.title}</p>
+          <p class="testimonial-card__author">— ${testimonial?.author}</p>
+          <p class="testimonial-card__title">${testimonial?.title}</p>
         </div>
         <div class="testimonial-card__quote">
           <svg width="49" height="35" viewBox="0 0 49 35" fill="none">
