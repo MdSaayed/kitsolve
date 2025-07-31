@@ -57,29 +57,29 @@ document.addEventListener("DOMContentLoaded", function () {
 * 2. Portfolio One
 ============================= */
 document.addEventListener("DOMContentLoaded", function () {
-    const items = document.querySelectorAll(".portfolio-list__item");
-    const image = document.getElementById("portfolio-image");
-    const text = document.getElementById("portfolio-text");
+  const items = document.querySelectorAll(".portfolio-list__item");
+  const image = document.getElementById("portfolio-image");
+  const text = document.getElementById("portfolio-text");
 
-    items.forEach((item) => {
-      item.addEventListener("click", () => {
-        // Remove active class from all
-        items.forEach((el) =>
-          el.classList.remove("portfolio-list__item--active")
-        );
+  items.forEach((item) => {
+    item.addEventListener("click", () => {
+      // Remove active class from all
+      items.forEach((el) =>
+        el.classList.remove("portfolio-list__item--active")
+      );
 
-        // Add to clicked one
-        item.classList.add("portfolio-list__item--active");
+      // Add to clicked one
+      item.classList.add("portfolio-list__item--active");
 
-        // Update right side image and text
-        const newImage = item.getAttribute("data-image");
-        const newText = item.getAttribute("data-text");
+      // Update right side image and text
+      const newImage = item.getAttribute("data-image");
+      const newText = item.getAttribute("data-text");
 
-        image.src = newImage;
-        text.textContent = newText;
-      });
+      image.src = newImage;
+      text.textContent = newText;
     });
   });
+});
 
 /* =============================
 * 2. Hero One testimonial Slide
@@ -297,5 +297,177 @@ document.addEventListener("DOMContentLoaded", function () {
 
   slider.events.on("indexChanged", updatePreviewImages);
 });
+
+/* =============================
+* 6. Testimonials One Area
+============================= */
+document.addEventListener("DOMContentLoaded", function () {
+  const testimonialsTwo = tns({
+    container: ".testimonials-two-slider",
+    items: 3,
+    slideBy: 1,
+    controls: false,
+    nav: false,
+    mouseDrag: true,
+    speed: 600,
+    loop: true,
+    gutter: 32,
+    edgePadding: 200,
+    responsive: {
+      0: {
+        items: 1,
+        gutter: 16,
+        edgePadding: 16,
+      },
+      650: {
+        items: 2,
+        gutter: 24,
+        edgePadding: 24,
+      },
+      992: {
+        items: 2,
+        gutter: 20,
+        edgePadding: 100,
+      },
+      1400: {
+        items: 3,
+        gutter: 20,
+        edgePadding: 150,
+      },
+    }
+  });
+
+
+  function updateCenterSlide() {
+    const slides = document.querySelectorAll(".testimonials__item");
+    slides.forEach(slide => slide.classList.remove("is-center"));
+
+    const activeSlides = document.querySelectorAll(".tns-slide-active");
+    const centerIndex = Math.floor(activeSlides.length / 2);
+
+    if (activeSlides[centerIndex]) {
+      activeSlides[centerIndex].classList.add("is-center");
+    }
+  }
+
+
+  // Call once after slider starts
+  setTimeout(updateCenterSlide, 0);
+
+  // Also update when slide changes
+  document.querySelector('.testimonials-two-slider').addEventListener('transitionend', () => {
+    updateCenterSlide();
+  });
+});
+
+
+/* =============================
+* 6. Team Two Area
+============================= */
+document.addEventListener('DOMContentLoaded', () => {
+  const mainExpertImage = document.getElementById('mainExpertImage');
+  const mainExpertRole = document.getElementById('mainExpertRole');
+  const mainExpertName = document.getElementById('mainExpertName');
+  const smallExpertsContainer = document.getElementById('smallExpertsContainer');
+
+  // Team data array of objects
+  const teamMembers = [
+    {
+      id: 'leslie',
+      image: '../img/team/team-member-1.png',
+      thumbnail: '../img/team/team-member-1.png',
+      name: 'Leslie Alexander',
+      role: 'Graphics Designer',
+      social: {
+        facebook: '#',
+        twitter: '#',
+        instagram: '#',
+        pinterest: '#'
+      }
+    },
+    {
+      id: 'john',
+      image: '../img/team/team-member-2.png',
+      thumbnail: '../img/team/team-member-2.png',
+      name: 'John Doe',
+      role: 'Web Developer',
+      social: {
+        facebook: '#',
+        twitter: '#',
+        instagram: '#',
+        pinterest: '#'
+      }
+    },
+    {
+      id: 'jane',
+      image: '../img/team/team-member-3.png',
+      thumbnail: '../img/team/team-member-3.png',
+      name: 'Jane Smith',
+      role: 'UX Designer',
+      social: {
+        facebook: '#',
+        twitter: '#',
+        instagram: '#',
+        pinterest: '#'
+      }
+    },
+    {
+      id: 'peter',
+      image: '../img/team/team-member-4.png',
+      thumbnail: '../img/team/team-member-4.png',
+      name: 'Peter Jones',
+      role: 'Project Manager',
+      social: {
+        facebook: '#',
+        twitter: '#',
+        instagram: '#',
+        pinterest: '#'
+      }
+    },
+  ];
+
+  // Function to update the main expert's details
+  function updateMainExpert(member) {
+    mainExpertImage.src = member.image;
+    mainExpertImage.alt = member.name;
+    mainExpertName.textContent = member.name;
+    mainExpertRole.textContent = member.role;
+    // You can also update social links here if they vary per member
+    // For simplicity, current social links are static in HTML
+  }
+
+  // Function to render thumbnails from the teamMembers array
+  function renderThumbnails() {
+    smallExpertsContainer.innerHTML = ''; // Clear existing thumbnails
+    teamMembers.forEach(member => {
+      const thumbnailDiv = document.createElement('div');
+      thumbnailDiv.classList.add('team__small-expert-item');
+      thumbnailDiv.dataset.id = member.id; // Store member ID for easy lookup
+
+      const thumbnailImg = document.createElement('img');
+      thumbnailImg.src = member.thumbnail;
+      thumbnailImg.alt = member.name + ' Thumbnail';
+      thumbnailImg.classList.add('team__small-expert-image');
+
+      thumbnailDiv.appendChild(thumbnailImg);
+      smallExpertsContainer.appendChild(thumbnailDiv);
+
+      // Add click event listener to each dynamically created thumbnail
+      thumbnailDiv.addEventListener('click', () => {
+        updateMainExpert(member);
+      });
+    });
+  }
+
+  // Initial rendering of thumbnails and setting the first expert
+  renderThumbnails();
+  if (teamMembers.length > 0) {
+    updateMainExpert(teamMembers[0]); // Set the first member as default
+  }
+});
+
+
+
+
 
 
