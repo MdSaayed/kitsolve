@@ -248,7 +248,7 @@ document.addEventListener("DOMContentLoaded", function () {
           <p class="testimonial-card__author">— ${testimonial?.author}</p>
           <p class="testimonial-card__title">${testimonial?.title}</p>
         </div>
-        <div class="testimonial-card__quote">
+        <div class="testimonial-card__quote quote--three">
           <svg width="49" height="35" viewBox="0 0 49 35" fill="none">
             <path d="M3.90324 34.2857H14.189L21.0461 20.5714V0H0.47467V20.5714H10.7604L3.90324 34.2857ZM31.3318 34.2857H41.6175L48.4747 20.5714V0H27.9032V20.5714H38.189L31.3318 34.2857Z" fill="black" />
           </svg>
