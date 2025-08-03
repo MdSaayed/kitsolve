@@ -27,6 +27,19 @@ CSS INDEX
 15. Blog One Area
 16. Footer One Area
 
+17. Hero Two Area
+18. About Two Area
+19. Services Two Area
+20. Portfolio Two Area
+21. Process Two Area
+22. Testimonials Two Area
+23. Team Two Area
+24. Faq Two Area
+25. Contact Two Area
+26. Blog Two Area
+27. CTA Two Area
+28. 
+
 
 ------------------------------------------------------------------*/
 
@@ -2060,30 +2073,30 @@ img.testimonials-avatar.slider__avatar--active {
 /* =============================
 * 16. Footer One Area
 ============================= */
-.footer--one {
+.footer {
   background-color: var(--clr-base-dark);
 }
 
-.footer--one .footer__logo-lg {
+.footer__logo-lg {
   max-width: 180px;
   width: 100%;
   height: auto;
 }
 
-.footer--one .footer__logo-text,
-.footer--one .footer__nav-title,
-.footer--one .footer__contact-title {
+.footer__logo-text,
+.footer__nav-title,
+.footer__contact-title {
   font-size: 2rem;
   color: var(--white);
   line-height: 1.3;
   letter-spacing: 01.16px;
 }
 
-.footer--one .footer__desc,
-.footer--one .footer__link,
-.footer--one .footer__item,
-.footer--one .footer__address,
-.footer--one .footer__email {
+.footer__desc,
+.footer__link,
+.footer__item,
+.footer__address,
+.footer__email {
   font-size: 18px;
   font-weight: 400;
   line-height: 1.6;
@@ -2093,11 +2106,28 @@ img.testimonials-avatar.slider__avatar--active {
   text-decoration: none;
 }
 
-.footer--one .footer__nav .footer__nav-title {
+.footer__address {
+  position: relative;
+  padding-left: 20px;
+}
+
+.footer__address::before {
+  position: absolute;
+  content: "";
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  width: 5px;
+  height: 5px;
+  background: var(--white);
+  border-radius: 50%;
+}
+
+.footer__nav .footer__nav-title {
   position: relative;
 }
 
-.footer--one .footer__nav .footer__nav-title::before {
+.footer__nav .footer__nav-title::before {
   content: "";
   position: absolute;
   bottom: -15px;
@@ -2107,12 +2137,12 @@ img.testimonials-avatar.slider__avatar--active {
   background-color: var(--clr-lime-green);
 }
 
-.footer--one .footer__nav .footer__link {
+.footer__nav .footer__link {
   position: relative;
   padding-left: 20px;
 }
 
-.footer--one .footer__nav .footer__link::before {
+.footer__nav .footer__link::before {
   content: "";
   position: absolute;
   left: 0;
@@ -2125,11 +2155,11 @@ img.testimonials-avatar.slider__avatar--active {
   background-repeat: no-repeat;
 }
 
-.footer--one .footer__link:hover {
+.footer__link:hover {
   color: var(--clr-lime-green);
 }
 
-.footer--one .footer__social-btn {
+.footer__social-btn {
   color: var(--white);
   background: #192221;
   border-radius: 30px;
@@ -2142,18 +2172,18 @@ img.testimonials-avatar.slider__avatar--active {
   transition: 0.4s ease;
 }
 
-.footer--one .footer__social-btn:hover {
+.footer__social-btn:hover {
   color: var(--clr-lime-green);
 }
 
-.footer--one .footer__cta-link:hover {
+.footer__cta-link:hover {
   color: var(--clr-lime-green);
 }
 
-.footer--one .footer__bottom {
+.footer__bottom {
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
   flex-wrap: wrap;
   column-gap: 2rem;
   row-gap: 1.5rem;
@@ -2162,8 +2192,8 @@ img.testimonials-avatar.slider__avatar--active {
   padding-top: 3rem;
 }
 
-.footer--one .footer__copyright,
-.footer--one .footer__cta-link {
+.footer__copyright,
+.footer__cta-link {
   color: var(--white);
   font-size: 18px;
   font-weight: normal;
@@ -2171,7 +2201,7 @@ img.testimonials-avatar.slider__avatar--active {
   letter-spacing: 0.18px;
 }
 
-.footer--one .footer__cta-link {
+.footer__cta-link {
   background: #192221;
   display: flex;
   justify-content: center;
@@ -2189,371 +2219,18 @@ img.testimonials-avatar.slider__avatar--active {
 }
 
 /* =============================
-* 17. Contact Two Area
+* 17. Hero Two Area
 ============================= */
-.contact--two {
-  background: var(--clr-lime-green);
-}
-
-.contact__info {
-  background-color: #C8F561;
-  padding: 3.5rem 2rem;
-  border-radius: 20px;
-}
-
-.contact__info-title {
-  font-size: 2.5rem;
-  color: var(--dark);
-  margin-bottom: 1rem;
-}
-
-.contact__info-text {
-  font-size: 1rem;
-  color: var(--dark);
-}
-
-.contact__info-cards {
-  column-gap: 2rem;
-  row-gap: 1.5rem;
-}
-
-.contact__info-card {
-  background-color: var(--dark);
-  color: var(--white);
-  padding: 1.5rem;
-  border-radius: 20px 20px 0 20px;
-  flex-grow: 1;
-}
-
-.contact__info-icon {
-  position: relative;
-  padding-left: 1.5rem;
-}
-
-.contact__info-icon svg {
-  position: relative;
-  z-index: 10;
-}
-
-.contact__info-icon-inner {
-  position: relative;
-}
-
-.contact__info-icon-inner::before {
-  content: "";
-  position: absolute;
-  width: 50px;
-  height: 50px;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background: var(--white);
-  border-radius: 50%;
-  z-index: 1;
-}
-
-.contact__info-content {
-  padding-left: 1rem;
-}
-
-.contact__info-number {
-  font-size: 1.5rem;
-  font-weight: 600;
-  line-height: 1.3;
-  letter-spacing: 0.12px;
-  color: var(--white);
-  word-break: break-word;
-  overflow-wrap: break-word;
-}
-
-.contact__info-label {
-  font-size: 20px;
-  line-height: 1.6;
-  letter-spacing: 0.1px;
-  font-weight: normal;
-  margin-bottom: 0;
-}
-
-.contact--two .contact__form-wrapper {
-  position: static;
-  transform: translate(0);
-  max-width: 100%;
-}
-
-/* =============================
-* 2. Blog Two Area
-============================= */
-.blog--two {
-  background: #F1EEE6;
-}
-
-.blog--two .blog__header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  row-gap: 2rem;
-  column-gap: 3rem;
-}
-
-.blog--two .blog__title,
-.blog--two .blog__desc {
-  text-align: left;
-  margin-left: 0;
-}
-
-.blog--two .blog__item {
-  background-color: #fff;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-  flex-direction: row;
-  height: 100%;
-  border-radius: 0.5rem;
-  overflow: hidden;
-  border: 1px solid #eee;
-  transition: transform 0.3s ease;
-}
-
-.blog--two .blog__item:hover {
-  transform: translateY(-4px);
-}
-
-.blog--two .blog__thumb {
-  max-width: 320px;
-  max-height: 320px;
-  width: 100%;
-  overflow: hidden;
-  border-radius: 10px;
-}
-
-.blog--two .blog__thumb img {
-  width: 100%;
-  height: 100%;
-  display: block;
-  object-fit: cover;
-}
-
-.blog--two .blog__content {
-  padding: 1.25rem;
-  display: flex;
-  flex-direction: column;
-  flex-grow: 1;
-}
-
-.blog--two .blog__date-wrap,
-.blog--two .blog__comments-wrap {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-
-.blog--two .blog__meta {
-  display: flex;
-  justify-content: space-between;
-  font-size: 1rem;
-  font-weight: normal;
-  line-height: 1.6;
-  letter-spacing: 0.16px;
-  color: var(--gray);
-  margin-bottom: 1.5rem;
-}
-
-.blog--two .blog__item-title {
-  font-size: 1.5rem;
-  font-weight: 600;
-  margin-bottom: 12px;
-  color: var(--dark);
-  line-height: 1.3;
-  letter-spacing: 0.12px;
-}
-
-.blog--two .blog__excerpt {
-  color: #333;
-  font-size: 1rem;
-  font-weight: normal;
-  line-height: 1.6;
-  letter-spacing: 0.16p;
-  flex-grow: 1;
-}
-
-.blog--two .blog__footer {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: 1rem;
-  font-size: 0.875rem;
-  border-top: 1px solid #F5F5F5;
-  padding-top: 1rem;
-}
-
-.blog--two .blog__author-wrap {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-
-}
-
-.blog--two .blog__author-img {
-  border-radius: 50%;
-  max-width: 32px;
-  max-height: 32px;
-  object-fit: cover;
-}
-
-.blog--two .blog__author {
-  color: var(--clr-base-dark);
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 1.6;
-  letter-spacing: 0.18;
-}
-
-.blog--two .blog__read-more {
-  font-size: 1rem;
-  font-weight: 600;
-  line-height: 1.6;
-  letter-spacing: 01.6px;
-  text-decoration: underline;
-  color: var(--clr-deep-green);
-  transition: color 0.3s ease;
-}
-
-
-/* =============================
-* 2. CTA Two Area
-============================= */
-.cta--two {
-  position: relative;
-  background-color: var(--clr-base-dark);
-  color: var(--white);
-}
-
-.cta__box {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  border-radius: 20px;
-  max-width: 1150px;
-  text-align: center;
-  position: relative;
-  z-index: 1;
-  background: #141D1C;
-}
-
-.cta--two .cta__logo {
-  margin: 0 auto;
-}
-
-.cta--two .cta__form {
-  margin-inline: auto;
-  display: flex;
-  justify-content: center;
-  align-items: stretch;
-  margin-top: 2rem;
-  gap: 1rem;
-  flex-wrap: wrap;
-  /*  d-flex flex-column flex-sm-row justify-content-center align-items-stretch mt-3 gap-2 */
-}
-
-.cta--two .cta__input {
-  flex: 1;
-  padding: 18px 20px;
-  border: none;
-  border-radius: 0.5rem;
-  background-color: var(--clr-base-dark);
-  color: var(--white);
-  font-size: 1rem;
-  min-width: 390px;
-}
-
-.cta--two .cta__input::placeholder {
-  color: var(--white);
-  font-size: 1rem;
-  font-weight: normal;
-  line-height: 1.6;
-  letter-spacing: 0.16px;
-}
-
-.cta__input:focus {
-  border: none;
-  outline: 1px solid var(--gray);
-}
-
-.cta__button {
-  flex: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 12px;
-  padding: 16px 20px;
-  background-color: var(--clr-lime-green);
-  color: var(--clr-base-dark);
-  font-weight: 600;
-  font-size: 20px;
-  border: none;
-  line-height: 1.3;
-  letter-spacing: 0.1px;
-  border-radius: 8px;
-  white-space: nowrap;
-  transition: background 0.3s ease;
-}
-
-.cta__button svg {
-  position: relative;
-  z-index: 10;
-}
-
-/* =============================
-* 2. Responsive
-============================= */
-.faq--two .faq__title {
-  max-width: 550px;
-}
-
-.faq__title-highlight {
-  position: relative;
-  display: inline-block;
-  z-index: 2;
-}
-
-.faq__title-highlight::before {
-  content: "";
-  position: absolute;
-  bottom: 6px;
-  left: 0;
-  width: 100%;
-  height: 16px;
-  background: url("../img/faq/faq-shape-1.png") center center / cover no-repeat;
-  z-index: -1;
-  display: block;
-}
-
-.faq--two .faq__bg-shape {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  max-width: 700px;
-  max-height: 500px;
-  width: 100%;
-  height: 100%;
-  z-index: -1 !important;
-}
-
-/* =============================
-* 2. Hero Two Area
-============================= */
-.hero--two{
+.hero--two {
   background: var(--clr-base-dark);
   position: relative;
 }
 
-.hero--two .hero__container{
+.hero--two .hero__container {
   position: relative;
 }
 
-.hero--two::before{
+.hero--two::before {
   content: "";
   position: absolute;
   bottom: 0;
@@ -2564,7 +2241,7 @@ img.testimonials-avatar.slider__avatar--active {
   border-top-right-radius: 10px;
 }
 
-.hero--two .hero__title{
+.hero--two .hero__title {
   font-size: 6.25rem;
   line-height: 1.3;
   font-weight: 800;
@@ -2572,8 +2249,8 @@ img.testimonials-avatar.slider__avatar--active {
   color: var(--white);
 }
 
-.hero__desc{
-  max-width: 750px;  
+.hero__desc {
+  max-width: 750px;
   color: var(--white);
   margin-left: auto;
   margin-right: 0;
@@ -2581,15 +2258,15 @@ img.testimonials-avatar.slider__avatar--active {
   text-align: left;
 }
 
-.hero--two .hero__slider-img{
+.hero--two .hero__slider-img {
   width: 100%;
 }
 
-.stats--style--one{
+.stats--style--one {
   position: relative;
 }
 
-.stats--style--one .stat{
+.stats--style--one .stat {
   background: var(--clr-lime-green);
   border-radius: 10px;
   color: var(--dark);
@@ -2601,7 +2278,7 @@ img.testimonials-avatar.slider__avatar--active {
   padding: 1.5rem;
 }
 
-.stats--style--one .stat__number{
+.stats--style--one .stat__number {
   color: var(--dark);
   font-size: 2.5rem;
   font-weight: 600;
@@ -2609,7 +2286,7 @@ img.testimonials-avatar.slider__avatar--active {
   letter-spacing: 0.2px;
 }
 
-.stats--style--one .stat__text{
+.stats--style--one .stat__text {
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.6;
@@ -2618,19 +2295,12 @@ img.testimonials-avatar.slider__avatar--active {
   margin-bottom: 1rem;
 }
 
-
-
-
-
-
-
-
 /* =============================
-* 2. About Two Area
+* 18. About Two Area
 ============================= */
 .about--two {
   position: relative;
-  background: #F1EEE6;
+  background: var(--clr-deep-teal);
   overflow: hidden;
 }
 
@@ -2649,15 +2319,21 @@ img.testimonials-avatar.slider__avatar--active {
   text-align: left;
   margin-left: 0;
   max-width: 600px;
+  color: var(--white);
 }
 
 .about--two .about__desc {
   max-width: 600px;
+  color: var(--white);
+}
+
+.phone__number {
+  color: var(--white);
 }
 
 .phone__number {
   padding: 1rem 1.5rem;
-  border: 0.5px solid var(--dark);
+  border: 0.5px solid var(--white);
   position: absolute;
   bottom: 20%;
   left: 40%;
@@ -2743,7 +2419,7 @@ img.testimonials-avatar.slider__avatar--active {
 }
 
 /* =============================
-* 2. Portfolio Two Area
+* 19. Services Two Area
 ============================= */
 .services--two .services__title {
   color: var(--dark);
@@ -2801,9 +2477,8 @@ img.testimonials-avatar.slider__avatar--active {
   transition: fill 0.4s ease;
 }
 
-
 /* =============================
-* 2. Portfolio Two Area
+* 20. Portfolio Two Area
 ============================= */
 .portfolio--two .portfolio__container {
   overflow: hidden;
@@ -2861,7 +2536,7 @@ img.testimonials-avatar.slider__avatar--active {
 }
 
 /* =============================
-* 2. Process Two Area
+* 21. Process Two Area
 ============================= */
 .process--two {
   background: var(--clr-base-dark);
@@ -2930,9 +2605,8 @@ img.testimonials-avatar.slider__avatar--active {
   margin-top: 0 !important;
 }
 
-
 /* =============================
-* 2. Testimonials Two Area
+* 22. Testimonials Two Area
 ============================= */
 .testimonials--two {
   background-color: var(--clr-cream);
@@ -3034,9 +2708,8 @@ img.testimonials-avatar.slider__avatar--active {
   transform: translateY(-3rem);
 }
 
-
 /* =============================
-* 2. Team Two Area
+* 23. Team Two Area
 ============================= */
 .team--two {
   background-color: var(--dark);
@@ -3219,52 +2892,504 @@ img.testimonials-avatar.slider__avatar--active {
   padding-top: 1.5rem;
 }
 
-@media (max-width: 992px) {
-  .team__main-expert {
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 0;
-    flex-direction: column-reverse;
-  }
+/* =============================
+* 24. Faq Two Area
+============================= */
+.faq--two .faq__title {
+  max-width: 550px;
+}
 
-  .team__main-expert-image-wrapper {
-    margin-bottom: 1.5rem;
-  }
+.faq__title-highlight {
+  position: relative;
+  display: inline-block;
+  z-index: 2;
+}
 
-  .team__main-expert-info {
-    text-align: center;
-  }
+.faq__title-highlight::before {
+  content: "";
+  position: absolute;
+  bottom: 6px;
+  left: 0;
+  width: 100%;
+  height: 16px;
+  background: url("../img/faq/faq-shape-1.png") center center / cover no-repeat;
+  z-index: -1;
+  display: block;
+}
 
-  .team__small-expert-item {
-    margin-bottom: 0.5rem;
-    margin-left: 0.5rem;
-    margin-right: 0.5rem;
-  }
+.faq--two .faq__bg-shape {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  max-width: 700px;
+  max-height: 500px;
+  width: 100%;
+  height: 100%;
+  z-index: -1 !important;
+}
 
-  .team__small-experts {
-    flex-direction: row;
-  }
+/* =============================
+* 25. Contact Two Area
+============================= */
+.contact--two {
+  background: var(--clr-lime-green);
+}
 
-  .team__main-expert-social {
-    justify-content: center;
-  }
+.contact__info {
+  background-color: #C8F561;
+  padding: 3.5rem 2rem;
+  border-radius: 20px;
+}
 
-  .team__small-expert-image {
-    max-width: 80px;
-    max-height: 80px;
-  }
+.contact__info-title {
+  font-size: 2.5rem;
+  color: var(--dark);
+  margin-bottom: 1rem;
+}
 
-  .team__small-experts {
-    gap: 5px;
-  }
+.contact__info-text {
+  font-size: 1rem;
+  color: var(--dark);
+}
 
-  .team__header-line {
-    margin: 0;
-  }
+.contact__info-cards {
+  column-gap: 2rem;
+  row-gap: 1.5rem;
+}
 
-  .team__explore-button-wrapper {
-    text-align: center;
-  }
+.contact__info-card {
+  background-color: var(--dark);
+  color: var(--white);
+  padding: 1.5rem;
+  border-radius: 20px 20px 0 20px;
+  flex-grow: 1;
+}
+
+.contact__info-icon {
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.contact__info-icon svg {
+  position: relative;
+  z-index: 10;
+}
+
+.contact__info-icon-inner {
+  position: relative;
+}
+
+.contact__info-icon-inner::before {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: var(--white);
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.contact__info-content {
+  padding-left: 1rem;
+}
+
+.contact__info-number {
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 1.3;
+  letter-spacing: 0.12px;
+  color: var(--white);
+  word-break: break-word;
+  overflow-wrap: break-word;
+}
+
+.contact__info-label {
+  font-size: 20px;
+  line-height: 1.6;
+  letter-spacing: 0.1px;
+  font-weight: normal;
+  margin-bottom: 0;
+}
+
+.contact--two .contact__form-wrapper {
+  position: static;
+  transform: translate(0);
+  max-width: 100%;
+}
+
+/* =============================
+* 26. Blog Two Area
+============================= */
+.blog--two {
+  background: #F1EEE6;
+}
+
+.blog--two .blog__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  row-gap: 2rem;
+  column-gap: 3rem;
+}
+
+.blog--two .blog__title,
+.blog--two .blog__desc {
+  text-align: left;
+  margin-left: 0;
+}
+
+.blog--two .blog__item {
+  background-color: var(--white);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  flex-direction: row;
+  height: 100%;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  border: 1px solid #eee;
+  transition: transform 0.3s ease;
+}
+
+.blog--two .blog__item:hover {
+  transform: translateY(-4px);
+}
+
+.blog--two .blog__thumb {
+  max-width: 320px;
+  max-height: 320px;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.blog--two .blog__thumb img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.blog--two .blog__content {
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.blog--two .blog__date-wrap,
+.blog--two .blog__comments-wrap {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.blog--two .blog__meta {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1.6;
+  letter-spacing: 0.16px;
+  color: var(--gray);
+  margin-bottom: 1.5rem;
+}
+
+.blog--two .blog__item-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: var(--dark);
+  line-height: 1.3;
+  letter-spacing: 0.12px;
+}
+
+.blog--two .blog__excerpt {
+  color: #333;
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1.6;
+  letter-spacing: 0.16p;
+  flex-grow: 1;
+}
+
+.blog--two .blog__footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1rem;
+  font-size: 0.875rem;
+  border-top: 1px solid #F5F5F5;
+  padding-top: 1rem;
+}
+
+.blog--two .blog__author-wrap {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+}
+
+.blog--two .blog__author-img {
+  border-radius: 50%;
+  max-width: 32px;
+  max-height: 32px;
+  object-fit: cover;
+}
+
+.blog--two .blog__author {
+  color: var(--clr-base-dark);
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.6;
+  letter-spacing: 0.18;
+}
+
+.blog--two .blog__read-more {
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.6;
+  letter-spacing: 01.6px;
+  text-decoration: underline;
+  color: var(--clr-deep-green);
+  transition: color 0.3s ease;
+}
+
+/* =============================
+* 27. CTA Two Area
+============================= */
+.cta--two {
+  position: relative;
+  background-color: var(--clr-base-dark);
+  color: var(--white);
+}
+
+.cta__box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  max-width: 1150px;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  background: #141D1C;
+}
+
+.cta--two .cta__logo {
+  margin: 0 auto;
+}
+
+.cta--two .cta__form {
+  margin-inline: auto;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  margin-top: 2rem;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.cta--two .cta__input {
+  flex: 1;
+  padding: 18px 20px;
+  border: none;
+  border-radius: 0.5rem;
+  background-color: var(--clr-base-dark);
+  color: var(--white);
+  font-size: 1rem;
+  min-width: 390px;
+}
+
+.cta--two .cta__input::placeholder {
+  color: var(--white);
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1.6;
+  letter-spacing: 0.16px;
+}
+
+.cta__input:focus {
+  border: none;
+  outline: 1px solid var(--gray);
+}
+
+.cta__button {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 16px 20px;
+  background-color: var(--clr-lime-green);
+  color: var(--clr-base-dark);
+  font-weight: 600;
+  font-size: 20px;
+  border: none;
+  line-height: 1.3;
+  letter-spacing: 0.1px;
+  border-radius: 8px;
+  white-space: nowrap;
+  transition: background 0.3s ease;
+}
+
+.cta__button svg {
+  position: relative;
+  z-index: 10;
+}
+
+/* =============================
+* 28. Footer Two Area
+============================= */
+.footer--two .footer__container {
+  position: relative;
+}
+
+.footer--two .footer__container>.footer__content,
+.footer--two .footer__container>.footer__bottom {
+  position: relative;
+  z-index: 10;
+}
+
+.footer--two .footer__shape {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  max-width: 400px;
+  width: 100%;
+  max-height: 496px;
+  height: 100%;
+  z-index: -1 !important;
+  background-size: contain !important;
+  background-repeat: no-repeat !important;
+  background-position: bottom left !important;
+}
+
+/* =============================
+* 29. Features One
+============================= */
+.features__title {
+  color: var(--dark);
+  text-align: center;
+  margin: 0 auto;
+}
+
+.features__card {
+  background-color: var(--clr-base-dark);
+  color: var(--dark);
+  padding: 2.5rem 2rem;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 400px;
+  transition: all 0.3s ease;
+  margin-bottom: 1.5rem;
+  cursor: pointer;
+}
+
+.features__card:hover {
+  background-color: var(--clr-lime-green);
+}
+
+.features__card:hover .card__number {
+  display: none;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.features__card:hover .card__title,
+.features__card:hover .card__description,
+.features__card:hover .card__details-link {
+  opacity: 1;
+}
+
+.features__card:hover .card__action-btn {
+  top: -20%;
+  transform: translate(-50%, 35%) rotate(0deg);
+  background-color: var(--clr-base-dark);
+}
+
+.features__card:hover .card__action-btn svg {
+    transform: translateY(15px) rotate(180deg);
+}
+
+.features__card:hover .card__action-btn svg path{
+    fill: var(--white);
+}
+
+.card__title {
+  color: var(--dark);
+  font-weight: 600;
+  font-size: 2rem;
+  line-height: 1.3;
+  max-width: 200px;
+  margin-bottom: 2rem;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.card__description,
+.card__details-link {
+  color: var(--dark);
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.6;
+  letter-spacing: 0.16px;
+  margin-bottom: 1rem;
+  padding: 2px 0;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.card__details-link {
+  color: inherit;
+  text-decoration: underline;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: opacity 0.4s ease;
+}
+
+.card__number {
+  color: #262F2E;
+  font-size: 6.25rem;
+  font-weight: 600;
+  line-height: 1.3;
+  letter-spacing: 0.5px;
+  text-align: center;
+  display: block;
+  transition: opacity 0.5s ease;
+}
+
+.card__action-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--clr-lime-green);
+  width: 118px;
+  height: 100px;
+  border-radius: 50%;
+  border: none;
+  position: absolute;
+  bottom: -25%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  transition: all 0.4s ease;
+
+}
+
+.card__action-btn svg {
+  transform: translateY(-15px);
+  transition: all 0.4s ease;
 }
 
 
@@ -3309,7 +3434,7 @@ img.testimonials-avatar.slider__avatar--active {
   }
 
   /* Hero Two Area */
-  .hero--two .hero__title{
+  .hero--two .hero__title {
     font-size: 5.5rem;
   }
 }
@@ -3334,19 +3459,13 @@ img.testimonials-avatar.slider__avatar--active {
   }
 
   /* Hero Two Area */
-  .hero--two .hero__title{
+  .hero--two .hero__title {
     font-size: 5rem;
   }
 
-  /* About Two Area */
-  .about--two::after {
-    content: "";
-    display: none;
-  }
-
   .about--two {
-  background: var(--clr-base-dark);
-}
+    background: var(--clr-base-dark);
+  }
 
   .about--two .about__title,
   .about--two .about__desc {
@@ -3409,8 +3528,13 @@ img.testimonials-avatar.slider__avatar--active {
     height: 2rem;
   }
 
+  /* Footer One Area */
+  .footer__bottom {
+    justify-content: space-around;
+  }
+
   /* Hero Two Area */
-  .hero--two .hero__title{
+  .hero--two .hero__title {
     font-size: 4.5rem;
   }
 }
@@ -3478,8 +3602,55 @@ img.testimonials-avatar.slider__avatar--active {
   }
 
   /* Hero Two Area */
-  .hero--two .hero__title{
+  .hero--two .hero__title {
     font-size: 3rem;
+  }
+
+  /* Team Two Area */
+  .team__main-expert {
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 0;
+    flex-direction: column-reverse;
+  }
+
+  .team__main-expert-image-wrapper {
+    margin-bottom: 1.5rem;
+  }
+
+  .team__main-expert-info {
+    text-align: center;
+  }
+
+  .team__small-expert-item {
+    margin-bottom: 0.5rem;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+  }
+
+  .team__small-experts {
+    flex-direction: row;
+  }
+
+  .team__main-expert-social {
+    justify-content: center;
+  }
+
+  .team__small-expert-image {
+    max-width: 80px;
+    max-height: 80px;
+  }
+
+  .team__small-experts {
+    gap: 5px;
+  }
+
+  .team__header-line {
+    margin: 0;
+  }
+
+  .team__explore-button-wrapper {
+    text-align: center;
   }
 }
 
@@ -3644,18 +3815,23 @@ img.testimonials-avatar.slider__avatar--active {
   }
 
   /* Footer One Area */
-  .footer--one .footer__copyright {
+  .footer__copyright {
     text-align: center;
   }
 
-  .footer--one .footer__nav-title,
-  .footer--one .footer__contact-title {
+  .footer__nav-title,
+  .footer__contact-title {
     font-size: 1.7rem;
   }
 
   /* Hero Two Area */
-  .hero--two .hero__title{
+  .hero--two .hero__title {
     font-size: 3.5rem;
+  }
+
+  /* About Two Area */
+  .about--two .arrow__btn {
+    transform: translateX(-50%);
   }
 
   /* Process Two Area */
@@ -3839,7 +4015,7 @@ img.testimonials-avatar.slider__avatar--active {
     font-size: 1.2rem;
   }
 
-  .hero--two .hero__title{
+  .hero--two .hero__title {
     font-size: 2.5rem;
   }
 
