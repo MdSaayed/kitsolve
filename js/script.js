@@ -467,6 +467,32 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
+/* =============================
+* 7. Pricing One Area
+============================= */
+document.addEventListener('DOMContentLoaded', () => {
+  const monthlyBtn = document.getElementById('monthlyBtn');
+  const yearlyBtn = document.getElementById('yearlyBtn');
+  const prices = document.querySelectorAll('.price');
+
+  monthlyBtn.addEventListener('click', () => {
+    prices.forEach(price => {
+      price.innerText = price.getAttribute('data-monthly');
+    });
+    monthlyBtn.classList.add('pricing__toggle-btn--active');
+    yearlyBtn.classList.remove('pricing__toggle-btn--active');
+  });
+
+  yearlyBtn.addEventListener('click', () => {
+    prices.forEach(price => {
+      price.innerText = price.getAttribute('data-yearly');
+    });
+    yearlyBtn.classList.add('pricing__toggle-btn--active');
+    monthlyBtn.classList.remove('pricing__toggle-btn--active');
+  });
+
+});
+
 
 
 
