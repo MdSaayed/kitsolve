@@ -1565,11 +1565,11 @@ img.testimonials-avatar.slider__avatar--active {
   position: relative;
 }
 
-.cta--two {
+.cta--style--two {
   background-color: var(--clr-base-dark);
 }
 
-.cta--one .cta__container {
+.cta__container {
   position: relative;
 }
 
@@ -1624,7 +1624,7 @@ img.testimonials-avatar.slider__avatar--active {
   max-width: 840px;
 }
 
-.faq--one .cta__shape {
+.cta__shape {
   height: 180px;
   width: 330px;
   right: -6rem;
@@ -1662,7 +1662,7 @@ img.testimonials-avatar.slider__avatar--active {
   border-color: var(--white);
 }
 
-.cta--two .cta__social-link {
+.cta--style--two .cta__social-link {
   color: var(--white);
 }
 
@@ -1678,7 +1678,7 @@ img.testimonials-avatar.slider__avatar--active {
   border-radius: 50%;
 }
 
-.cta--two .cta__social-link::before {
+.cta--style--two .cta__social-link::before {
   background-color: var(--white);
 }
 
@@ -2200,7 +2200,7 @@ img.testimonials-avatar.slider__avatar--active {
   column-gap: 2rem;
   row-gap: 1.5rem;
   margin-top: 3.5rem;
-  line-top: 1px solid #192221;
+  border-top: 1px solid #192221;
   padding-top: 3rem;
 }
 
@@ -3190,7 +3190,7 @@ img.testimonials-avatar.slider__avatar--active {
 /* =============================
 * 27. CTA Two Area
 ============================= */
-.cta--two {
+.cta--style--two {
   position: relative;
   background-color: var(--clr-base-dark);
   color: var(--white);
@@ -3209,11 +3209,11 @@ img.testimonials-avatar.slider__avatar--active {
   background: #141D1C;
 }
 
-.cta--two .cta__logo {
+.cta--style--two .cta__logo {
   margin: 0 auto;
 }
 
-.cta--two .cta__form {
+.cta--style--two .cta__form {
   margin-inline: auto;
   display: flex;
   justify-content: center;
@@ -3223,7 +3223,7 @@ img.testimonials-avatar.slider__avatar--active {
   flex-wrap: wrap;
 }
 
-.cta--two .cta__input {
+.cta--style--two .cta__input {
   flex: 1;
   padding: 18px 20px;
   border: none;
@@ -3234,7 +3234,7 @@ img.testimonials-avatar.slider__avatar--active {
   min-width: 390px;
 }
 
-.cta--two .cta__input::placeholder {
+.cta--style--two .cta__input::placeholder {
   color: var(--white);
   font-size: 1rem;
   font-weight: normal;
@@ -3279,7 +3279,7 @@ img.testimonials-avatar.slider__avatar--active {
 }
 
 .footer--two .footer__container>.footer__content,
-.footer--two .footer__container>.footer__bottom {
+.footer__container>.footer__bottom {
   position: relative;
   z-index: 10;
 }
@@ -3297,14 +3297,6 @@ img.testimonials-avatar.slider__avatar--active {
   background-repeat: no-repeat !important;
   background-position: bottom left !important;
 }
-
-
-
-
-
-
-
-
 
 
 
@@ -4180,6 +4172,76 @@ img.testimonials-avatar.slider__avatar--active {
 
 
 /* =============================
+* 2. CTA Four Area
+============================= */
+.cta--style-four .cta__container {
+  padding-bottom: 1rem;
+}
+
+.cta--style-four .cta__title {
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 1.3;
+  color: var(--white);
+}
+
+.cta--style-four .cta__box {
+  flex-direction: row;
+  background-color: transparent;
+  max-width: 100%;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.cta--style-four .cta__form {
+  margin: 0;
+}
+
+.cta--style-four .cta__title {
+  text-align: left;
+}
+
+.cta--style-four .cta__input {
+  background-color: #192221;
+}
+
+
+/* =============================
+* 2. Contact Area Four
+============================= */
+.contact--style-four .contact__form-wrapper {
+  position: static;
+  background: var(--white);
+  transform: translateY(0);
+  margin: 0 auto;
+  border: 1px solid #F1EEE6;
+}
+
+.contact--style-four .contact__info-title,
+.contact--style-four .contact__info-text{
+  max-width: 640px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.contact--style-four .contact__info{
+  background: transparent;
+}
+
+.contact--style-four .contact__info-cards{
+  background: var(--clr-deep-green);
+  padding: 2rem;
+  border-radius: 20px;
+  justify-content: center;
+}
+
+.contact--style-four .contact__info-card{
+  background: transparent;
+}
+
+
+/* =============================
 * 2. Responsive
 ============================= */
 
@@ -4777,7 +4839,7 @@ img.testimonials-avatar.slider__avatar--active {
   }
 
   /* CTA Two Area */
-  .cta--two .cta__input {
+  .cta--style--two .cta__input {
     min-width: 100%;
 
   }
@@ -4787,14 +4849,14 @@ img.testimonials-avatar.slider__avatar--active {
     overflow-wrap: break-word;
   }
 
-  .cta--two .cta__input {
+  .cta--style--two .cta__input {
     flex: 1;
     padding-left: 15px;
     padding-right: 0;
     font-size: 12px;
   }
 
-  .cta--two .cta__button {
+  .cta--style--two .cta__button {
     flex: 1;
     gap: 12px;
     padding: 16px 8px;
