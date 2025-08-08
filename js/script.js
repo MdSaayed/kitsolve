@@ -493,6 +493,59 @@ document.addEventListener('DOMContentLoaded', () => {
 
 });
 
+/* =============================
+* 7. Hero Two Area
+============================= */
+document.addEventListener("DOMContentLoaded", function () {
+  const thumbs = document.querySelectorAll('.hero__slider-thumb');
+  const mainImage = document.querySelector('.hero__slider-img');
+
+  thumbs.forEach(thumb => {
+    thumb.addEventListener('click', function () {
+      const newSrc = this.getAttribute('src');
+      mainImage.setAttribute('src', newSrc);
+    });
+  });
+});
+
+/* =============================
+* 7. Hero Three Area
+============================= */
+
+const hero_three_slider = new Swiper('#hero-three-slider', {
+  loop: true,
+  effect: 'coverflow',
+  grabCursor: true,
+  centeredSlides: true,
+  slidesPerView: 'auto',
+  spaceBetween: 32,
+  autoplay: true,
+  coverflowEffect: {
+    rotate: 45,
+    stretch: 0,
+    depth: 100,
+    modifier: 1,
+    slideShadows: false,
+  },
+
+  pagination: false,
+  navigation: false,
+  breakpoints: {
+    768: {
+      slidesPerView: 2,
+      coverflowEffect: {
+        rotate: 30,
+      },
+    },
+    992: {
+      slidesPerView: 5,
+      coverflowEffect: {
+        rotate: 15,
+      },
+    },
+  }
+});
+
 
 
 

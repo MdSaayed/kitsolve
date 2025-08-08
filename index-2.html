@@ -7,6 +7,8 @@
   <title>Kitsolve - Business Html Template</title>
   <!-- Favicon -->
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="./css/bootstrap.min.css">
   <!-- Fontawesome CSS -->
@@ -25,7 +27,7 @@
       <div class="hero__container container">
         <div class="hero__header">
           <div class="hero__title-wrap d-flex flex-wrap gap-4">
-            <h1 class="hero__title">CREATIVE AGENCY</h1>
+            <h1 class="hero__title title-xxl">CREATIVE AGENCY</h1>
             <img src="./img/hero/hero-1.png" alt="Hero Image" class="hero__img">
 
           </div>
@@ -36,7 +38,11 @@
         </div>
 
         <div class="hero__slider spacing-t">
-          <img src="./img//hero/hero-bg-4.png" alt="Hero Image w-100" class="hero__slider-img">
+            <div class="hero__slider-thumb-wrap d-flex flex-wrap gap-2">
+              <img class="hero__slider-thumb" src="./img/hero/hero-bg-5.png" alt="slider thumb">
+              <img class="hero__slider-thumb" src="./img/hero/hero-bg-6.png" alt="slider thumb">
+            </div>
+            <img class="hero__slider-img" src="./img/hero/hero-bg-4.png" alt="Hero Image">
         </div>
 
         <div class="stats stats--style--one">
@@ -1462,6 +1468,8 @@
     </div>
   </footer>
 
+
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
   <!-- GSAP JS -->
   <script src="./js/gsap.min.js"></script>
