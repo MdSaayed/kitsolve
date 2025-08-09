@@ -511,7 +511,6 @@ document.addEventListener("DOMContentLoaded", function () {
 /* =============================
 * 7. Hero Three Area
 ============================= */
-
 const hero_three_slider = new Swiper('#hero-three-slider', {
   loop: true,
   effect: 'coverflow',
@@ -544,6 +543,39 @@ const hero_three_slider = new Swiper('#hero-three-slider', {
       },
     },
   }
+});
+
+/* =============================
+* 7. Testimonials Four Area
+============================= */
+document.addEventListener('DOMContentLoaded', () => {
+    const navItems = document.querySelectorAll('.testimonials__nav-item');
+    const imageEl = document.querySelector('.testimonials__main-image');
+    const avatarEl = document.querySelector('.testimonials__avatar');
+    const textEl = document.querySelector('.testimonials__quote');
+    const authorEl = document.querySelector('.testimonials__author-name');
+    const titleEl = document.querySelector('.testimonials__author-role');
+
+    function updateContent(item) {
+        imageEl.src = item.dataset.image;
+        avatarEl.src = item.dataset.image;
+        textEl.textContent = item.dataset.text;
+        authorEl.textContent = `— ${item.dataset.author}`;
+        titleEl.textContent = item.dataset.title;
+    }
+
+    navItems.forEach(item => {
+        item.addEventListener('click', () => {
+            navItems.forEach(nav => nav.classList.remove('nav-item--active'));
+            item.classList.add('nav-item--active');
+            updateContent(item);
+        });
+    });
+
+    const defaultActive = document.querySelector('.testimonials__nav-item.nav-item--active');
+    if (defaultActive) {
+        updateContent(defaultActive);
+    }
 });
 
 
