@@ -22,6 +22,13 @@ document.addEventListener("DOMContentLoaded", function () {
 * 2. Hero Slider Home One
 ============================= */
 document.addEventListener("DOMContentLoaded", function () {
+  const bgSliderContainer = document.querySelector(".hero__bg-slider");
+  const heroSection = document.querySelector(".hero.hero--one");
+
+  if (!bgSliderContainer || !heroSection) {
+    return;
+  }
+
   const bgSlider = tns({
     container: ".hero__bg-slider",
     items: 1,
@@ -35,19 +42,19 @@ document.addEventListener("DOMContentLoaded", function () {
     mouseDrag: false,
     touch: false,
     speed: 1000,
-    slideBy: "page",
   });
 
-  const heroSection = document.querySelector(".hero.hero--one");
-
-  // Set background image based on current slide
   function updateHeroBackground(index) {
     const currentSlide = document.querySelectorAll(".hero__bg-slide")[index];
+    if (!currentSlide) return;
     const bg = currentSlide.getAttribute("data-bg");
-    heroSection.style.backgroundImage = `url(${bg})`;
+    if (bg) {
+      heroSection.style.backgroundImage = `url(${bg})`;
+    }
   }
 
   updateHeroBackground(bgSlider.getInfo().index);
+
   bgSlider.events.on("indexChanged", function (info) {
     updateHeroBackground(info.index);
   });
@@ -85,22 +92,38 @@ document.addEventListener("DOMContentLoaded", function () {
 * 2. Hero One testimonial Slide
 ============================= */
 document.addEventListener("DOMContentLoaded", function () {
-  var testimonialSlider = tns({
-    container: ".hero__testimonial-slider",
+  const container = document.querySelector(".hero__testimonial-slider");
+  const prevBtn = document.querySelector(".nav-prev");
+  const nextBtn = document.querySelector(".nav-next");
+
+  if (!container) {
+    return;
+  }
+
+  const testimonialSlider = tns({
+    container: container,
     autoHeight: true,
     items: 1,
     swipeAngle: false,
     speed: 400,
     nav: false,
     gutter: 20,
-    prevButton: document.querySelector(".nav-prev"),
-    nextButton: document.querySelector(".nav-next"),
+    prevButton: prevBtn || undefined,
+    nextButton: nextBtn || undefined,
   });
 });
 
 document.addEventListener("DOMContentLoaded", function () {
+  const container = document.querySelector(".about__flip-items");
+  const navContainer = document.querySelector(".about__flip-nav");
+
+  if (!container || !navContainer) {
+    // Required elements missing, do not initialize
+    return;
+  }
+
   const servicesFlip = tns({
-    container: ".about__flip-items",
+    container: container,
     items: 1,
     autoHeight: true,
     swipeAngle: false,
@@ -112,9 +135,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Get number of slides
   const slideCount = servicesFlip.getInfo().slideCount;
-
-  // Select nav container
-  const navContainer = document.querySelector(".about__flip-nav");
 
   // Generate nav dots dynamically
   for (let i = 0; i < slideCount; i++) {
@@ -140,7 +160,6 @@ document.addEventListener("DOMContentLoaded", function () {
     if (activeDot) activeDot.classList.add("active");
   });
 });
-
 
 /* =============================
 * 6. Faq One
@@ -176,11 +195,19 @@ document.querySelectorAll(".faq__toggle").forEach((toggle) => {
 });
 
 /* =============================
-* 6. Faq One
+* 6. Testimonials Three Area
 ============================= */
 document.addEventListener("DOMContentLoaded", function () {
+  const prevBtn = document.querySelector(".prev-btn");
+  const nextBtn = document.querySelector(".next-btn");
+  const sliderContainer = document.querySelector(".testimonial--slider-three");
+
+  if (!sliderContainer) {
+    return;
+  }
+
   const slider = tns({
-    container: ".my-slider",
+    container: sliderContainer,
     items: 1,
     slideBy: "page",
     autoplay: false,
@@ -191,19 +218,12 @@ document.addEventListener("DOMContentLoaded", function () {
     mouseDrag: true,
   });
 
-  const prevBtn = document.querySelector(".prev-btn");
-  const nextBtn = document.querySelector(".next-btn");
+  if (prevBtn) {
+    prevBtn.addEventListener("click", () => slider.goTo("prev"));
+  }
 
-  if (prevBtn && nextBtn && slider) {
-    prevBtn.addEventListener("click", () => {
-      slider.goTo("prev");
-    });
-
-    nextBtn.addEventListener("click", () => {
-      slider.goTo("next");
-    });
-  } else {
-    console.warn("Tiny Slider or buttons not found.");
+  if (nextBtn) {
+    nextBtn.addEventListener("click", () => slider.goTo("next"));
   }
 });
 
@@ -232,78 +252,80 @@ document.addEventListener("DOMContentLoaded", function () {
     },
   ];
 
-  const testimonialSliderContainer = document.getElementById("testimonialSlider");
+  const testimonialSliderContainer = document.getElementById("testimonial-slider-three");
   const prevImageElement = document.getElementById("prevImage");
   const activeAvatarElements = document.getElementById("slide__avatar-active");
 
-  // Populate testimonial cards
-  testimonials?.forEach((testimonial, index) => {
-    const cardHtml = `
-      <div class="testimonial-card">
-        <div class="testimonial-card__content">
-          <p class="testimonial-card__text">${testimonial?.text}</p>
-          <div class="testimonials-card-avatar">
-            <img class="testimonials-avatar slider__avatar--active" src="${testimonial?.imageUrl}" alt=${testimonial?.author} />
+  if (testimonialSliderContainer) {
+    testimonials.forEach((testimonial) => {
+      const cardHtml = `
+        <div class="testimonial-card">
+          <div class="testimonial-card__content">
+            <p class="testimonial-card__text">${testimonial.text}</p>
+            <div class="testimonials-card-avatar">
+              <img class="testimonials-avatar slider__avatar--active" src="${testimonial.imageUrl}" alt="${testimonial.author}" />
+            </div>
+            <p class="testimonial-card__author">— ${testimonial.author}</p>
+            <p class="testimonial-card__title">${testimonial.title}</p>
           </div>
-          <p class="testimonial-card__author">— ${testimonial?.author}</p>
-          <p class="testimonial-card__title">${testimonial?.title}</p>
+          <div class="testimonial-card__quote quote--three">
+            <svg width="49" height="35" viewBox="0 0 49 35" fill="none">
+              <path d="M3.90324 34.2857H14.189L21.0461 20.5714V0H0.47467V20.5714H10.7604L3.90324 34.2857ZM31.3318 34.2857H41.6175L48.4747 20.5714V0H27.9032V20.5714H38.189L31.3318 34.2857Z" fill="black" />
+            </svg>
+          </div>
         </div>
-        <div class="testimonial-card__quote quote--three">
-          <svg width="49" height="35" viewBox="0 0 49 35" fill="none">
-            <path d="M3.90324 34.2857H14.189L21.0461 20.5714V0H0.47467V20.5714H10.7604L3.90324 34.2857ZM31.3318 34.2857H41.6175L48.4747 20.5714V0H27.9032V20.5714H38.189L31.3318 34.2857Z" fill="black" />
-          </svg>
-        </div>
-      </div>
-    `;
-    testimonialSliderContainer.insertAdjacentHTML("beforeend", cardHtml);
-  });
+      `;
+      testimonialSliderContainer.insertAdjacentHTML("beforeend", cardHtml);
+    });
 
-  // Initialize Tiny Slider
-  const slider = tns({
-    container: "#testimonialSlider",
-    items: 1,
-    slideBy: "page",
-    autoplay: false,
-    controls: false,
-    nav: false,
-    loop: true,
-    speed: 400,
-  });
+    const slider = tns({
+      container: "#testimonial-slider-three",
+      items: 1,
+      slideBy: "page",
+      autoplay: false,
+      controls: false,
+      nav: false,
+      loop: true,
+      speed: 400,
+    });
 
-  const prevButton = document.getElementById("prevButton");
-  const nextButton = document.getElementById("nextButton");
+    const prevButton = document.getElementById("prevButton");
+    const nextButton = document.getElementById("nextButton");
 
-  function updatePreviewImages(info) {
-    const displayIndex = (info?.displayIndex || 1) - 1;
-    const currentIndex = displayIndex >= testimonials?.length ? 0 : displayIndex;
-    const totalSlides = testimonials?.length;
+    function updatePreviewImages(info) {
+      const displayIndex = (info?.displayIndex || 1) - 1;
+      const currentIndex = displayIndex >= testimonials.length ? 0 : displayIndex;
+      const totalSlides = testimonials.length;
+      const prevIndex = (currentIndex - 1 + totalSlides) % totalSlides;
 
-    const prevIndex = (currentIndex - 1 + totalSlides) % totalSlides;
-
-    if (prevImageElement) {
-      prevImageElement.src = testimonials[prevIndex].imageUrl;
+      if (prevImageElement) {
+        prevImageElement.src = testimonials[prevIndex].imageUrl;
+      }
+      if (activeAvatarElements) {
+        activeAvatarElements.src = testimonials[currentIndex].imageUrl;
+      }
     }
 
-    if (activeAvatarElements) {
-      activeAvatarElements.src = testimonials[currentIndex]?.imageUrl;
-    }
+    updatePreviewImages({ index: slider.getInfo().index });
+
+    prevButton?.addEventListener("click", () => slider.goTo("prev"));
+    nextButton?.addEventListener("click", () => slider.goTo("next"));
+
+    slider.events.on("indexChanged", updatePreviewImages);
   }
-
-
-  updatePreviewImages({ index: slider.getInfo().index });
-
-  prevButton?.addEventListener("click", () => slider.goTo("prev"));
-  nextButton?.addEventListener("click", () => slider.goTo("next"));
-
-  slider.events.on("indexChanged", updatePreviewImages);
 });
 
 /* =============================
 * 6. Testimonials One Area
 ============================= */
 document.addEventListener("DOMContentLoaded", function () {
+  const sliderContainer = document.querySelector(".testimonials-two-slider");
+  if (!sliderContainer) {
+    return;
+  }
+
   const testimonialsTwo = tns({
-    container: ".testimonials-two-slider",
+    container: sliderContainer,
     items: 3,
     slideBy: 1,
     controls: false,
@@ -337,7 +359,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
-
   function updateCenterSlide() {
     const slides = document.querySelectorAll(".testimonials__item");
     slides.forEach(slide => slide.classList.remove("is-center"));
@@ -350,16 +371,14 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
-
   // Call once after slider starts
   setTimeout(updateCenterSlide, 0);
 
   // Also update when slide changes
-  document.querySelector('.testimonials-two-slider').addEventListener('transitionend', () => {
+  sliderContainer.addEventListener('transitionend', () => {
     updateCenterSlide();
   });
 });
-
 
 /* =============================
 * 6. Team Two Area
@@ -370,7 +389,10 @@ document.addEventListener('DOMContentLoaded', () => {
   const mainExpertName = document.getElementById('mainExpertName');
   const smallExpertsContainer = document.getElementById('smallExpertsContainer');
 
-  // Team data array of objects
+  if (!mainExpertImage || !mainExpertRole || !mainExpertName || !smallExpertsContainer) {
+    return;
+  }
+
   const teamMembers = [
     {
       id: 'leslie',
@@ -426,23 +448,19 @@ document.addEventListener('DOMContentLoaded', () => {
     },
   ];
 
-  // Function to update the main expert's details
   function updateMainExpert(member) {
     mainExpertImage.src = member.image;
     mainExpertImage.alt = member.name;
     mainExpertName.textContent = member.name;
     mainExpertRole.textContent = member.role;
-    // You can also update social links here if they vary per member
-    // For simplicity, current social links are static in HTML
   }
 
-  // Function to render thumbnails from the teamMembers array
   function renderThumbnails() {
-    smallExpertsContainer.innerHTML = ''; // Clear existing thumbnails
+    smallExpertsContainer.innerHTML = '';
     teamMembers.forEach(member => {
       const thumbnailDiv = document.createElement('div');
       thumbnailDiv.classList.add('team__small-expert-item');
-      thumbnailDiv.dataset.id = member.id; // Store member ID for easy lookup
+      thumbnailDiv.dataset.id = member.id;
 
       const thumbnailImg = document.createElement('img');
       thumbnailImg.src = member.thumbnail;
@@ -452,20 +470,17 @@ document.addEventListener('DOMContentLoaded', () => {
       thumbnailDiv.appendChild(thumbnailImg);
       smallExpertsContainer.appendChild(thumbnailDiv);
 
-      // Add click event listener to each dynamically created thumbnail
       thumbnailDiv.addEventListener('click', () => {
         updateMainExpert(member);
       });
     });
   }
 
-  // Initial rendering of thumbnails and setting the first expert
   renderThumbnails();
   if (teamMembers.length > 0) {
-    updateMainExpert(teamMembers[0]); // Set the first member as default
+    updateMainExpert(teamMembers[0]);
   }
 });
-
 
 /* =============================
 * 7. Pricing One Area
@@ -475,22 +490,25 @@ document.addEventListener('DOMContentLoaded', () => {
   const yearlyBtn = document.getElementById('yearlyBtn');
   const prices = document.querySelectorAll('.price');
 
-  monthlyBtn.addEventListener('click', () => {
-    prices.forEach(price => {
-      price.innerText = price.getAttribute('data-monthly');
+  if (monthlyBtn) {
+    monthlyBtn.addEventListener('click', () => {
+      prices.forEach(price => {
+        price.innerText = price.getAttribute('data-monthly');
+      });
+      monthlyBtn.classList.add('pricing__toggle-btn--active');
+      if (yearlyBtn) yearlyBtn.classList.remove('pricing__toggle-btn--active');
     });
-    monthlyBtn.classList.add('pricing__toggle-btn--active');
-    yearlyBtn.classList.remove('pricing__toggle-btn--active');
-  });
+  }
 
-  yearlyBtn.addEventListener('click', () => {
-    prices.forEach(price => {
-      price.innerText = price.getAttribute('data-yearly');
+  if (yearlyBtn) {
+    yearlyBtn.addEventListener('click', () => {
+      prices.forEach(price => {
+        price.innerText = price.getAttribute('data-yearly');
+      });
+      yearlyBtn.classList.add('pricing__toggle-btn--active');
+      if (monthlyBtn) monthlyBtn.classList.remove('pricing__toggle-btn--active');
     });
-    yearlyBtn.classList.add('pricing__toggle-btn--active');
-    monthlyBtn.classList.remove('pricing__toggle-btn--active');
-  });
-
+  }
 });
 
 /* =============================
@@ -549,34 +567,76 @@ const hero_three_slider = new Swiper('#hero-three-slider', {
 * 7. Testimonials Four Area
 ============================= */
 document.addEventListener('DOMContentLoaded', () => {
-    const navItems = document.querySelectorAll('.testimonials__nav-item');
-    const imageEl = document.querySelector('.testimonials__main-image');
-    const avatarEl = document.querySelector('.testimonials__avatar');
-    const textEl = document.querySelector('.testimonials__quote');
-    const authorEl = document.querySelector('.testimonials__author-name');
-    const titleEl = document.querySelector('.testimonials__author-role');
+  const navItems = document.querySelectorAll('.testimonials__nav-item');
+  const imageEl = document.querySelector('.testimonials__main-image');
+  const avatarEl = document.querySelector('.testimonials__avatar');
+  const textEl = document.querySelector('.testimonials__quote');
+  const authorEl = document.querySelector('.testimonials__author-name');
+  const titleEl = document.querySelector('.testimonials__author-role');
 
-    function updateContent(item) {
-        imageEl.src = item.dataset.image;
-        avatarEl.src = item.dataset.image;
-        textEl.textContent = item.dataset.text;
-        authorEl.textContent = `— ${item.dataset.author}`;
-        titleEl.textContent = item.dataset.title;
-    }
+  function updateContent(item) {
+    imageEl.src = item.dataset.image;
+    avatarEl.src = item.dataset.image;
+    textEl.textContent = item.dataset.text;
+    authorEl.textContent = `— ${item.dataset.author}`;
+    titleEl.textContent = item.dataset.title;
+  }
 
-    navItems.forEach(item => {
-        item.addEventListener('click', () => {
-            navItems.forEach(nav => nav.classList.remove('nav-item--active'));
-            item.classList.add('nav-item--active');
-            updateContent(item);
-        });
+  navItems.forEach(item => {
+    item.addEventListener('click', () => {
+      navItems.forEach(nav => nav.classList.remove('nav-item--active'));
+      item.classList.add('nav-item--active');
+      updateContent(item);
     });
+  });
 
-    const defaultActive = document.querySelector('.testimonials__nav-item.nav-item--active');
-    if (defaultActive) {
-        updateContent(defaultActive);
-    }
+  const defaultActive = document.querySelector('.testimonials__nav-item.nav-item--active');
+  if (defaultActive) {
+    updateContent(defaultActive);
+  }
 });
+
+/* =============================
+* 7. Testimonials Four Area
+============================= */
+document.addEventListener('DOMContentLoaded', function () {
+  const testimonialSlider = tns({
+    container: "#portfolio-three-slider",
+    autoHeight: true,
+    items: 1,
+    swipeAngle: false,
+    speed: 400,
+    nav: true,
+    controls: false,
+    gutter: 20,
+    loop: true,
+    rewind: false,
+    mouseDrag: true,
+    items: 1,
+    responsive: {
+      767: {
+        nav: false,
+        edgePadding: 80
+      },
+      992: {
+        edgePadding: 100
+      },
+      1200: {
+        edgePadding: 150
+      },
+      1600: {
+        edgePadding: 300
+      },
+      1700: {
+        edgePadding: 400
+      }
+    },
+  });
+});
+
+
+
+
 
 
 
