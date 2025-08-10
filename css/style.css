@@ -4411,6 +4411,37 @@ img.testimonials-avatar.slider__avatar--active {
 
 
 /* =============================
+* 2. Pricing Two Area
+============================= */
+.pricing--style-two .pricing__card {
+  position: relative;
+}
+
+.pricing--style-two div:not(:last-child) .pricing__card::after {
+  content: "";
+  position: absolute;
+  top: -88px;
+  right: 0;
+  background-color: var(--clr-lime-green);
+  width: 45px;
+  height: 160px;
+  border-radius: 65px;
+  z-index: 1;
+}
+
+.pricing--style-two div:not(:last-child) .pricing__card::before {
+  content: "";
+  position: absolute;
+  top: -88px;
+  right: 45px;
+  background-color: var(--clr-lime-green);
+  width: 45px;
+  height: 190px;
+  border-radius: 65px;
+  z-index: 1;
+}
+
+/* =============================
 * 2. Responsive
 ============================= */
 
@@ -5113,6 +5144,18 @@ img.testimonials-avatar.slider__avatar--active {
 
   .contact--style-four .contact__info-cards {
     padding: 1rem 0;
+  }
+
+  /* Pricing Two Area */
+  .pricing--style-two div:not(:last-child) .pricing__card::before {
+    width: 30px;
+    right: 30px;
+    height: 140px;
+  }
+
+  .pricing--style-two div:not(:last-child) .pricing__card::after {
+    width: 30px;
+    height: 120px;
   }
 }
 
