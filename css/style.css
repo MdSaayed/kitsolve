@@ -4716,6 +4716,20 @@ div#portfolio-three-slider-ow {
 
 
 /* =============================
+* 2. About Three Area
+============================= */
+
+.about--style-three .about__title{
+  color: var(--dark);
+  margin-bottom: 1rem;
+}
+
+.about--style-three .about__desc{
+  font-size: 1rem;
+  color: var(--gray);
+}
+
+/* =============================
 * 2. Responsive
 ============================= */
 
