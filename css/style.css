@@ -3631,6 +3631,7 @@ img.testimonials-avatar.slider__avatar--active {
   padding: 12px;
   justify-content: end;
   align-items: center;
+  flex-wrap: wrap;
   gap: 15px;
   transition: background 0.4s ease;
 
@@ -4718,15 +4719,348 @@ div#portfolio-three-slider-ow {
 /* =============================
 * 2. About Three Area
 ============================= */
+.about--style-three {
+  background-color: #F1EEE6;
+  overflow: hidden;
+}
 
-.about--style-three .about__title{
+.about--style-three .about__title {
   color: var(--dark);
   margin-bottom: 1rem;
 }
 
-.about--style-three .about__desc{
+.about--style-three .about__desc {
   font-size: 1rem;
   color: var(--gray);
+}
+
+.about--style-three .slider__item,
+.about--style-three .about__slider {
+  position: relative;
+}
+
+.about--style-three .slider__inner {
+  padding-bottom: 40px;
+}
+
+.about__stats {
+  position: absolute;
+  right: 3rem;
+  bottom: 0;
+  z-index: 10;
+  background: rgba(0, 0, 0, 0.8);
+  color: var(--white);
+  padding: 1.5rem;
+  border-radius: 10px;
+  max-width: 250px;
+  width: 100%;
+}
+
+.about--style-three .stats__text {
+  font-size: 1rem;
+  margin: 0;
+}
+
+.about--style-three .stats__number {
+  font-size: 2.5rem;
+  font-weight: 600;
+  line-height: 1.3;
+  margin-top: 1rem;
+}
+
+.about--style-three .about__slider-nav {
+  position: absolute;
+  left: 0;
+  bottom: 40px;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  z-index: 10;
+}
+
+.about--style-three .nav-next,
+.about--style-three .nav-prev {
+  background: var(--clr-lime-green);
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  transition: background 0.4s ease;
+}
+
+.about--style-three .nav-next:hover,
+.about--style-three .nav-prev:hover {
+  background-color: var(--clr-deep-green);
+}
+
+.about--style-three .nav-next:hover svg path,
+.about--style-three .nav-prev:hover svg path {
+  fill: var(--clr-lime-green);
+}
+
+.about--style-three .nav-next {
+  background: var(--clr-deep-green);
+}
+
+.about--style-three .nav-next i,
+.about--style-three .nav-prev i {
+  font-size: 2rem;
+}
+
+.about--style-three .about__service-title-wrap {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.about--style-three .about__service-icon {
+  position: relative;
+  z-index: 10;
+}
+
+.about--style-three .about__service-icon::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: var(--clr-lime-green);
+  border-radius: 50%;
+  padding: 10px;
+  width: 40px;
+  height: 40px;
+  display: grid;
+  place-items: center;
+  z-index: 1;
+}
+
+.about--style-three .about__service-icon svg {
+  width: 25px;
+  height: 25px;
+  position: relative;
+  z-index: 10;
+}
+
+.about--style-three .about__service-title {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.1px;
+  max-width: 256px;
+}
+
+.about--style-three .about__item {
+  display: flex;
+  gap: 2rem;
+  font-size: 1rem;
+  color: var(--dark);
+  margin-bottom: 1rem;
+}
+
+.about--style-three .about__phone {
+  border: 1px solid var(--dark);
+  padding: 10px 1.5rem;
+  border-radius: 50px;
+  font-size: 20px;
+  font-weight: normal;
+  letter-spacing: 0.16px;
+  line-height: 1.6;
+  color: var(--dark);
+  text-decoration: none;
+  transform: rotate(330deg);
+}
+
+/* =============================
+* 2. Services Tag
+============================= */
+.services-tag .tag__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.services-tag .tag__item {
+  border: 0.5px solid var(--clr-lime-green);
+  box-shadow: 0 4px 0 0 var(--clr-lime-green);
+  padding: 1.5rem;
+  border-radius: 10px;
+  flex: 1 1 300px;
+}
+
+.services-tag .tag__icon {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  display: grid;
+  place-items: center;
+}
+
+.services-tag .tag__icon::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  transform: translate(-50%, -50%);
+  background: var(--clr-lime-green);
+  border-radius: 50%;
+  z-index: -1;
+}
+
+.services-tag .tag__text {
+  max-width: 320px;
+}
+
+.services-tag .tag__title {
+  font-size: 1.5em;
+  font-weight: 500;
+  line-height: 1.3;
+  letter-spacing: 0.12px;
+  margin-bottom: 1rem;
+}
+
+.services-tag .tag__desc {
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1.6;
+  letter-spacing: 0.16px;
+}
+
+/* =============================
+* 2. Hero Five Area
+============================= */
+.hero--style-five {
+  position: relative;
+  padding: 4rem 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+.hero--style-five .hero__overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: linear-gradient(270deg, rgba(13, 22, 21, 0.75) 0%, rgba(13, 22, 21, 0.95) 77.99%);
+}
+
+.hero--style-five .hero__content {
+  max-width: 1090px;
+  text-align: center;
+  margin: 0 auto;
+  color: var(--white);
+}
+
+.hero--style-five .hero__title {
+  color: var(--white);
+  max-width: 1090px;
+  margin-bottom: 1rem;
+}
+
+.hero--style-five .hero__desc {
+  max-width: 735px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.hero--style-five .hero__btn-wrap {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  column-gap: 3rem;
+  row-gap: 2rem;
+  margin-top: 2rem;
+}
+
+.video__btn {
+  background: transparent;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  text-decoration: none;
+}
+
+.video__btn span {
+  color: var(--white);
+  font-weight: 600;
+  font-size: 1.5rem;
+  line-height: 1.3;
+  letter-spacing: 0.16px;
+}
+
+.hero--style-five .hero-bg-slider__container {
+  padding-top: 0;
+  padding-bottom: 0;
+  position: relative;
+}
+
+.hero--style-five .hero-bg-slider__nav {
+  display: flex;
+  gap: 2rem;
+  position: absolute;
+  right: 5rem;
+  bottom: -4rem;
+  z-index: 15;
+}
+
+.hero--style-five .hero__bg-nav-prev,
+.hero--style-five .hero__bg-nav-next {
+  width: 60px;
+  height: 60px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background-color: var(--clr-lime-green);
+  cursor: pointer;
+}
+
+
+.hero--style-five .hero__bg-nav-prev:hover,
+.hero--style-five .hero__bg-nav-next:hover {
+  background-color: var(--clr-deep-green);
+}
+
+.hero--style-five .hero__bg-nav-prev:hover svg path,
+.hero--style-five .hero__bg-nav-next:hover svg path {
+  fill: var(--clr-lime-green);
+}
+
+.hero--style-five .hero__bg-nav-prev svg,
+.hero--style-five .hero__bg-nav-next svg {
+  width: 25px;
+}
+
+.hero--style-five .hero__bg-nav-next {
+  background: var(--clr-deep-green);
+}
+
+.hero--style-five .hero__bg-shape {
+  position: absolute;
+  max-width: 450px;
+  width: 100%;
+  max-height: 300px;
+  height: 100%;
+  background-size: contain !important;
+  background-repeat: no-repeat !important;
+  z-index: 1 !important;
+}
+
+.hero--style-five .hero__bg-shape--top {
+  top: -20px;
+  right: 0;
+}
+
+.hero--style-five .hero__bg-shape--bottom {
+  bottom: -20px;
+  left: 0;
 }
 
 /* =============================
@@ -4795,6 +5129,21 @@ div#portfolio-three-slider-ow {
   /* Process Three Area */
   .process--style-three .step__number {
     font-size: 7rem;
+  }
+
+  /* About Three Area */
+  .about--style-three .nav-next,
+  .about--style-three .nav-prev {
+    width: 50px;
+    height: 50px;
+  }
+
+  .about--style-three .about__slider-nav {
+    bottom: 60px;
+  }
+
+  .about--style-three .about__slider-nav svg {
+    width: 20px;
   }
 }
 
@@ -4899,6 +5248,28 @@ div#portfolio-three-slider-ow {
 
   .phone__number {
     display: none;
+  }
+
+  /* Hero Five Area */
+  .hero--style-five .hero__bg-nav-prev svg,
+  .hero--style-five .hero__bg-nav-next svg {
+    width: 20px;
+  }
+
+  .hero--style-five .hero__bg-nav-prev,
+  .hero--style-five .hero__bg-nav-next {
+    width: 40px;
+    height: 40px;
+  }
+
+  .hero--style-five .hero__bg-shape--bottom {
+    bottom: -95px;
+    left: 0;
+  }
+
+  .hero--style-five .hero__bg-shape--top {
+    top: -132px;
+    right: 0;
   }
 }
 
@@ -5344,6 +5715,19 @@ div#portfolio-three-slider-ow {
     width: 100px;
     height: 250px;
   }
+
+  /* Hero Five Area */
+  .hero--style-five {
+    padding: 2rem 0;
+  }
+
+  .hero--style-five .hero-bg-slider__nav {
+    display: none;
+  }
+
+  .hero--style-five .hero__bg-shape {
+    display: none;
+  }
 }
 
 @media (max-width: 576px) {
@@ -5498,6 +5882,23 @@ div#portfolio-three-slider-ow {
   .portfolio--style-three .portfolio__inner {
     padding: 1.5rem;
   }
+
+  /* About Three Area */
+  .about--style-three .about__stats {
+    display: none;
+  }
+
+  .about--style-three .slider__inner {
+    padding-bottom: 0;
+  }
+
+  .about--style-three .about__slider-nav {
+    bottom: 0px;
+  }
+
+  .about--style-three .about__phone {
+    transform: rotate(342deg);
+  }
 }
 
 @media (max-width: 350px) {
@@ -5535,5 +5936,23 @@ div#portfolio-three-slider-ow {
   /* Contact One Area */
   .contact__heading {
     font-size: 1.2rem;
+  }
+
+  /* About Three Area */
+  .about--style-three .nav-next,
+  .about--style-three .nav-prev {
+    width: 40px;
+    height: 40px;
+  }
+
+  /* Team Four Area */
+  .team__social-link {
+    width: 24px;
+    height: 24px;
+  }
+
+  .team--style-four .team__social-links {
+    gap: 8px;
+    padding: 10px;
   }
 }

@@ -113,12 +113,15 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+
+/* =============================
+* 2. About One Area
+============================= */
 document.addEventListener("DOMContentLoaded", function () {
   const container = document.querySelector(".about__flip-items");
   const navContainer = document.querySelector(".about__flip-nav");
 
   if (!container || !navContainer) {
-    // Required elements missing, do not initialize
     return;
   }
 
@@ -152,7 +155,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Update active class when slide changes
   servicesFlip.events.on("indexChanged", function (info) {
-    const currentIndex = info.displayIndex - 1; // displayIndex is 1-based
+    const currentIndex = info.displayIndex - 1;
     document.querySelectorAll(".nav-dot").forEach(dot => {
       dot.classList.remove("active");
     });
@@ -634,9 +637,76 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 });
 
+/* =============================
+* 7. About Three Area
+============================= */
+document.addEventListener("DOMContentLoaded", function () {
+  const container = document.querySelector(".about__slider-wrap");
+  const prevBtn = document.querySelector(".nav-prev");
+  const nextBtn = document.querySelector(".nav-next");
 
+  if (!container) {
+    return;
+  }
 
+  const testimonialSlider = tns({
+    container: container,
+    autoHeight: true,
+    items: 1,
+    swipeAngle: false,
+    speed: 400,
+    nav: false,
+    gutter: 20,
+    prevButton: prevBtn || undefined,
+    nextButton: nextBtn || undefined,
+  });
+});
 
+/* =============================
+* 7. Hero Five Area
+============================= */
+document.addEventListener("DOMContentLoaded", function () {
+  const bgSliderContainer = document.querySelector("#hero-bg-slider");
+  const heroSection = document.querySelector(".hero--style-five");
+  const prevBtn = document.querySelector(".hero__bg-nav-prev");
+  const nextBtn = document.querySelector(".hero__bg-nav-next");
+
+  if (!bgSliderContainer || !heroSection) {
+    return;
+  }
+
+  const bgSlider = tns({
+    container: "#hero-bg-slider",
+    items: 1,
+    slideBy: "page",
+    autoplay: true,
+    autoplayTimeout: 4000,
+    autoplayButtonOutput: false,
+    controls: true,
+    nav: false,
+    loop: true,
+    mouseDrag: false,
+    touch: false,
+    speed: 1000,
+    prevButton: prevBtn || undefined,
+    nextButton: nextBtn || undefined,
+  });
+
+  function updateHeroBackground(index) {
+    const currentSlide = document.querySelectorAll(".hero__bg-slide")[index];
+    if (!currentSlide) return;
+    const bg = currentSlide.getAttribute("data-bg");
+    if (bg) {
+      heroSection.style.backgroundImage = `url(${bg})`;
+    }
+  }
+
+  updateHeroBackground(bgSlider.getInfo().index);
+
+  bgSlider.events.on("indexChanged", function (info) {
+    updateHeroBackground(info.index);
+  });
+});
 
 
 
