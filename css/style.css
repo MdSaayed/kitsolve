@@ -242,7 +242,7 @@ p {
   transform: translateX(-50%);
 }
 
-.btn-square .line-right {
+.btn-square .border-right {
   position: absolute;
   top: 50%;
   right: 0;
@@ -285,7 +285,7 @@ p {
   background: var(--dark) !important;
 }
 
-.btn-square-black .line-right {
+.btn-square-black .border-right {
   background: var(--dark) !important;
 }
 
@@ -1223,7 +1223,7 @@ p {
 .slider__preview,
 .slider__active-img {
   width: 280px;
-  height: 350px;
+  height: auto;
   position: relative;
   overflow: hidden;
   border-radius: 10px;
@@ -1352,7 +1352,7 @@ img.testimonials-avatar.slider__avatar--active {
 }
 
 .nav-buttons__btn:first-child {
-  line-right: 1px solid var(--dark);
+  border-right: 1px solid var(--dark);
   padding-right: 2rem;
 }
 
@@ -1691,6 +1691,7 @@ img.testimonials-avatar.slider__avatar--active {
 
 .team--one .team__title {
   max-width: 560px;
+  color: var(--white);
 }
 
 .team--one .team__grid {
@@ -3963,7 +3964,7 @@ img.testimonials-avatar.slider__avatar--active {
   background: var(--dark);
 }
 
-.btn-square-wrap-small .line-right {
+.btn-square-wrap-small .border-right {
   position: absolute;
   top: 50%;
   right: 0;
@@ -4018,7 +4019,7 @@ img.testimonials-avatar.slider__avatar--active {
 
 .product-benefits__item:hover .btn-square::after,
 .product-benefits__item:hover .btn-square::before,
-.product-benefits__item:hover .line-right,
+.product-benefits__item:hover .border-right,
 .product-benefits__item:hover .line-top,
 .product-benefits__item:hover .product-benefits__item-btn {
   background-color: var(--white);
@@ -4746,7 +4747,7 @@ div#portfolio-three-slider-ow {
   padding-bottom: 40px;
 }
 
-.about__stats {
+.about--style-three .about__stats {
   position: absolute;
   right: 3rem;
   bottom: 0;
@@ -5308,7 +5309,7 @@ div#portfolio-three-slider-ow {
   }
 
   /* Testimonials One Area */
-  .slider__preview {
+  .testimonials--one .slider__preview {
     display: none;
   }
 
@@ -5752,7 +5753,6 @@ div#portfolio-three-slider-ow {
   }
 
   /* Pricing Area */
-
   .pricing__toggle-btn {
     padding: 8px 16px;
   }
@@ -5867,7 +5867,7 @@ div#portfolio-three-slider-ow {
 
   /* Process One Area */
   .process__item {
-    min-width: fit-content;
+    min-width: 400px;
     padding: 3rem 2rem;
   }
 
@@ -6048,7 +6048,7 @@ div#portfolio-three-slider-ow {
 
   /* Process One Area */
   .process--one .process__item {
-    min-width: min-content;
+    min-width: 230px;
   }
 
   /* Contact One Area */

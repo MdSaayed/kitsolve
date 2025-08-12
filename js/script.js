@@ -19,11 +19,11 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 /* =============================
-* 2. Hero Slider Home One
+* 2. Hero Bg Home One
 ============================= */
 document.addEventListener("DOMContentLoaded", function () {
   const bgSliderContainer = document.querySelector(".hero__bg-slider");
-  const heroSection = document.querySelector(".hero.hero--one");
+  const heroSection = document.querySelector(".hero--one");
 
   if (!bgSliderContainer || !heroSection) {
     return;
@@ -61,7 +61,32 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 /* =============================
-* 2. Portfolio One
+* 2. Hero One testimonial Area
+============================= */
+document.addEventListener("DOMContentLoaded", function () {
+  const container = document.querySelector(".hero__testimonial-slider");
+  const prevBtn = document.querySelector(".nav-prev");
+  const nextBtn = document.querySelector(".nav-next");
+
+  if (!container) {
+    return;
+  }
+
+  const testimonialSlider = tns({
+    container: container,
+    autoHeight: true,
+    items: 1,
+    swipeAngle: false,
+    speed: 400,
+    nav: false,
+    gutter: 20,
+    prevButton: prevBtn || undefined,
+    nextButton: nextBtn || undefined,
+  });
+});
+
+/* =============================
+* 2. Portfolio One Area
 ============================= */
 document.addEventListener("DOMContentLoaded", function () {
   const items = document.querySelectorAll(".portfolio-list__item");
@@ -89,32 +114,6 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 /* =============================
-* 2. Hero One testimonial Slide
-============================= */
-document.addEventListener("DOMContentLoaded", function () {
-  const container = document.querySelector(".hero__testimonial-slider");
-  const prevBtn = document.querySelector(".nav-prev");
-  const nextBtn = document.querySelector(".nav-next");
-
-  if (!container) {
-    return;
-  }
-
-  const testimonialSlider = tns({
-    container: container,
-    autoHeight: true,
-    items: 1,
-    swipeAngle: false,
-    speed: 400,
-    nav: false,
-    gutter: 20,
-    prevButton: prevBtn || undefined,
-    nextButton: nextBtn || undefined,
-  });
-});
-
-
-/* =============================
 * 2. About One Area
 ============================= */
 document.addEventListener("DOMContentLoaded", function () {
@@ -136,10 +135,8 @@ document.addEventListener("DOMContentLoaded", function () {
     nav: false,
   });
 
-  // Get number of slides
   const slideCount = servicesFlip.getInfo().slideCount;
 
-  // Generate nav dots dynamically
   for (let i = 0; i < slideCount; i++) {
     const dot = document.createElement("button");
     dot.classList.add("nav-dot");
@@ -147,7 +144,6 @@ document.addEventListener("DOMContentLoaded", function () {
     dot.setAttribute("data-slide", i);
     navContainer.appendChild(dot);
 
-    // Add click event
     dot.addEventListener("click", function () {
       servicesFlip.goTo(i);
     });
@@ -165,7 +161,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 /* =============================
-* 6. Faq One
+* 6. Faq One Area
 ============================= */
 document.querySelectorAll(".faq__toggle").forEach((toggle) => {
   toggle.addEventListener("click", function () {
@@ -198,39 +194,6 @@ document.querySelectorAll(".faq__toggle").forEach((toggle) => {
 });
 
 /* =============================
-* 6. Testimonials Three Area
-============================= */
-document.addEventListener("DOMContentLoaded", function () {
-  const prevBtn = document.querySelector(".prev-btn");
-  const nextBtn = document.querySelector(".next-btn");
-  const sliderContainer = document.querySelector(".testimonial--slider-three");
-
-  if (!sliderContainer) {
-    return;
-  }
-
-  const slider = tns({
-    container: sliderContainer,
-    items: 1,
-    slideBy: "page",
-    autoplay: false,
-    controls: false,
-    nav: false,
-    speed: 500,
-    gutter: 20,
-    mouseDrag: true,
-  });
-
-  if (prevBtn) {
-    prevBtn.addEventListener("click", () => slider.goTo("prev"));
-  }
-
-  if (nextBtn) {
-    nextBtn.addEventListener("click", () => slider.goTo("next"));
-  }
-});
-
-/* =============================
 * 6. Testimonials One Area
 ============================= */
 document.addEventListener("DOMContentLoaded", function () {
@@ -255,7 +218,7 @@ document.addEventListener("DOMContentLoaded", function () {
     },
   ];
 
-  const testimonialSliderContainer = document.getElementById("testimonial-slider-three");
+  const testimonialSliderContainer = document.getElementById("testimonials-one");
   const prevImageElement = document.getElementById("prevImage");
   const activeAvatarElements = document.getElementById("slide__avatar-active");
 
@@ -282,7 +245,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     const slider = tns({
-      container: "#testimonial-slider-three",
+      container: "#testimonials-one",
       items: 1,
       slideBy: "page",
       autoplay: false,
@@ -319,7 +282,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 /* =============================
-* 6. Testimonials One Area
+* 6. Testimonials Two Area
 ============================= */
 document.addEventListener("DOMContentLoaded", function () {
   const sliderContainer = document.querySelector(".testimonials-two-slider");
@@ -381,6 +344,40 @@ document.addEventListener("DOMContentLoaded", function () {
   sliderContainer.addEventListener('transitionend', () => {
     updateCenterSlide();
   });
+});
+
+
+/* =============================
+* 6. Testimonials Three Area
+============================= */
+document.addEventListener("DOMContentLoaded", function () {
+  const prevBtn = document.querySelector(".prev-btn");
+  const nextBtn = document.querySelector(".next-btn");
+  const sliderContainer = document.querySelector(".testimonial--slider-three");
+
+  if (!sliderContainer) {
+    return;
+  }
+
+  const slider = tns({
+    container: sliderContainer,
+    items: 1,
+    slideBy: "page",
+    autoplay: false,
+    controls: false,
+    nav: false,
+    speed: 500,
+    gutter: 20,
+    mouseDrag: true,
+  });
+
+  if (prevBtn) {
+    prevBtn.addEventListener("click", () => slider.goTo("prev"));
+  }
+
+  if (nextBtn) {
+    nextBtn.addEventListener("click", () => slider.goTo("next"));
+  }
 });
 
 /* =============================
@@ -600,7 +597,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 /* =============================
-* 7. Testimonials Four Area
+* 7. Portfolio Three Area
 ============================= */
 document.addEventListener('DOMContentLoaded', function () {
   const testimonialSlider = tns({
