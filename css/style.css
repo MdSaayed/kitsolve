@@ -4146,12 +4146,15 @@ img.testimonials-avatar.slider__avatar--active {
   letter-spacing: 0.16px;
 }
 
+.hero--style-six .hero__bottom,
 .hero--three .hero__bottom {
   max-width: 1070px;
   margin-left: auto;
   margin-right: auto;
 }
 
+.hero--style-six .hero__rating,
+.hero--style-six .company__name,
 .hero--three .hero__rating,
 .hero--three .company__name {
   color: var(--white);
@@ -4161,6 +4164,7 @@ img.testimonials-avatar.slider__avatar--active {
   letter-spacing: 0.2px;
 }
 
+.hero--style-six .rating__text,
 .hero--three .rating__text {
   color: var(--white);
   font-size: 1.5rem;
@@ -4171,7 +4175,6 @@ img.testimonials-avatar.slider__avatar--active {
 .hero--three .hero__image-slider img {
   width: 100%;
 }
-
 
 /* =============================
 * 2. CTA Four Area
@@ -5064,6 +5067,89 @@ div#portfolio-three-slider-ow {
 }
 
 /* =============================
+* 2. Hero Six Area
+============================= */
+.hero--style-six {
+  background-color: var(--clr-base-dark);
+}
+
+.hero--style-six .hero__grid {
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.hero--style-six .hero__content {
+  padding: 2.5rem;
+  background: #1C2524;
+  border-radius: 30px;
+  flex: 1 1 550px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.hero--style-six .hero__subtitle {
+  color: var(--white);
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.6;
+  letter-spacing: 0.16px;
+  border-radius: 30px;
+  background: rgba(255, 255, 255, 0.06);
+  padding: 8px 24px;
+  display: inline-block;
+  text-align: center;
+}
+
+.hero--style-six .hero__title {
+  margin: 1.5rem 0;
+  font-size: 5rem;
+  font-weight: 600;
+  line-height: 1.3;
+  letter-spacing: 0.4px;
+  color: var(--white);
+  max-width: 730px;
+}
+
+.hero--style-six .hero__desc-wrap {
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.hero--style-six .hero__desc{
+  max-width: 540px;
+}
+
+.hero--style-six .hero__image-wrap {
+  border-radius: 30px;
+  overflow: hidden;
+  flex: 1 1 450px;
+  display: flex;
+  align-items: center;
+}
+
+.hero--style-six .hero__image-wrap img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.hero--style-six .hero__desc {
+  margin: 0;
+}
+
+
+.hero--style-six .hero__content-bg {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  max-height: 420px;
+  height: 100%;
+}
+
+/* =============================
 * 2. Responsive
 ============================= */
 
@@ -5144,6 +5230,11 @@ div#portfolio-three-slider-ow {
 
   .about--style-three .about__slider-nav svg {
     width: 20px;
+  }
+
+  /* Hero Six Area */
+  .hero--style-six .hero__title {
+    font-size: 4rem;
   }
 }
 
@@ -5270,6 +5361,11 @@ div#portfolio-three-slider-ow {
   .hero--style-five .hero__bg-shape--top {
     top: -132px;
     right: 0;
+  }
+
+  /* Hero Six Area */
+  .hero--style-six .hero__title {
+    font-size: 3rem;
   }
 }
 
@@ -5432,6 +5528,11 @@ div#portfolio-three-slider-ow {
   .process--style-three .step .step__bg-shape,
   .process--style-three .step .step__bg-shape::before {
     display: none;
+  }
+
+  /* Hero Six Area */
+  .hero--style-six .hero__title {
+    font-size: 2.5rem;
   }
 }
 
@@ -5716,6 +5817,14 @@ div#portfolio-three-slider-ow {
     height: 250px;
   }
 
+  /* Hero Three Area */
+  .hero--style-six .hero__rating,
+  .hero--style-six .company__name,
+  .hero--three .hero__rating,
+  .hero--three .company__name {
+    font-size: 1.5rem;
+  }
+
   /* Hero Five Area */
   .hero--style-five {
     padding: 2rem 0;
@@ -5898,6 +6007,15 @@ div#portfolio-three-slider-ow {
 
   .about--style-three .about__phone {
     transform: rotate(342deg);
+  }
+
+  /* Hero Six Area */
+  .hero--style-six .hero__title {
+    font-size: 2rem;
+  }
+
+  .hero--style-six .hero__content {
+    padding: 2rem 1.2rem;
   }
 }
 
