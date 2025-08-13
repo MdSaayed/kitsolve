@@ -2542,7 +2542,7 @@ img.testimonials-avatar.slider__avatar--active {
   color: var(--dark);
 }
 
-.portfolio--style-two .portfolio__card:nth-child(even)  {
+.portfolio--style-two .portfolio__card:nth-child(even) {
   background: var(--clr-deep-green);
   color: var(--white);
 }
@@ -2638,35 +2638,35 @@ img.testimonials-avatar.slider__avatar--active {
 /* =============================
 * 22. Testimonials Two Area
 ============================= */
-.testimonials--two {
+.testimonials--style-two {
   background-color: var(--clr-cream);
 }
 
-.testimonials--two .testimonials__container {
+.testimonials--style-two .testimonials__container {
   padding-left: 0;
   padding-right: 0;
 }
 
-.testimonials--two .testimonials__title {
+.testimonials--style-two .testimonials__title {
   color: var(--dark);
   text-align: center;
   max-width: 700px;
   margin: 0 auto;
 }
 
-.testimonials--two .testimonials__desc {
+.testimonials--style-two .testimonials__desc {
   max-width: 760px;
   text-align: center;
   margin: 0 auto;
   margin-top: 1rem;
 }
 
-.testimonials--two .testimonials__item {
+.testimonials--style-two .testimonials__item {
   padding: 8rem 0;
   transition: padding 0.4s ease;
 }
 
-.testimonials--two .testimonials__content {
+.testimonials--style-two .testimonials__content {
   display: block;
   border-radius: 10px;
   padding: 3rem 2rem;
@@ -2676,7 +2676,7 @@ img.testimonials-avatar.slider__avatar--active {
   transition: padding 0.4s ease, transform 0.4s ease;
 }
 
-.testimonials--two .testimonials__content::after {
+.testimonials--style-two .testimonials__content::after {
   position: absolute;
   content: "";
   bottom: 10px;
@@ -2692,7 +2692,7 @@ img.testimonials-avatar.slider__avatar--active {
   bottom: 5rem;
 }
 
-.testimonials--two .testimonials__text {
+.testimonials--style-two .testimonials__text {
   color: #4B4B4B;
 }
 
@@ -2700,7 +2700,7 @@ img.testimonials-avatar.slider__avatar--active {
   margin-top: 2rem;
 }
 
-.testimonials--two .testimonials__author {
+.testimonials--style-two .testimonials__author {
   font-size: 1.5rem;
   font-weight: 600;
   line-height: 1.3;
@@ -2708,14 +2708,14 @@ img.testimonials-avatar.slider__avatar--active {
   margin-top: 8px;
 }
 
-.testimonials--two .testimonials__position {
+.testimonials--style-two .testimonials__position {
   color: var(--dark);
   text-align: left;
   font-size: 1rem;
   font-weight: 400;
 }
 
-.testimonials--two .testimonials__author-img {
+.testimonials--style-two .testimonials__author-img {
   position: absolute;
   width: 72px;
   height: 72px;
@@ -2723,13 +2723,13 @@ img.testimonials-avatar.slider__avatar--active {
   overflow: hidden;
 }
 
-.testimonials--two .testimonials__item:nth-child(odd) .testimonials__author-img {
+.testimonials--style-two .testimonials__item:nth-child(odd) .testimonials__author-img {
   right: 0;
   top: 0;
   transform: translate(0, -100%);
 }
 
-.testimonials--two .testimonials__item:nth-child(even) .testimonials__author-img {
+.testimonials--style-two .testimonials__item:nth-child(even) .testimonials__author-img {
   left: 0;
   bottom: 0 !important;
   transform: translate(0, 100%);
@@ -2905,7 +2905,6 @@ img.testimonials-avatar.slider__avatar--active {
 }
 
 .team__small-expert-image {
-  border: 1px solid var(--white);
   padding: 3px;
   max-width: 120px;
   width: 100%;
@@ -2915,6 +2914,10 @@ img.testimonials-avatar.slider__avatar--active {
   display: block;
   transition: transform 0.4s ease;
   cursor: pointer;
+}
+
+.team__small-expert-image.active {
+  border: 1px solid var(--white);
 }
 
 .team__small-expert-image:hover {
@@ -2966,7 +2969,7 @@ img.testimonials-avatar.slider__avatar--active {
 /* =============================
 * 25. Contact Two Area
 ============================= */
-.contact--two {
+.contact--style-two {
   background: var(--clr-lime-green);
   overflow: hidden;
 }
@@ -3050,7 +3053,7 @@ img.testimonials-avatar.slider__avatar--active {
   margin-bottom: 0;
 }
 
-.contact--two .contact__form-wrapper {
+.contact--style-two .contact__form-wrapper {
   position: static;
   transform: translate(0);
   max-width: 100%;
@@ -3081,7 +3084,6 @@ img.testimonials-avatar.slider__avatar--active {
 .blog--style-two .blog__item {
   background-color: var(--white);
   display: flex;
-  flex-wrap: wrap;
   gap: 1rem;
   flex-direction: row;
   height: 100%;
@@ -3096,9 +3098,7 @@ img.testimonials-avatar.slider__avatar--active {
 }
 
 .blog--style-two .blog__thumb {
-  max-width: 320px;
-  max-height: 320px;
-  width: 100%;
+  max-height: 500px;
   overflow: hidden;
   border-radius: 10px;
 }
@@ -3142,6 +3142,7 @@ img.testimonials-avatar.slider__avatar--active {
   color: var(--dark);
   line-height: 1.3;
   letter-spacing: 0.12px;
+  max-width: 340px;
 }
 
 .blog--style-two .blog__excerpt {
@@ -3149,8 +3150,9 @@ img.testimonials-avatar.slider__avatar--active {
   font-size: 1rem;
   font-weight: normal;
   line-height: 1.6;
-  letter-spacing: 0.16p;
+  letter-spacing: 0.16px;
   flex-grow: 1;
+  max-width: 340px;
 }
 
 .blog--style-two .blog__footer {
@@ -3159,7 +3161,7 @@ img.testimonials-avatar.slider__avatar--active {
   align-items: center;
   margin-top: 1rem;
   font-size: 0.875rem;
-  line-top: 1px solid #F5F5F5;
+  border-top: 1px solid #F5F5F5;
   padding-top: 1rem;
 }
 
@@ -3282,17 +3284,17 @@ img.testimonials-avatar.slider__avatar--active {
 /* =============================
 * 28. Footer Two Area
 ============================= */
-.footer--two .footer__container {
+.footer--style-two .footer__container {
   position: relative;
 }
 
-.footer--two .footer__container>.footer__content,
+.footer--style-two .footer__container>.footer__content,
 .footer__container>.footer__bottom {
   position: relative;
   z-index: 10;
 }
 
-.footer--two .footer__shape {
+.footer--style-two .footer__shape {
   position: absolute;
   max-width: 400px;
   width: 100%;
@@ -3304,7 +3306,7 @@ img.testimonials-avatar.slider__avatar--active {
   background-position: bottom left !important;
 }
 
-.footer--two .footer__shape--left {
+.footer--style-two .footer__shape--left {
   bottom: 0;
   left: 0;
 }
@@ -5202,6 +5204,16 @@ div#portfolio-three-slider-ow {
     flex-direction: column;
   }
 
+  /* Blog Two Area */
+  .blog--style-two .blog__item {
+    flex-wrap: wrap;
+  }
+
+  .blog--style-two .blog__thumb {
+    width: 100%;
+    max-height: 400px;
+  }
+
   /* Product Benefit Area */
   .product-benefits__item .product-benefits__item-content {
     padding: 2.5rem;
@@ -5904,7 +5916,7 @@ div#portfolio-three-slider-ow {
 
   /* Process One Area */
   .process__item {
-    min-width: 250px ;
+    min-width: 250px;
     padding: 2rem !important;
   }
 

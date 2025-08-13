@@ -498,16 +498,29 @@ document.addEventListener('DOMContentLoaded', () => {
       smallExpertsContainer.appendChild(thumbnailDiv);
 
       thumbnailDiv.addEventListener('click', () => {
+        // Remove previous active
+        document.querySelectorAll('.team__small-expert-image.active').forEach(img => {
+          img.classList.remove('active');
+        });
+
+        // Add active to clicked thumbnail
+        thumbnailImg.classList.add('active');
+
+        // Update main expert
         updateMainExpert(member);
       });
     });
   }
 
   renderThumbnails();
+
   if (teamMembers.length > 0) {
     updateMainExpert(teamMembers[0]);
+    const firstImg = smallExpertsContainer.querySelector('.team__small-expert-image');
+    if (firstImg) firstImg.classList.add('active');
   }
 });
+
 
 /* =============================
 * 7. Pricing One Area
