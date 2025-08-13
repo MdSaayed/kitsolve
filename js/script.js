@@ -282,6 +282,34 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 /* =============================
+* 6. Portfolio Two Area
+============================= */
+document.addEventListener("DOMContentLoaded", function () {
+  tns({
+    container: "#portfolio-slider1",
+    items: 1,
+    mouseDrag: true,
+    swipeAngle: false,
+    speed: 500,
+    loop: true,
+    autoplay: true,
+    autoplayTimeout: 2000,
+    autoplayHoverPause: true,
+    autoplayButtonOutput: false,
+    mouseDrag: true,
+    swipeAngle: false,
+    controls: false,
+    nav: false,
+    responsive: {
+      576: { items: 1 },
+      768: { items: 2 },
+      992: { items: 3 },
+      1400: { items: 4 },
+    }
+  });
+});
+
+/* =============================
 * 6. Testimonials Two Area
 ============================= */
 document.addEventListener("DOMContentLoaded", function () {
@@ -345,7 +373,6 @@ document.addEventListener("DOMContentLoaded", function () {
     updateCenterSlide();
   });
 });
-
 
 /* =============================
 * 6. Testimonials Three Area
