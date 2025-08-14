@@ -1,6 +1,6 @@
 /*------------------------------------------------------------------
 Template Name: Maxfix – Digital Agency Portfolio HTML Template
-Template URL: https://extraordinary-fairy-c25c85.netlify.app
+Template URL: https://kitsolve.netlify.app
 Description: Maxfix is a next-generation HTML template converted from a premium Figma design, crafted for digital agencies, design studios, digital marketing agencies, personal portfolios, and creative professionals. It includes 14+ well-structured pages based on a 1770px grid system, featuring 2+ beautifully designed home pages. The codebase is clean, customizable, and organized for seamless editing and scalability across various business and personal website needs.
 Author: UiBazar
 Author URL: https://themeforest.net/user/kitdokan
@@ -534,6 +534,7 @@ p {
   position: relative;
   transition: background 0.3s;
   overflow: hidden;
+  cursor: pointer;
 }
 
 .portfolio-list__item::before {
@@ -3105,7 +3106,6 @@ img.testimonials-avatar.slider__avatar--active {
 
 .blog--style-two .blog__thumb img {
   width: 100%;
-  height: 100%;
   display: block;
   object-fit: cover;
 }
@@ -3198,6 +3198,29 @@ img.testimonials-avatar.slider__avatar--active {
   text-decoration: underline;
   color: var(--clr-deep-green);
   transition: color 0.3s ease;
+}
+
+.blog__item-related{
+  background: transparent !important;
+  height: auto !important;
+}
+
+.blog__item-related .blog__thumb{
+  max-width: 180px !important;
+  max-height: 130px !important;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+
+.blog__item-related .blog__item-title{
+  font-size: 1.2rem !important;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.blog__item-related  .blog__content{
+  padding: 5px !important;
 }
 
 /* =============================
@@ -3548,40 +3571,40 @@ img.testimonials-avatar.slider__avatar--active {
 /* =============================
 * 2. Contact Three Area
 ============================= */
-.contact--three {
+.contact--style-three {
   background: var(--white);
 }
 
-.contact--three .contact__col {
+.contact--style-three .contact__col {
   min-height: auto;
 }
 
-.contact--three .contact__form-wrapper {
+.contact--style-three .contact__form-wrapper {
   background: var(--white);
   position: static;
   transform: translate(0);
   max-width: 100%;
 }
 
-.contact--three .contact__info {
+.contact--style-three .contact__info {
   background: var(--white);
 }
 
-.contact--three .contact__info-card {
+.contact--style-three .contact__info-card {
   background: transparent;
   color: var(--dark);
   padding: 0;
 }
 
-.contact--three .contact__info-number {
+.contact--style-three .contact__info-number {
   color: var(--dark);
 }
 
-.contact--three .contact__info-icon-inner::before {
+.contact--style-three .contact__info-icon-inner::before {
   background: var(--dark);
 }
 
-.contact--three .contact__info-icon-inner svg path {
+.contact--style-three .contact__info-icon-inner svg path {
   fill: var(--clr-lime-green);
 }
 

@@ -1,7 +1,42 @@
+/*------------------------------------------------------------------
+Template Name: Kitsolve – Business Solution HTML Template
+Template URL: https://kitsolve.netlify.app
+Description: Kitsolve is a clean, modern, and fully responsive HTML template designed for corporate businesses, startups, creative agencies, IT services, consulting firms, SaaS platforms, software showcases, app landing pages, marketing agencies, and digital service providers. Built on a 1920px grid, it offers a clear visual hierarchy, organized sections, and reusable components for easy editing and rapid customization.
+Author: KitDokan
+Author URL: https://themeforest.net/user/kitdokan
+Version: 1.0
+-------------------------------------------------------------------
+
+JS INDEX
+===================
+
+1. Preloader
+2. Dynamically set BG
+3. Hero Bg Slider Home One
+4. Hero One testimonial Area
+5. Portfolio One Area
+6. About One Area
+7. Faq One Area
+8. Testimonials One Area
+9. Portfolio Two Area
+10. Testimonials Two Area
+11. Testimonials Three Area
+12. Team Two Area
+13. Pricing One Area
+14. Hero Two Area
+15. Hero Three Area
+16. Testimonials Four Area
+17. Portfolio Three Area
+18. About Three Area
+19. Hero Five Area
+
+------------------------------------------------------------------*/
+
+
 "use strict";
 
 /* =============================
-* 1. Dynamically set BG
+* 2. Dynamically set BG
 ============================= */
 document.addEventListener("DOMContentLoaded", function () {
   const bgDivs = document.querySelectorAll("[data-bg-img]");
@@ -19,7 +54,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 /* =============================
-* 2. Hero Bg Home One
+* 3. Hero Bg Slider Home One
 ============================= */
 document.addEventListener("DOMContentLoaded", function () {
   const bgSliderContainer = document.querySelector(".hero__bg-slider");
@@ -61,7 +96,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 /* =============================
-* 2. Hero One testimonial Area
+* 4. Hero One testimonial Area
 ============================= */
 document.addEventListener("DOMContentLoaded", function () {
   const container = document.querySelector(".hero__testimonial-slider");
@@ -86,7 +121,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 /* =============================
-* 2. Portfolio One Area
+* 5. Portfolio One Area
 ============================= */
 document.addEventListener("DOMContentLoaded", function () {
   const items = document.querySelectorAll(".portfolio-list__item");
@@ -114,7 +149,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 /* =============================
-* 2. About One Area
+* 6. About One Area
 ============================= */
 document.addEventListener("DOMContentLoaded", function () {
   const container = document.querySelector(".about__flip-items");
@@ -161,7 +196,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 /* =============================
-* 6. Faq One Area
+* 7. Faq One Area
 ============================= */
 document.querySelectorAll(".faq__toggle").forEach((toggle) => {
   toggle.addEventListener("click", function () {
@@ -194,7 +229,7 @@ document.querySelectorAll(".faq__toggle").forEach((toggle) => {
 });
 
 /* =============================
-* 6. Testimonials One Area
+* 8. Testimonials One Area
 ============================= */
 document.addEventListener("DOMContentLoaded", function () {
   const testimonials = [
@@ -282,7 +317,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 /* =============================
-* 6. Portfolio Two Area
+* 9. Portfolio Two Area
 ============================= */
 document.addEventListener("DOMContentLoaded", function () {
   const sliderEl = document.querySelector("#portfolio-slider1");
@@ -312,7 +347,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 /* =============================
-* 6. Testimonials Two Area
+* 10. Testimonials Two Area
 ============================= */
 document.addEventListener("DOMContentLoaded", function () {
   const sliderContainer = document.querySelector("#testimonials-two");
@@ -377,7 +412,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 /* =============================
-* 6. Testimonials Three Area
+* 11. Testimonials Three Area
 ============================= */
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -468,10 +503,8 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
-
-
 /* =============================
-* 6. Team Two Area
+* 12. Team Two Area
 ============================= */
 document.addEventListener('DOMContentLoaded', () => {
   const mainExpertImage = document.getElementById('mainExpertImage');
@@ -584,9 +617,8 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 });
 
-
 /* =============================
-* 7. Pricing One Area
+* 13. Pricing One Area
 ============================= */
 document.addEventListener('DOMContentLoaded', () => {
   const monthlyBtn = document.getElementById('monthlyBtn');
@@ -615,7 +647,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 /* =============================
-* 7. Hero Two Area
+* 14. Hero Two Area
 ============================= */
 document.addEventListener("DOMContentLoaded", function () {
   const thumbs = document.querySelectorAll('.hero__slider-thumb');
@@ -630,7 +662,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 /* =============================
-* 7. Hero Three Area
+* 15. Hero Three Area
 ============================= */
 const hero_three_slider = new Swiper('#hero-three-slider', {
   loop: true,
@@ -667,7 +699,7 @@ const hero_three_slider = new Swiper('#hero-three-slider', {
 });
 
 /* =============================
-* 7. Testimonials Four Area
+* 16. Testimonials Four Area
 ============================= */
 document.addEventListener('DOMContentLoaded', () => {
   const navItems = document.querySelectorAll('.testimonials__nav-item');
@@ -700,7 +732,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 /* =============================
-* 7. Portfolio Three Area
+* 17. Portfolio Three Area
 ============================= */
 document.addEventListener('DOMContentLoaded', function () {
   const portfolioSliderThree = document.getElementById("portfolio-three-slider");
@@ -741,7 +773,7 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 /* =============================
-* 7. About Three Area
+* 18. About Three Area
 ============================= */
 document.addEventListener("DOMContentLoaded", function () {
   const container = document.querySelector(".about__slider-wrap");
@@ -766,7 +798,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 /* =============================
-* 7. Hero Five Area
+* 19. Hero Five Area
 ============================= */
 document.addEventListener("DOMContentLoaded", function () {
   const bgSliderContainer = document.querySelector("#hero-bg-slider");
