@@ -1365,7 +1365,7 @@ img.testimonials-avatar.slider__avatar--active {
   background-color: var(--clr-deep-green);
 }
 
-.testimonials--one .testimonial-card__quote {
+.testimonials--style-one .testimonial-card__quote {
   position: absolute;
   top: 0;
   right: 0;
@@ -3481,7 +3481,7 @@ img.testimonials-avatar.slider__avatar--active {
 /* =============================
 * 2. Testimonials Three Area
 ============================= */
-.testimonials--three .testimonials__desc {
+.testimonials--style-three .testimonials__desc {
   font-size: 20px;
   font-weight: 500;
   line-height: 1.2;
@@ -3490,22 +3490,22 @@ img.testimonials-avatar.slider__avatar--active {
   max-width: 196px;
 }
 
-.testimonials--three .testimonials__body {
+.testimonials--style-three .testimonials__body {
   margin-top: 5rem;
   background: var(--white);
   border-radius: 20px;
 }
 
-.testimonials--three .testimonials__content {
+.testimonials--style-three .testimonials__content {
   max-width: 1100px;
   margin: 0 auto;
 }
 
-.testimonials--three .slider__active-img {
+.testimonials--style-three .slider__active-img {
   padding: 2rem 0 2rem 2rem;
 }
 
-.testimonials--three .quote--three {
+.testimonials--style-three .quote--three {
   position: absolute;
   bottom: 10px !important;
   right: 10px;
@@ -5372,7 +5372,7 @@ div#portfolio-three-slider-ow {
   }
 
   /* Testimonials One Area */
-  .testimonials--one .slider__preview {
+  .testimonials--style-one .slider__preview {
     display: none;
   }
 

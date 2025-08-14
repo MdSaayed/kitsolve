@@ -285,28 +285,30 @@ document.addEventListener("DOMContentLoaded", function () {
 * 6. Portfolio Two Area
 ============================= */
 document.addEventListener("DOMContentLoaded", function () {
-  tns({
-    container: "#portfolio-slider1",
-    items: 1,
-    mouseDrag: true,
-    swipeAngle: false,
-    speed: 500,
-    loop: true,
-    autoplay: true,
-    autoplayTimeout: 2000,
-    autoplayHoverPause: true,
-    autoplayButtonOutput: false,
-    mouseDrag: true,
-    swipeAngle: false,
-    controls: false,
-    nav: false,
-    responsive: {
-      576: { items: 1 },
-      768: { items: 2 },
-      992: { items: 3 },
-      1400: { items: 4 },
-    }
-  });
+  const sliderEl = document.querySelector("#portfolio-slider1");
+
+  if (sliderEl && typeof tns === "function") {
+    tns({
+      container: "#portfolio-slider1",
+      items: 1,
+      mouseDrag: true,
+      swipeAngle: false,
+      speed: 500,
+      loop: true,
+      autoplay: true,
+      autoplayTimeout: 2000,
+      autoplayHoverPause: true,
+      autoplayButtonOutput: false,
+      controls: false,
+      nav: false,
+      responsive: {
+        576: { items: 1 },
+        768: { items: 2 },
+        992: { items: 3 },
+        1400: { items: 4 },
+      }
+    });
+  }
 });
 
 /* =============================
@@ -377,35 +379,96 @@ document.addEventListener("DOMContentLoaded", function () {
 /* =============================
 * 6. Testimonials Three Area
 ============================= */
+
 document.addEventListener("DOMContentLoaded", function () {
-  const prevBtn = document.querySelector(".prev-btn");
-  const nextBtn = document.querySelector(".next-btn");
-  const sliderContainer = document.querySelector(".testimonial--slider-three");
+  const testimonials = [
+    {
+      text: "From the first consultation, I knew we were in capable hands. They handled our financial concerns with care and helped reduce unnecessary costs effectively. Their transparent communication, deep expertise, and consistent follow-through made the entire experience seamless, empowering our business with renewed financial confidence.",
+      author: "David K.",
+      title: "Managing Director",
+      imageUrl: "../img/testimonials/testimonials-1.png",
+    },
+    {
+      text: "Elevix transformed our marketing strategy with smart, data-driven insights. Their approach boosted our engagement, conversions, and overall brand performance quickly and efficiently. We saw measurable improvements across campaigns, channels, and long-term brand positioning, along with invaluable support that made implementation faster and results-driven.",
+      author: "Sarah L.",
+      title: "Marketing Lead",
+      imageUrl: "../img/testimonials/testimonials-2.png",
+    },
+    {
+      text: "Elevix delivered a solid, user-friendly software solution on time. Their attention to detail, reliability, and support exceeded our expectations throughout the development process. They provided regular updates, handled challenges with ease, and ensured that the final product aligned perfectly with our goals and vision.",
+      author: "Michael B.",
+      title: "CTO",
+      imageUrl: "../img/testimonials/testimonials-3.png",
+    },
+  ];
 
-  if (!sliderContainer) {
-    return;
-  }
+  const testimonialSliderContainer = document.getElementById("testimonial-slider-three");
+  const prevImageElement = document.getElementById("prevImage");
+  const activeAvatarElements = document.getElementById("slide__avatar-active");
+  const prevButton = document.getElementById("prevButton");
+  const nextButton = document.getElementById("nextButton");
 
-  const slider = tns({
-    container: sliderContainer,
-    items: 1,
-    slideBy: "page",
-    autoplay: false,
-    controls: false,
-    nav: false,
-    speed: 500,
-    gutter: 20,
-    mouseDrag: true,
-  });
+  if (testimonialSliderContainer) {
+    testimonials.forEach((testimonial) => {
+      testimonialSliderContainer.insertAdjacentHTML(
+        "beforeend",
+        `
+        <div class="testimonial-card">
+          <div class="testimonial-card__content">
+            <p class="testimonial-card__text">${testimonial.text}</p>
+            <div class="testimonials-card-avatar">
+              <img class="testimonials-avatar slider__avatar--active" src="${testimonial.imageUrl}" alt="${testimonial.author}" />
+            </div>
+            <p class="testimonial-card__author">— ${testimonial.author}</p>
+            <p class="testimonial-card__title">${testimonial.title}</p>
+          </div>
+          <div class="testimonial-card__quote quote--three">
+            <svg width="49" height="35" viewBox="0 0 49 35" fill="none">
+              <path d="M3.90324 34.2857H14.189L21.0461 20.5714V0H0.47467V20.5714H10.7604L3.90324 34.2857ZM31.3318 34.2857H41.6175L48.4747 20.5714V0H27.9032V20.5714H38.189L31.3318 34.2857Z" fill="black" />
+            </svg>
+          </div>
+        </div>
+        `
+      );
+    });
 
-  if (prevBtn) {
-    prevBtn.addEventListener("click", () => slider.goTo("prev"));
-  }
+    if (testimonialSliderContainer.children.length > 0 && typeof tns === "function") {
+      const slider = tns({
+        container: "#testimonial-slider-three",
+        items: 1,
+        slideBy: "page",
+        autoplay: false,
+        controls: false,
+        nav: false,
+        loop: true,
+        speed: 400,
+      });
 
-  if (nextBtn) {
-    nextBtn.addEventListener("click", () => slider.goTo("next"));
+      function updatePreviewImages(info) {
+        const displayIndex = (info?.displayIndex || 1) - 1;
+        const currentIndex = displayIndex >= testimonials.length ? 0 : displayIndex;
+        const totalSlides = testimonials.length;
+        const prevIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+
+        if (prevImageElement) {
+          prevImageElement.src = testimonials[prevIndex].imageUrl;
+        }
+        if (activeAvatarElements) {
+          activeAvatarElements.src = testimonials[currentIndex].imageUrl;
+        }
+      }
+
+      updatePreviewImages({ displayIndex: slider.getInfo().displayIndex });
+
+      prevButton?.addEventListener("click", () => slider.goTo("prev"));
+      nextButton?.addEventListener("click", () => slider.goTo("next"));
+
+      slider.events.on("indexChanged", updatePreviewImages);
+    }
   }
 });
+
+
 
 /* =============================
 * 6. Team Two Area
@@ -640,6 +703,9 @@ document.addEventListener('DOMContentLoaded', () => {
 * 7. Portfolio Three Area
 ============================= */
 document.addEventListener('DOMContentLoaded', function () {
+  const portfolioSliderThree = document.getElementById("portfolio-three-slider");
+  if (!portfolioSliderThree) return;
+  
   const testimonialSlider = tns({
     container: "#portfolio-three-slider",
     autoHeight: true,
