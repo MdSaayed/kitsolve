@@ -313,7 +313,7 @@ document.addEventListener("DOMContentLoaded", function () {
 * 6. Testimonials Two Area
 ============================= */
 document.addEventListener("DOMContentLoaded", function () {
-  const sliderContainer = document.querySelector(".testimonials-two-slider");
+  const sliderContainer = document.querySelector("#testimonials-two");
   if (!sliderContainer) {
     return;
   }
@@ -326,6 +326,8 @@ document.addEventListener("DOMContentLoaded", function () {
     nav: false,
     mouseDrag: true,
     speed: 600,
+    autoplay: true,
+    autoplayButtonOutput: false,
     loop: true,
     gutter: 32,
     edgePadding: 200,
@@ -354,24 +356,22 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   function updateCenterSlide() {
+    const info = testimonialsTwo.getInfo();
     const slides = document.querySelectorAll(".testimonials__item");
+
     slides.forEach(slide => slide.classList.remove("is-center"));
 
-    const activeSlides = document.querySelectorAll(".tns-slide-active");
-    const centerIndex = Math.floor(activeSlides.length / 2);
+    const visible = info.index;
+    const itemsVisible = info.items;
+    const centerIndex = visible + Math.floor(itemsVisible / 2);
 
-    if (activeSlides[centerIndex]) {
-      activeSlides[centerIndex].classList.add("is-center");
+    if (slides[centerIndex]) {
+      slides[centerIndex].classList.add("is-center");
     }
   }
 
-  // Call once after slider starts
-  setTimeout(updateCenterSlide, 0);
-
-  // Also update when slide changes
-  sliderContainer.addEventListener('transitionend', () => {
-    updateCenterSlide();
-  });
+  updateCenterSlide();
+  sliderContainer.addEventListener('transitionend', updateCenterSlide);
 });
 
 /* =============================

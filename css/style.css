@@ -3126,6 +3126,7 @@ img.testimonials-avatar.slider__avatar--active {
 
 .blog--style-two .blog__meta {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   font-size: 1rem;
   font-weight: normal;
@@ -3159,6 +3160,8 @@ img.testimonials-avatar.slider__avatar--active {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
   margin-top: 1rem;
   font-size: 0.875rem;
   border-top: 1px solid #F5F5F5;
@@ -3372,6 +3375,7 @@ img.testimonials-avatar.slider__avatar--active {
   line-height: 1.3;
   max-width: 200px;
   margin-bottom: 2rem;
+  margin-top: 1rem;
   opacity: 0;
   transition: opacity 0.5s ease;
 }
@@ -3973,7 +3977,7 @@ img.testimonials-avatar.slider__avatar--active {
   background: var(--dark);
 }
 
-.btn-square-wrap-small .border-right {
+.btn-square-wrap-small .line-right {
   position: absolute;
   top: 50%;
   right: 0;
@@ -4028,7 +4032,7 @@ img.testimonials-avatar.slider__avatar--active {
 
 .product-benefits__item:hover .btn-square::after,
 .product-benefits__item:hover .btn-square::before,
-.product-benefits__item:hover .border-right,
+.product-benefits__item:hover .line-right,
 .product-benefits__item:hover .line-top,
 .product-benefits__item:hover .product-benefits__item-btn {
   background-color: var(--white);
@@ -4088,7 +4092,11 @@ img.testimonials-avatar.slider__avatar--active {
 /* =============================
 * 2. Footer Three Area
 ============================= */
-.footer--three .footer__link-text {
+.footer--style-three .footer__container {
+  position: relative;
+}
+
+.footer--style-three .footer__link-text {
   color: var(--white) !important;
   font-size: 1.5rem;
   font-weight: 600;
@@ -4097,11 +4105,11 @@ img.testimonials-avatar.slider__avatar--active {
   margin-left: 10px;
 }
 
-.footer--three .footer__brand .footer__links {
+.footer--style-three .footer__brand .footer__links {
   margin-top: 2rem;
 }
 
-.footer--three .footer__brand .footer__link {
+.footer--style-three .footer__brand .footer__link {
   font-size: 18px;
   font-weight: 400;
   line-height: 1.6;
@@ -4126,27 +4134,47 @@ img.testimonials-avatar.slider__avatar--active {
   border-radius: 50%;
 }
 
-.footer--three .footer__bottom {
+.footer--style-three .footer__bottom {
   padding-top: 0;
+  border-top: 0;
+}
+
+.footer--style-three .footer__text-image {
+  position: absolute;
+  width: 350px;
+  height: 68px;
+  right: 150px;
+  bottom: 200px;
+  z-index: -1 !important;
 }
 
 /* =============================
 * 2. Hero Three Area
 ============================= */
-.hero--three {
+.hero--style-three {
   background: var(--clr-base-dark);
 }
 
-.hero--three .hero__content {
+.hero--style-three .hero__content {
   column-gap: 5rem;
   row-gap: 3rem;
 }
 
-.hero--three .hero__title {
+.hero--style-three .hero__title {
   max-width: 750px;
 }
 
-.hero--three .hero__desc {
+.hero--style-three .o-shape {
+  display: inline-block;
+  width: 120px;
+  height: 72px;
+  border: 18px solid var(--clr-lime-green);
+  border-radius: 50px;
+  box-sizing: border-box;
+  margin: 0 5px;
+}
+
+.hero--style-three .hero__desc {
   color: var(--white);
   margin: 0;
   max-width: 600px;
@@ -4157,7 +4185,7 @@ img.testimonials-avatar.slider__avatar--active {
 }
 
 .hero--style-six .hero__bottom,
-.hero--three .hero__bottom {
+.hero--style-three .hero__bottom {
   max-width: 1070px;
   margin-left: auto;
   margin-right: auto;
@@ -4165,8 +4193,8 @@ img.testimonials-avatar.slider__avatar--active {
 
 .hero--style-six .hero__rating,
 .hero--style-six .company__name,
-.hero--three .hero__rating,
-.hero--three .company__name {
+.hero--style-three .hero__rating,
+.hero--style-three .company__name {
   color: var(--white);
   font-size: 2.5rem;
   font-weight: 600;
@@ -4175,14 +4203,14 @@ img.testimonials-avatar.slider__avatar--active {
 }
 
 .hero--style-six .rating__text,
-.hero--three .rating__text {
+.hero--style-three .rating__text {
   color: var(--white);
   font-size: 1.5rem;
   font-weight: normal;
   line-height: 1.6;
 }
 
-.hero--three .hero__image-slider img {
+.hero--style-three .hero__image-slider img {
   width: 100%;
 }
 
@@ -5321,6 +5349,11 @@ div#portfolio-three-slider-ow {
     position: relative;
     bottom: -3rem;
   }
+
+  .hero--style-three .o-shape {
+    width: 110px;
+    height: 60px;
+  }
 }
 
 @media (max-width: 1200px) {
@@ -5467,6 +5500,13 @@ div#portfolio-three-slider-ow {
     font-size: 1.2rem;
   }
 
+  /* Hero Three Area */
+  .hero--style-three .o-shape {
+    width: 80px;
+    height: 42px;
+    border: 11px solid var(--clr-lime-green);
+  }
+
   /* Team Two Area */
   .team__main-expert {
     flex-direction: column;
@@ -5517,6 +5557,13 @@ div#portfolio-three-slider-ow {
   /* Team Three Area */
   .team--style-three .team__member-name {
     font-size: 1.2rem;
+  }
+
+  /* Footer Three Area */
+  .footer--style-three .footer__text-image {
+    height: 68px;
+    right: 100px;
+    bottom: 130px;
   }
 
   /* CTA Five Area */
@@ -5869,9 +5916,17 @@ div#portfolio-three-slider-ow {
   /* Hero Three Area */
   .hero--style-six .hero__rating,
   .hero--style-six .company__name,
-  .hero--three .hero__rating,
-  .hero--three .company__name {
+  .hero--style-three .hero__rating,
+  .hero--style-three .company__name {
     font-size: 1.5rem;
+  }
+
+  /* Footer Three Area */
+  .footer--style-three .footer__text-image {
+    height: 50px;
+    width: 257px;
+    right: 100px;
+    bottom: 128px;
   }
 
   /* Hero Five Area */
@@ -6133,6 +6188,14 @@ div#portfolio-three-slider-ow {
     height: 40px;
   }
 
+  /* About Three Area */
+  .footer--style-three .footer__text-image {
+    height: 40px;
+    width: 230px;
+    right: 4px;
+    bottom: 12px;
+  }
+
   /* Team Four Area */
   .team__social-link {
     width: 24px;
@@ -6142,5 +6205,11 @@ div#portfolio-three-slider-ow {
   .team--style-four .team__social-links {
     gap: 8px;
     padding: 10px;
+  }
+
+  .hero--style-three .o-shape {
+    width: 69px;
+    height: 34px;
+    border: 8px solid var(--clr-lime-green);
   }
 }
