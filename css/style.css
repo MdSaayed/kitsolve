@@ -38,7 +38,33 @@ CSS INDEX
 25. Contact Two Area
 26. Blog Two Area
 27. CTA Two Area
-28. 
+28. Footer Two Area
+
+29. Hero Three Area
+30. Features One Area
+31. Product Benefits Area
+32. Testimonials Three Area
+33. Pricing One Area
+34. Faq Three Area
+35. CTA Three Area
+36. Keywords Area
+37. Team Three Area
+38. Contact Three Area
+39. Blog Two Area
+40. Footer Three Area
+
+41. Hero Five Area
+42. Services Tag Area
+43. About Three Area
+44. Keywords Two Area
+45. Process Three Area
+46. Portfolio Three Area
+47. Pricing Two Area
+48. Testimonials Four Area
+49. Contact Four Area
+50. CTA Four Area
+51. Footer Four Area
+
 
 
 ------------------------------------------------------------------*/
@@ -1961,40 +1987,40 @@ img.testimonials-avatar.slider__avatar--active {
 /* =============================
 * 15. Blog One Area
 ============================= */
-.blog--one .blog__title {
+.blog--style-one .blog__title {
   text-align: left;
 }
 
-.blog--one .blog__desc {
+.blog--style-one .blog__desc {
   max-width: 540px;
   text-align: left;
   margin-left: 0;
 }
 
-.blog--one .blog__btn-icon svg {
+.blog--style-one .blog__btn-icon svg {
   margin-top: -2px;
 }
 
-.blog--one .blog__list {
+.blog--style-one .blog__list {
   margin-top: 5rem;
 }
 
-.blog--one .blog-card {
+.blog--style-one .blog-card {
   transition: transform 0.3s ease;
 }
 
-.blog--one .blog-card:hover {
+.blog--style-one .blog-card:hover {
   transform: translateY(-5px);
 }
 
-.blog--one .blog-card__image-wrap {
+.blog--style-one .blog-card__image-wrap {
   position: relative;
   overflow: hidden;
   max-width: 100%;
   max-height: 280px;
 }
 
-.blog--one .blog-card__image-wrap::before {
+.blog--style-one .blog-card__image-wrap::before {
   position: absolute;
   content: "";
   width: 100%;
@@ -2005,19 +2031,19 @@ img.testimonials-avatar.slider__avatar--active {
       #0d1615 100%);
 }
 
-.blog--one .blog-card__image {
+.blog--style-one .blog-card__image {
   display: block;
   object-fit: cover;
   width: 100%;
   height: 100%;
 }
 
-.blog--one .blog-card__meta {
+.blog--style-one .blog-card__meta {
   color: var(--gray);
   flex-wrap: wrap;
 }
 
-.blog--one .blog-card__action {
+.blog--style-one .blog-card__action {
   position: absolute;
   top: 1rem;
   left: 1rem;
@@ -2039,14 +2065,14 @@ img.testimonials-avatar.slider__avatar--active {
   padding: 0;
 }
 
-.blog--one .blog-card__plus-icon {
+.blog--style-one .blog-card__plus-icon {
   color: var(--dark);
   flex-shrink: 0;
   font-size: 14px;
   transition: transform 0.3s ease;
 }
 
-.blog--one .blog-card__readmore-text {
+.blog--style-one .blog-card__readmore-text {
   display: none;
   color: var(--dark);
   font-size: 1rem;
@@ -2058,29 +2084,29 @@ img.testimonials-avatar.slider__avatar--active {
   transition: opacity 0.3s ease, max-width 0.3s ease;
 }
 
-.blog--one .blog-card__action:hover {
+.blog--style-one .blog-card__action:hover {
   width: auto;
   padding: 0.5rem 1rem;
   width: 135px;
 }
 
-.blog--one .blog-card__action:hover .blog-card__readmore-text {
+.blog--style-one .blog-card__action:hover .blog-card__readmore-text {
   max-width: 200px;
   display: block;
 }
 
-.blog--one .blog-card__title-link {
+.blog--style-one .blog-card__title-link {
   text-decoration: none;
 }
 
-.blog--one .blog-card__title {
+.blog--style-one .blog-card__title {
   font-size: 1.5rem;
   line-height: 1.3;
   letter-spacing: 0.12px;
   color: var(--dark);
 }
 
-.blog--one .blog-card__excerpt {
+.blog--style-one .blog-card__excerpt {
   font-size: 0.95rem;
 }
 
@@ -2461,7 +2487,6 @@ img.testimonials-avatar.slider__avatar--active {
 
 .services--style-two .services__item {
   background: #F1EEE6;
-  /* padding: 2rem 3rem; */
   border-radius: 20px;
   position: relative;
 }
@@ -3200,12 +3225,12 @@ img.testimonials-avatar.slider__avatar--active {
   transition: color 0.3s ease;
 }
 
-.blog__item-related{
+.blog__item-related {
   background: transparent !important;
   height: auto !important;
 }
 
-.blog__item-related .blog__thumb{
+.blog__item-related .blog__thumb {
   max-width: 180px !important;
   max-height: 130px !important;
   width: 100%;
@@ -3213,13 +3238,13 @@ img.testimonials-avatar.slider__avatar--active {
   overflow: hidden;
 }
 
-.blog__item-related .blog__item-title{
+.blog__item-related .blog__item-title {
   font-size: 1.2rem !important;
   font-weight: 600;
   line-height: 1.3;
 }
 
-.blog__item-related  .blog__content{
+.blog__item-related .blog__content {
   padding: 5px !important;
 }
 
@@ -3338,7 +3363,73 @@ img.testimonials-avatar.slider__avatar--active {
 }
 
 /* =============================
-* 29. Features One
+* 29. Hero Three Area
+============================= */
+.hero--style-three {
+  background: var(--clr-base-dark);
+}
+
+.hero--style-three .hero__content {
+  column-gap: 5rem;
+  row-gap: 3rem;
+}
+
+.hero--style-three .hero__title {
+  max-width: 750px;
+}
+
+.hero--style-three .o-shape {
+  display: inline-block;
+  width: 120px;
+  height: 72px;
+  border: 18px solid var(--clr-lime-green);
+  border-radius: 50px;
+  box-sizing: border-box;
+  margin: 0 5px;
+}
+
+.hero--style-three .hero__desc {
+  color: var(--white);
+  margin: 0;
+  max-width: 600px;
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+  font-weight: 400;
+  letter-spacing: 0.16px;
+}
+
+.hero--style-six .hero__bottom,
+.hero--style-three .hero__bottom {
+  max-width: 1070px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero--style-six .hero__rating,
+.hero--style-six .company__name,
+.hero--style-three .hero__rating,
+.hero--style-three .company__name {
+  color: var(--white);
+  font-size: 2.5rem;
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: 0.2px;
+}
+
+.hero--style-six .rating__text,
+.hero--style-three .rating__text {
+  color: var(--white);
+  font-size: 1.5rem;
+  font-weight: normal;
+  line-height: 1.6;
+}
+
+.hero--style-three .hero__image-slider img {
+  width: 100%;
+}
+
+/* =============================
+* 30. Features One
 ============================= */
 .features__title {
   color: var(--dark);
@@ -3460,49 +3551,202 @@ img.testimonials-avatar.slider__avatar--active {
   transition: all 0.4s ease;
 }
 
-
 /* =============================
-* 2. Faq Three Area
+* 31. Product Benefits Area
 ============================= */
-.faq--three {
-  background-color: #F1EEE6;
-  position: relative;
+.product-benefits {
+  overflow: hidden;
 }
 
-.faq--three .faq__shape {
-  position: absolute;
-  left: 0;
-  top: 50%;
-  width: 80%;
+.product-benefits img {
+  width: 100%;
+  max-height: 100%;
   height: 100%;
-  transform: translateY(-50%);
-  z-index: 1 !important;
-  background-size: contain !important;
-  background-repeat: no-repeat !important;
 }
 
-.faq--three .faq__title,
-.faq--three .faq__desc {
+.product-benefits__sub-heading {
+  text-align: center;
+  color: var(--clr-deep-green);
+}
+
+.product-benefits__title {
+  max-width: 890px !important;
+}
+
+.product-benefits__item-content {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5rem;
+}
+
+.product-benefits__item .product-benefits__item-content {
+  border-radius: 0;
+  padding: 4.5rem;
+}
+
+.product-benefits__item .product-benefits__item-content .product-benefits__badges {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 5rem;
+  row-gap: 2rem;
+}
+
+.product-benefits__item .product-benefits__badge {
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1.6;
+  letter-spacing: 0.16px;
   color: var(--dark);
-  margin: 0 auto;
+  padding: 8px 1.5rem;
+  background: rgba(188, 233, 85, 0.17);
+  transition: background 0.4s ease;
 }
 
-.faq--three .faq__desc {
-  margin-top: 1rem;
+.btn-square-wrap-small .product-benefits__desc {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.6;
+  letter-spacing: 0.20px;
+  margin-bottom: 1.5rem;
 }
 
-.faq--three .faq__grid {
-  max-width: 1060px;
-  margin-left: auto;
-  margin-right: auto;
+.product-benefits__item-title-wrap {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  align-items: center;
 }
 
-.faq--three .faq__question {
-  flex-direction: row;
+.product-benefits__item-title {
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 1.3;
+  letter-spacing: 0.16px;
+}
+
+.product-benefits__item-btn {
+  width: 100px;
+  padding: 10px;
+  padding-left: 0;
+  background: transparent;
+}
+
+.product-benefits__item-btn svg {
+  height: 15px;
+  width: 40px;
+}
+
+.btn-square-wrap-small .line-top {
+  width: calc(100% + 25px);
+  background: var(--dark);
+}
+
+.btn-square-wrap-small .line-right {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  height: calc(100% + 25px);
+  width: 1px;
+  background: var(--dark);
+  transform: translateY(-50%);
+}
+
+.btn-square-wrap-small .btn-square::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: calc(100% + 25px);
+  height: 1px;
+  background: var(--dark);
+  transform: translateX(-50%);
+}
+
+.btn-square-wrap-small .btn-square::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  height: calc(100% + 25px);
+  width: 1px;
+  background: var(--dark);
+  transform: translateY(-50%);
+}
+
+.product-benefits__lists {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.product-benefits__item {
+  padding-bottom: 2rem;
+  border-bottom: 1px solid rgba(28, 85, 64, 0.20);
+  display: flex;
+  flex-wrap: wrap;
+  color: var(--dark);
+  transition: color 0.4s ease;
+}
+
+.product-benefits__item:hover {
+  color: var(--white);
+}
+
+
+.product-benefits__item:hover .btn-square::after,
+.product-benefits__item:hover .btn-square::before,
+.product-benefits__item:hover .line-right,
+.product-benefits__item:hover .line-top,
+.product-benefits__item:hover .product-benefits__item-btn {
+  background-color: var(--white);
+  transition: background 0.4s ease;
+}
+
+.product-benefits__item:hover .product-benefits__badge {
+  background: var(--clr-lime-green);
+}
+
+.product-benefits__item .image {
+  order: 1;
+  transition: order 0.4s ease, transform 0.4s ease;
+}
+
+.product-benefits__item .content {
+  order: 2;
+  transition: order 0.4s ease, transform 0.4s ease;
+}
+
+.product-benefits__item:hover .image {
+  order: 2;
+}
+
+.product-benefits__item:hover .content {
+  background-color: var(--clr-base-dark);
+  order: 1;
+  transition: background 0.4s ease;
+}
+
+.product-benefits__image-wrap {
+  max-height: 400px;
+  overflow: hidden;
+  border-radius: 0;
+}
+
+.product-benefits__lists img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.product-benefits__btn-wrap {
+  text-align: center;
 }
 
 /* =============================
-* 2. Testimonials Three Area
+* 32. Testimonials Three Area
 ============================= */
 .testimonials--style-three .testimonials__desc {
   font-size: 20px;
@@ -3535,185 +3779,7 @@ img.testimonials-avatar.slider__avatar--active {
 }
 
 /* =============================
-* 2. CTA Three Area
-============================= */
-.cta--three {
-  background: var(--clr-base-dark);
-}
-
-.cta--three .cta__content::before {
-  background: linear-gradient(180deg, rgba(13, 22, 21, 0.18) 0%, rgba(13, 22, 21, 0.48) 55.06%, rgba(13, 22, 21, 0.60) 100%);
-}
-
-.cta--three .cta__text {
-  padding-bottom: 7rem;
-}
-
-/* =============================
-* 2. Keywords Style Two Area
-============================= */
-.keywords--style-two {
-  background: var(--clr-lime-green);
-}
-
-.keywords--style-two {
-  background: var(--clr-lime-green);
-}
-
-.keywords--style-two .keywords__item {
-  color: var(--dark);
-}
-
-.keywords--style-two .keywords__separator svg path {
-  fill: var(--dark);
-}
-
-/* =============================
-* 2. Contact Three Area
-============================= */
-.contact--style-three {
-  background: var(--white);
-}
-
-.contact--style-three .contact__col {
-  min-height: auto;
-}
-
-.contact--style-three .contact__form-wrapper {
-  background: var(--white);
-  position: static;
-  transform: translate(0);
-  max-width: 100%;
-}
-
-.contact--style-three .contact__info {
-  background: var(--white);
-}
-
-.contact--style-three .contact__info-card {
-  background: transparent;
-  color: var(--dark);
-  padding: 0;
-}
-
-.contact--style-three .contact__info-number {
-  color: var(--dark);
-}
-
-.contact--style-three .contact__info-icon-inner::before {
-  background: var(--dark);
-}
-
-.contact--style-three .contact__info-icon-inner svg path {
-  fill: var(--clr-lime-green);
-}
-
-/* =============================
-* 2. Team Three Area
-============================= */
-.team--style-three {
-  background: #F1EEE6;
-  overflow: hidden;
-}
-
-.team__title {
-  color: var(--dark);
-  max-width: 650px;
-}
-
-.team__member {
-  background: var(--white);
-  position: relative;
-  transition: background 0.4s ease;
-  border-radius: 10px;
-  overflow: hidden;
-}
-
-.team__member:hover .team__content,
-.team__member:hover .team__social-links {
-  background-color: var(--clr-lime-green);
-}
-
-.team__image-wrap {
-  height: 100%;
-  overflow: hidden;
-  max-height: 330px;
-}
-
-.team__image-wrap img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.team__content {
-  display: block;
-  margin: 0;
-  padding: 1.5rem;
-  background: var(--white);
-  transition: background 0.4s ease;
-}
-
-.team--style-three .team__member-item:nth-child(even) .team__social-links {
-  padding-bottom: calc(1.5rem + 12px);
-}
-
-.team--style-three .team__member-item:nth-child(even) .team__content {
-  padding-top: 0;
-}
-
-.team__social-links {
-  width: 100%;
-  background: var(--white);
-  padding: 12px;
-  justify-content: end;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 15px;
-  transition: background 0.4s ease;
-
-}
-
-.team--style-three .team__top {
-  display: flex;
-  flex-direction: column;
-}
-
-.team--style-three .team__member-item:nth-child(odd) .team__top {
-  flex-direction: column-reverse;
-}
-
-.team__social-link {
-  width: 35px;
-  height: 35px;
-  border-radius: 50%;
-  border: 1px solid var(--dark);
-  display: grid;
-  place-items: center;
-}
-
-.team__member-role {
-  font-size: 1rem;
-  font-weight: normal;
-  line-height: 1.6;
-  letter-spacing: 0.16px;
-  color: var(--dark);
-  margin-bottom: 0;
-}
-
-.team__member-name {
-  font-size: 1.5rem;
-  font-weight: 600;
-  line-height: 1.3;
-  letter-spacing: 0.12px;
-  color: var(--dark);
-  margin-top: 8px;
-}
-
-
-
-/* =============================
-* 2. Pricing One Area
+* 33. Pricing One Area
 ============================= */
 .pricing {
   background-color: var(--clr-base-dark);
@@ -3906,206 +3972,205 @@ img.testimonials-avatar.slider__avatar--active {
   max-width: 130px;
 }
 
+/* =============================
+* 34. Faq Three Area
+============================= */
+.faq--three {
+  background-color: #F1EEE6;
+  position: relative;
+}
+
+.faq--three .faq__shape {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 80%;
+  height: 100%;
+  transform: translateY(-50%);
+  z-index: 1 !important;
+  background-size: contain !important;
+  background-repeat: no-repeat !important;
+}
+
+.faq--three .faq__title,
+.faq--three .faq__desc {
+  color: var(--dark);
+  margin: 0 auto;
+}
+
+.faq--three .faq__desc {
+  margin-top: 1rem;
+}
+
+.faq--three .faq__grid {
+  max-width: 1060px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.faq--three .faq__question {
+  flex-direction: row;
+}
 
 /* =============================
-* 2. Product Benefits Area
+* 35. CTA Three Area
 ============================= */
-.product-benefits {
+.cta--three {
+  background: var(--clr-base-dark);
+}
+
+.cta--three .cta__content::before {
+  background: linear-gradient(180deg, rgba(13, 22, 21, 0.18) 0%, rgba(13, 22, 21, 0.48) 55.06%, rgba(13, 22, 21, 0.60) 100%);
+}
+
+.cta--three .cta__text {
+  padding-bottom: 7rem;
+}
+
+
+/* =============================
+* 37. Team Three Area
+============================= */
+.team--style-three {
+  background: #F1EEE6;
   overflow: hidden;
 }
 
-.product-benefits img {
-  width: 100%;
-  max-height: 100%;
-  height: 100%;
-}
-
-.product-benefits__sub-heading {
-  text-align: center;
-  color: var(--clr-deep-green);
-}
-
-.product-benefits__title {
-  max-width: 890px !important;
-}
-
-.product-benefits__item-content {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 5rem;
-}
-
-.product-benefits__item .product-benefits__item-content {
-  border-radius: 0;
-  padding: 4.5rem;
-}
-
-.product-benefits__item .product-benefits__item-content .product-benefits__badges {
-  display: flex;
-  flex-wrap: wrap;
-  column-gap: 5rem;
-  row-gap: 2rem;
-}
-
-.product-benefits__item .product-benefits__badge {
-  font-size: 1rem;
-  font-weight: normal;
-  line-height: 1.6;
-  letter-spacing: 0.16px;
+.team__title {
   color: var(--dark);
-  padding: 8px 1.5rem;
-  background: rgba(188, 233, 85, 0.17);
+  max-width: 650px;
+}
+
+.team__member {
+  background: var(--white);
+  position: relative;
   transition: background 0.4s ease;
-}
-
-.btn-square-wrap-small .product-benefits__desc {
-  font-size: 20px;
-  font-weight: 400;
-  line-height: 1.6;
-  letter-spacing: 0.20px;
-  margin-bottom: 1.5rem;
-}
-
-.product-benefits__item-title-wrap {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 1.5rem;
-  align-items: center;
-}
-
-.product-benefits__item-title {
-  font-size: 2rem;
-  font-weight: 600;
-  line-height: 1.3;
-  letter-spacing: 0.16px;
-}
-
-.product-benefits__item-btn {
-  width: 100px;
-  padding: 10px;
-  padding-left: 0;
-  background: transparent;
-}
-
-.product-benefits__item-btn svg {
-  height: 15px;
-  width: 40px;
-}
-
-.btn-square-wrap-small .line-top {
-  width: calc(100% + 25px);
-  background: var(--dark);
-}
-
-.btn-square-wrap-small .line-right {
-  position: absolute;
-  top: 50%;
-  right: 0;
-  height: calc(100% + 25px);
-  width: 1px;
-  background: var(--dark);
-  transform: translateY(-50%);
-}
-
-
-.btn-square-wrap-small .btn-square::before {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  width: calc(100% + 25px);
-  height: 1px;
-  background: var(--dark);
-  transform: translateX(-50%);
-}
-
-.btn-square-wrap-small .btn-square::after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 0;
-  height: calc(100% + 25px);
-  width: 1px;
-  background: var(--dark);
-  transform: translateY(-50%);
-}
-
-.product-benefits__lists {
-  display: flex;
-  flex-direction: column;
-  gap: 2.5rem;
-}
-
-.product-benefits__item {
-  padding-bottom: 2rem;
-  border-bottom: 1px solid rgba(28, 85, 64, 0.20);
-  display: flex;
-  flex-wrap: wrap;
-  color: var(--dark);
-  transition: color 0.4s ease;
-}
-
-.product-benefits__item:hover {
-  color: var(--white);
-}
-
-
-.product-benefits__item:hover .btn-square::after,
-.product-benefits__item:hover .btn-square::before,
-.product-benefits__item:hover .line-right,
-.product-benefits__item:hover .line-top,
-.product-benefits__item:hover .product-benefits__item-btn {
-  background-color: var(--white);
-  transition: background 0.4s ease;
-}
-
-.product-benefits__item:hover .product-benefits__badge {
-  background: var(--clr-lime-green);
-}
-
-.product-benefits__item .image {
-  order: 1;
-  transition: order 0.4s ease, transform 0.4s ease;
-}
-
-.product-benefits__item .content {
-  order: 2;
-  transition: order 0.4s ease, transform 0.4s ease;
-}
-
-.product-benefits__item:hover .image {
-  order: 2;
-}
-
-.product-benefits__item:hover .content {
-  background-color: var(--clr-base-dark);
-  order: 1;
-  transition: background 0.4s ease;
-}
-
-.product-benefits__image-wrap {
-  max-height: 400px;
+  border-radius: 10px;
   overflow: hidden;
-  border-radius: 0;
 }
 
-.product-benefits__lists img {
+.team__member:hover .team__content,
+.team__member:hover .team__social-links {
+  background-color: var(--clr-lime-green);
+}
+
+.team__image-wrap {
+  height: 100%;
+  overflow: hidden;
+  max-height: 330px;
+}
+
+.team__image-wrap img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-.product-benefits__btn-wrap {
-  text-align: center;
+.team__content {
+  display: block;
+  margin: 0;
+  padding: 1.5rem;
+  background: var(--white);
+  transition: background 0.4s ease;
 }
 
+.team--style-three .team__member-item:nth-child(even) .team__social-links {
+  padding-bottom: calc(1.5rem + 12px);
+}
 
+.team--style-three .team__member-item:nth-child(even) .team__content {
+  padding-top: 0;
+}
+
+.team__social-links {
+  width: 100%;
+  background: var(--white);
+  padding: 12px;
+  justify-content: end;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  transition: background 0.4s ease;
+}
+
+.team--style-three .team__top {
+  display: flex;
+  flex-direction: column;
+}
+
+.team--style-three .team__member-item:nth-child(odd) .team__top {
+  flex-direction: column-reverse;
+}
+
+.team__social-link {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  border: 1px solid var(--dark);
+  display: grid;
+  place-items: center;
+}
+
+.team__member-role {
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1.6;
+  letter-spacing: 0.16px;
+  color: var(--dark);
+  margin-bottom: 0;
+}
+
+.team__member-name {
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 1.3;
+  letter-spacing: 0.12px;
+  color: var(--dark);
+  margin-top: 8px;
+}
 
 /* =============================
-* 2. Blog Three Area
+* 38. Contact Three Area
+============================= */
+.contact--style-three {
+  background: var(--white);
+}
+
+.contact--style-three .contact__col {
+  min-height: auto;
+}
+
+.contact--style-three .contact__form-wrapper {
+  background: var(--white);
+  position: static;
+  transform: translate(0);
+  max-width: 100%;
+}
+
+.contact--style-three .contact__info {
+  background: var(--white);
+}
+
+.contact--style-three .contact__info-card {
+  background: transparent;
+  color: var(--dark);
+  padding: 0;
+}
+
+.contact--style-three .contact__info-number {
+  color: var(--dark);
+}
+
+.contact--style-three .contact__info-icon-inner::before {
+  background: var(--dark);
+}
+
+.contact--style-three .contact__info-icon-inner svg path {
+  fill: var(--clr-lime-green);
+}
+
+/* =============================
+* 39. Blog Three Area
 ============================= */
 .blog .card--style-three .blog__thumb {
   max-width: 100%;
@@ -4113,7 +4178,7 @@ img.testimonials-avatar.slider__avatar--active {
 }
 
 /* =============================
-* 2. Footer Three Area
+* 40. Footer Three Area
 ============================= */
 .footer--style-three .footer__container {
   position: relative;
@@ -4162,7 +4227,7 @@ img.testimonials-avatar.slider__avatar--active {
   border-top: 0;
 }
 
-.footer--style-three .footer__text-image {
+.footer__text-image {
   position: absolute;
   width: 350px;
   height: 68px;
@@ -4172,616 +4237,196 @@ img.testimonials-avatar.slider__avatar--active {
 }
 
 /* =============================
-* 2. Hero Three Area
+* 41. Hero Five Area
 ============================= */
-.hero--style-three {
-  background: var(--clr-base-dark);
-}
-
-.hero--style-three .hero__content {
-  column-gap: 5rem;
-  row-gap: 3rem;
-}
-
-.hero--style-three .hero__title {
-  max-width: 750px;
-}
-
-.hero--style-three .o-shape {
-  display: inline-block;
-  width: 120px;
-  height: 72px;
-  border: 18px solid var(--clr-lime-green);
-  border-radius: 50px;
-  box-sizing: border-box;
-  margin: 0 5px;
-}
-
-.hero--style-three .hero__desc {
-  color: var(--white);
-  margin: 0;
-  max-width: 600px;
-  margin-bottom: 1.5rem;
-  font-size: 1rem;
-  font-weight: 400;
-  letter-spacing: 0.16px;
-}
-
-.hero--style-six .hero__bottom,
-.hero--style-three .hero__bottom {
-  max-width: 1070px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.hero--style-six .hero__rating,
-.hero--style-six .company__name,
-.hero--style-three .hero__rating,
-.hero--style-three .company__name {
-  color: var(--white);
-  font-size: 2.5rem;
-  font-weight: 600;
-  line-height: 1.2;
-  letter-spacing: 0.2px;
-}
-
-.hero--style-six .rating__text,
-.hero--style-three .rating__text {
-  color: var(--white);
-  font-size: 1.5rem;
-  font-weight: normal;
-  line-height: 1.6;
-}
-
-.hero--style-three .hero__image-slider img {
-  width: 100%;
-}
-
-/* =============================
-* 2. CTA Four Area
-============================= */
-.cta--style-four .cta__container {
-  padding-bottom: 1rem;
-}
-
-.cta--style-four .cta__title {
-  font-weight: 600;
-  line-height: 1.3;
-  color: var(--white);
-}
-
-.cta--style-four .cta__box {
-  flex-direction: row;
-  background-color: transparent;
-  max-width: 100%;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 2rem;
-}
-
-.cta--style-four .cta__form {
-  margin: 0;
-}
-
-.cta--style-four .cta__title {
-  text-align: left;
-}
-
-.cta--style-four .cta__input {
-  background-color: #192221;
-}
-
-
-/* =============================
-* 2. Contact Area Four
-============================= */
-.contact--style-four .contact__form-wrapper {
-  position: static;
-  background: var(--white);
-  transform: translateY(0);
-  margin: 0 auto;
-  border: 1px solid #F1EEE6;
-}
-
-.contact--style-four .contact__info-title,
-.contact--style-four .contact__info-text {
-  max-width: 540px;
-  text-align: center;
-  margin: 0 auto;
-}
-
-.contact--style-four .contact__info {
-  background: transparent;
-}
-
-.contact--style-four .contact__info-cards {
-  background: var(--clr-deep-green);
-  padding: 2rem;
-  border-radius: 20px;
-  justify-content: center;
-}
-
-.contact--style-four .contact__info-card {
-  background: transparent;
-}
-
-
-/* =============================
-* 2. CTA Five Area
-============================= */
-.cta--style-five {
-  background: var(--clr-base-dark);
-}
-
-.cta--style-five .cta__title {
-  text-align: center;
-  max-width: 720px;
-}
-
-.cta--style-five .cta__text {
-  padding-bottom: 7rem;
-  max-width: 840px;
-}
-
-.cta--style-five .cta__content::before {
-  background: linear-gradient(180deg, rgba(13, 22, 21, 0.18) 0%, rgba(13, 22, 21, 0.48) 55.06%, rgba(13, 22, 21, 0.60) 100%);
-}
-
-.cta--style-five .cta__content {
-  background: #161F1E;
+.hero--style-five {
   position: relative;
+  padding: 4rem 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+  overflow: hidden;
 }
 
-.cta--style-five .cta__shape-left {
+.hero--style-five .hero__overlay {
   position: absolute;
+  width: 100%;
+  height: 100%;
   top: 0;
   left: 0;
-  max-width: 315px;
-  max-height: 330px;
-  width: 100%;
-  height: 100%;
+  background: linear-gradient(270deg, rgba(13, 22, 21, 0.75) 0%, rgba(13, 22, 21, 0.95) 77.99%);
 }
 
-.cta--style-five .cta__shape-right {
-  position: absolute;
-  top: 0 !important;
-  right: -15px !important;
-  max-width: 315px;
-  max-height: 330px;
-  width: 100%;
-  height: 100%;
-}
-
-
-/* =============================
-* 2. Testimonials Four Area
-============================= */
-.testimonials--style-four {
-  background: transparent;
-}
-
-.testimonials--style-four .testimonials__description {
-  max-width: 550px;
-  color: var(--gray);
-}
-
-.testimonials--style-four .testimonials__nav {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-  margin-top: 0;
-  justify-content: center;
-  background: transparent;
-  flex-shrink: 0;
-  padding: 0;
-}
-
-.testimonials--style-four .testimonials__nav-item {
-  display: flex;
-  align-items: center;
-  gap: 2rem;
-  box-shadow: 1px 2px 4px 0 rgba(0, 0, 0, 0.08);
-  padding: 1rem 1.5rem;
-  border-radius: 10px;
-  cursor: pointer;
-  transition: background 0.4s ease, color 0.4s ease;
-  color: var(--dark);
-}
-
-.testimonials--style-four .nav-item--active,
-.testimonials--style-four .testimonials__nav-item:hover {
-  background-color: var(--clr-deep-green);
+.hero--style-five .hero__content {
+  max-width: 1090px;
+  text-align: center;
+  margin: 0 auto;
   color: var(--white);
 }
 
-.client-card__details {
-  min-width: fit-content;
-}
-
-.testimonials--style-four .client-card__name,
-.testimonials--style-four .testimonials__author-name {
-  font-size: 1.5rem;
-  font-weight: 600;
-  line-height: 1.3;
-  letter-spacing: 0.12px;
-  margin-bottom: 8px;
-}
-
-.testimonials--style-four .client-card__role,
-.testimonials--style-four .testimonials__author-role {
-  font-size: 1rem;
-  font-weight: normal;
-  line-height: 1.6;
-  letter-spacing: 0.16px;
-  margin-bottom: 0;
-}
-
-.testimonials--style-four .client-card__image {
-  max-width: 80px;
-  max-height: 80px;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 50%;
-  overflow: hidden;
-  flex-shrink: 0;
-}
-
-.testimonials--style-four .testimonials__grid {
-  display: flex;
-  gap: 5rem;
-  align-items: center;
-}
-
-.testimonials--style-four .testimonials__image-col {
-  max-width: 288px;
-  max-height: 316px;
-  overflow: hidden;
-}
-
-.testimonials--style-four .testimonials__main-image {
-  border-radius: 20px;
-}
-
-.testimonials--style-four .testimonials__avatar {
-  max-width: 160px;
-  max-height: 160px;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 0;
-  display: none;
-}
-
-.testimonials--style-four .testimonials__main {
-  gap: 2rem;
-}
-
-.testimonials--style-four .testimonials__quote {
-  font-size: 1rem;
-  font-weight: normal;
-  line-height: 1.6;
-  letter-spacing: 0.16px;
-  color: #4B4B4B;
-}
-
-.testimonials--style-four .testimonials__card {
-  background: #F1EEE6;
-  padding: 1.5rem;
-  border-radius: 10px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 2rem;
-}
-
-
-/* =============================
-* 2. Pricing Two Area
-============================= */
-.pricing--style-two .pricing__card {
-  position: relative;
-}
-
-.pricing--style-two div:not(:last-child) .pricing__card::after {
-  content: "";
-  position: absolute;
-  top: -88px;
-  right: 0;
-  background-color: var(--clr-lime-green);
-  width: 45px;
-  height: 160px;
-  border-radius: 65px;
-  z-index: 1;
-}
-
-.pricing--style-two div:not(:last-child) .pricing__card::before {
-  content: "";
-  position: absolute;
-  top: -88px;
-  right: 45px;
-  background-color: var(--clr-lime-green);
-  width: 45px;
-  height: 190px;
-  border-radius: 65px;
-  z-index: 1;
-}
-
-/* =============================
-* 2. Team Four Area
-============================= */
-.team--style-four {
-  background: #F1EEE6;
-}
-
-.team--style-four .team__top {
-  position: relative;
-}
-
-.team--style-four .team__social-links {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  width: fit-content;
-  padding: 10px 2rem;
-  border-radius: 10px 10px 0 0;
-}
-
-
-/* =============================
-* 2. Portfolio Three Area
-============================= */
-.portfolio--style-three {
-  background: var(--clr-lime-green);
-  overflow: hidden;
-}
-
-.portfolio--style-three .portfolio__subtitle {
-  color: var(--dark);
-}
-
-.portfolio--style-three .portfolio__container {
-  padding-bottom: 0;
-}
-
-.portfolio__slider-container {
-  padding-top: 0;
-  padding-left: 0;
-  padding-right: 0;
-}
-
-.portfolio--style-three .portfolio__inner {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 1rem;
-  background: var(--clr-base-dark);
+.hero--style-five .hero__title {
   color: var(--white);
-  padding: 2rem;
-  border-radius: 1rem;
-  user-select: none;
-  -webkit-user-drag: none;
-}
-
-.portfolio--style-three .portfolio__content {
-  flex: 1 1 400px;
-}
-
-.portfolio--style-three .portfolio__item-title {
-  font-size: 2rem;
-  font-weight: 600;
-  line-height: 1.3;
+  max-width: 1090px;
   margin-bottom: 1rem;
 }
 
-.portfolio--style-three .portfolio__item-text {
-  font-size: 1rem;
-}
-
-.portfolio--style-three .portfolio__img-wrap {
-  max-height: 400px;
-  border-radius: 10px;
-  flex: 1 1 400px;
-  overflow: hidden;
-}
-
-.portfolio--style-three .portfolio__img {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-}
-
-.portfolio--style-three .portfolio__btn-wrapper {
+.hero--style-five .hero__desc {
+  max-width: 735px;
+  margin: 0 auto;
   text-align: center;
 }
 
-div#portfolio-three-slider-ow {
-  position: relative;
-
-}
-
-.portfolio--style-three .tns-nav {
-  position: absolute;
-  bottom: -50px;
-  left: 50%;
-  transform: translateX(-50%);
+.hero--style-five .hero__btn-wrap {
   display: flex;
-  margin-bottom: 10px;
-  gap: 5px;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  column-gap: 3rem;
+  row-gap: 2rem;
+  margin-top: 2rem;
 }
 
-.portfolio--style-three button {
-  width: 30px;
-  height: 10px;
-  background: var(--clr-midnight);
-  margin: 0;
-  padding: 0;
-  border-radius: 0.2px;
-  border: none;
+.video__btn {
+  background: transparent;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  text-decoration: none;
 }
 
-.portfolio--style-three button.tns-nav-active {
-  width: 30px;
-  height: 10px;
+.video__btn span {
+  color: var(--white);
+  font-weight: 600;
+  font-size: 1.5rem;
+  line-height: 1.3;
+  letter-spacing: 0.16px;
+}
+
+.hero--style-five .hero-bg-slider__container {
+  padding-top: 0;
+  padding-bottom: 0;
+  position: relative;
+}
+
+.hero--style-five .hero-bg-slider__nav {
+  display: flex;
+  gap: 2rem;
+  position: absolute;
+  right: 5rem;
+  bottom: -4rem;
+  z-index: 15;
+}
+
+.hero--style-five .hero__bg-nav-prev,
+.hero--style-five .hero__bg-nav-next {
+  width: 60px;
+  height: 60px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background-color: var(--clr-lime-green);
+  cursor: pointer;
+}
+
+
+.hero--style-five .hero__bg-nav-prev:hover,
+.hero--style-five .hero__bg-nav-next:hover {
+  background-color: var(--clr-deep-green);
+}
+
+.hero--style-five .hero__bg-nav-prev:hover svg path,
+.hero--style-five .hero__bg-nav-next:hover svg path {
+  fill: var(--clr-lime-green);
+}
+
+.hero--style-five .hero__bg-nav-prev svg,
+.hero--style-five .hero__bg-nav-next svg {
+  width: 25px;
+}
+
+.hero--style-five .hero__bg-nav-next {
   background: var(--clr-deep-green);
 }
 
+.hero--style-five .hero__bg-shape {
+  position: absolute;
+  max-width: 450px;
+  width: 100%;
+  max-height: 300px;
+  height: 100%;
+  background-size: contain !important;
+  background-repeat: no-repeat !important;
+  z-index: 1 !important;
+}
+
+.hero--style-five .hero__bg-shape--top {
+  top: -20px;
+  right: 0;
+}
+
+.hero--style-five .hero__bg-shape--bottom {
+  bottom: -20px;
+  left: 0;
+}
+
 /* =============================
-* 2. Process Three Area
+* 42. Services Tag Area
 ============================= */
-.process--style-three {
-  background: var(--clr-base-dark);
-}
-
-.process--style-three .process__title {
-  max-width: 720px;
-}
-
-.process--style-three .process__steps {
+.services-tag .tag__list {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
   gap: 2rem;
 }
 
-.process--style-three .step {
-  background: var(--clr-deep-teal);
-  padding: 2rem;
-  border-radius: 8px;
-  position: relative;
-  overflow: hidden;
+.services-tag .tag__item {
+  border: 0.5px solid var(--clr-lime-green);
+  box-shadow: 0 4px 0 0 var(--clr-lime-green);
+  padding: 1.5rem;
+  border-radius: 10px;
+  flex: 1 1 300px;
 }
 
-.process--style-three .step__bg-shape::before {
+.services-tag .tag__icon {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  display: grid;
+  place-items: center;
+}
+
+.services-tag .tag__icon::after {
   content: "";
   position: absolute;
-  width: 420px;
-  height: 388px;
-  background-color: var(--clr-lime-green);
-  border-radius: 100px;
-}
-
-.process--style-three .step:nth-child(odd) .step__bg-shape::before {
   top: 50%;
-  left: 0;
-  transform: translate(-90%, -50%);
-}
-
-.process--style-three .step:nth-child(even) .step__bg-shape::before {
-  top: 0;
-  right: 0;
-  transform: translate(90%, -40%);
-  z-index: 1;
-}
-
-.process--style-three .step {
-  background: var(--clr-deep-teal);
-  padding: 2rem;
-  border-radius: 8px;
-  position: relative;
-  overflow: hidden;
-}
-
-.process--style-three .step::before,
-.process--style-three .step::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  width: 130px;
-  height: 388px;
-  background-color: var(--clr-base-dark);
-  border: 1px solid var(--clr-deep-green);
-  border-radius: 100px;
-  z-index: 1;
-}
-
-.process--style-three .step::after {
-  transform: translate(50%, -50%);
-}
-
-.process--style-three .step::before {
-  transform: translate(0, -50%);
-}
-
-.process--style-three .step:nth-child(odd)::before,
-.process--style-three .step:nth-child(odd)::after {
-  right: 0;
-}
-
-.process--style-three .step:nth-child(even)::before,
-.process--style-three .step:nth-child(even)::after {
-  left: 0;
+  left: 50%;
+  width: 100%;
+  height: 100%;
   transform: translate(-50%, -50%);
+  background: var(--clr-lime-green);
+  border-radius: 50%;
+  z-index: -1;
 }
 
-.process--style-three .step:nth-child(even)::before {
-  transform: translate(0, -50%);
+.services-tag .tag__text {
+  max-width: 320px;
 }
 
-
-.process--style-three .step__content {
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.process--style-three .step:nth-child(even) .step__content {
-  flex-direction: row-reverse;
-}
-
-.process--style-three .step__text {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  color: var(--white);
-  position: relative;
-  z-index: 10;
-}
-
-.process--style-three .step__number {
-  font-size: 9rem;
-  font-weight: 900;
+.services-tag .tag__title {
+  font-size: 1.5em;
+  font-weight: 500;
   line-height: 1.3;
-  letter-spacing: 0.75px;
-  color: #1D2625;
-  display: block;
-  text-align: left;
+  letter-spacing: 0.12px;
+  margin-bottom: 1rem;
 }
 
-.process--style-three .step__title {
-  font-size: 2rem;
-  font-weight: 600;
-  line-height: 1.3;
-  letter-spacing: 0.16px;
-  margin: 2rem 0;
-  text-align: center;
-}
-
-.process--style-three .step__desc {
+.services-tag .tag__desc {
   font-size: 1rem;
   font-weight: normal;
   line-height: 1.6;
   letter-spacing: 0.16px;
-  text-align: center;
 }
-
-.process--style-three .step__image-wrap {
-  max-width: 550px;
-  max-height: 450px;
-  overflow: hidden;
-  position: relative;
-  z-index: 10;
-}
-
-.process--style-three .step__img {
-  width: 100%;
-  height: 100%;
-  border-radius: 20px;
-  object-fit: cover;
-}
-
 
 /* =============================
-* 2. About Three Area
+* 43. About Three Area
 ============================= */
 .about--style-three {
   background-color: #F1EEE6;
@@ -4939,193 +4584,594 @@ div#portfolio-three-slider-ow {
 }
 
 /* =============================
-* 2. Services Tag
+* 44. Keywords Two Area
 ============================= */
-.services-tag .tag__list {
+.keywords--style-two {
+  background: var(--clr-lime-green);
+}
+
+.keywords--style-two {
+  background: var(--clr-lime-green);
+}
+
+.keywords--style-two .keywords__item {
+  color: var(--dark);
+}
+
+.keywords--style-two .keywords__separator svg path {
+  fill: var(--dark);
+}
+
+/* =============================
+* 45. Process Three Area
+============================= */
+.process--style-three {
+  background: var(--clr-base-dark);
+}
+
+.process--style-three .process__title {
+  max-width: 720px;
+}
+
+.process--style-three .process__steps {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   gap: 2rem;
 }
 
-.services-tag .tag__item {
-  border: 0.5px solid var(--clr-lime-green);
-  box-shadow: 0 4px 0 0 var(--clr-lime-green);
-  padding: 1.5rem;
-  border-radius: 10px;
-  flex: 1 1 300px;
-}
-
-.services-tag .tag__icon {
+.process--style-three .step {
+  background: var(--clr-deep-teal);
+  padding: 2rem;
+  border-radius: 8px;
   position: relative;
-  width: 50px;
-  height: 50px;
-  display: grid;
-  place-items: center;
+  overflow: hidden;
 }
 
-.services-tag .tag__icon::after {
+.process--style-three .step__bg-shape::before {
   content: "";
   position: absolute;
+  width: 420px;
+  height: 388px;
+  background-color: var(--clr-lime-green);
+  border-radius: 100px;
+}
+
+.process--style-three .step:nth-child(odd) .step__bg-shape::before {
   top: 50%;
-  left: 50%;
-  width: 100%;
-  height: 100%;
+  left: 0;
+  transform: translate(-90%, -50%);
+}
+
+.process--style-three .step:nth-child(even) .step__bg-shape::before {
+  top: 0;
+  right: 0;
+  transform: translate(90%, -40%);
+  z-index: 1;
+}
+
+.process--style-three .step {
+  background: var(--clr-deep-teal);
+  padding: 2rem;
+  border-radius: 8px;
+  position: relative;
+  overflow: hidden;
+}
+
+.process--style-three .step::before,
+.process--style-three .step::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 130px;
+  height: 388px;
+  background-color: var(--clr-base-dark);
+  border: 1px solid var(--clr-deep-green);
+  border-radius: 100px;
+  z-index: 1;
+}
+
+.process--style-three .step::after {
+  transform: translate(50%, -50%);
+}
+
+.process--style-three .step::before {
+  transform: translate(0, -50%);
+}
+
+.process--style-three .step:nth-child(odd)::before,
+.process--style-three .step:nth-child(odd)::after {
+  right: 0;
+}
+
+.process--style-three .step:nth-child(even)::before,
+.process--style-three .step:nth-child(even)::after {
+  left: 0;
   transform: translate(-50%, -50%);
-  background: var(--clr-lime-green);
-  border-radius: 50%;
-  z-index: -1;
 }
 
-.services-tag .tag__text {
-  max-width: 320px;
+.process--style-three .step:nth-child(even)::before {
+  transform: translate(0, -50%);
 }
 
-.services-tag .tag__title {
-  font-size: 1.5em;
-  font-weight: 500;
+
+.process--style-three .step__content {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.process--style-three .step:nth-child(even) .step__content {
+  flex-direction: row-reverse;
+}
+
+.process--style-three .step__text {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  color: var(--white);
+  position: relative;
+  z-index: 10;
+}
+
+.process--style-three .step__number {
+  font-size: 9rem;
+  font-weight: 900;
   line-height: 1.3;
-  letter-spacing: 0.12px;
-  margin-bottom: 1rem;
+  letter-spacing: 0.75px;
+  color: #1D2625;
+  display: block;
+  text-align: left;
 }
 
-.services-tag .tag__desc {
+.process--style-three .step__title {
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 1.3;
+  letter-spacing: 0.16px;
+  margin: 2rem 0;
+  text-align: center;
+}
+
+.process--style-three .step__desc {
   font-size: 1rem;
   font-weight: normal;
   line-height: 1.6;
   letter-spacing: 0.16px;
+  text-align: center;
+}
+
+.process--style-three .step__image-wrap {
+  max-width: 550px;
+  max-height: 450px;
+  overflow: hidden;
+  position: relative;
+  z-index: 10;
+}
+
+.process--style-three .step__img {
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  object-fit: cover;
 }
 
 /* =============================
-* 2. Hero Five Area
+* 46. Portfolio Three Area
 ============================= */
-.hero--style-five {
-  position: relative;
-  padding: 4rem 0;
-  background-size: cover;
-  background-repeat: no-repeat;
+.portfolio--style-three {
+  background: var(--clr-lime-green);
   overflow: hidden;
 }
 
-.hero--style-five .hero__overlay {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  background: linear-gradient(270deg, rgba(13, 22, 21, 0.75) 0%, rgba(13, 22, 21, 0.95) 77.99%);
+.portfolio--style-three .portfolio__subtitle {
+  color: var(--dark);
 }
 
-.hero--style-five .hero__content {
-  max-width: 1090px;
-  text-align: center;
-  margin: 0 auto;
-  color: var(--white);
+.portfolio--style-three .portfolio__container {
+  padding-bottom: 0;
 }
 
-.hero--style-five .hero__title {
+.portfolio__slider-container {
+  padding-top: 0;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.portfolio--style-three .portfolio__inner {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  background: var(--clr-base-dark);
   color: var(--white);
-  max-width: 1090px;
+  padding: 2rem;
+  border-radius: 1rem;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+.portfolio--style-three .portfolio__content {
+  flex: 1 1 400px;
+}
+
+.portfolio--style-three .portfolio__item-title {
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 1.3;
   margin-bottom: 1rem;
 }
 
-.hero--style-five .hero__desc {
-  max-width: 735px;
-  margin: 0 auto;
+.portfolio--style-three .portfolio__item-text {
+  font-size: 1rem;
+}
+
+.portfolio--style-three .portfolio__img-wrap {
+  max-height: 400px;
+  border-radius: 10px;
+  flex: 1 1 400px;
+  overflow: hidden;
+}
+
+.portfolio--style-three .portfolio__img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.portfolio--style-three .portfolio__btn-wrapper {
   text-align: center;
 }
 
-.hero--style-five .hero__btn-wrap {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  align-items: center;
-  column-gap: 3rem;
-  row-gap: 2rem;
-  margin-top: 2rem;
-}
-
-.video__btn {
-  background: transparent;
-  display: flex;
-  align-items: center;
-  gap: 1.5rem;
-  text-decoration: none;
-}
-
-.video__btn span {
-  color: var(--white);
-  font-weight: 600;
-  font-size: 1.5rem;
-  line-height: 1.3;
-  letter-spacing: 0.16px;
-}
-
-.hero--style-five .hero-bg-slider__container {
-  padding-top: 0;
-  padding-bottom: 0;
+div#portfolio-three-slider-ow {
   position: relative;
+
 }
 
-.hero--style-five .hero-bg-slider__nav {
-  display: flex;
-  gap: 2rem;
+.portfolio--style-three .tns-nav {
   position: absolute;
-  right: 5rem;
-  bottom: -4rem;
-  z-index: 15;
+  bottom: -50px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  margin-bottom: 10px;
+  gap: 5px;
 }
 
-.hero--style-five .hero__bg-nav-prev,
-.hero--style-five .hero__bg-nav-next {
-  width: 60px;
-  height: 60px;
-  display: grid;
-  place-items: center;
-  border-radius: 50%;
-  background-color: var(--clr-lime-green);
-  cursor: pointer;
+.portfolio--style-three button {
+  width: 30px;
+  height: 10px;
+  background: var(--clr-midnight);
+  margin: 0;
+  padding: 0;
+  border-radius: 0.2px;
+  border: none;
 }
 
-
-.hero--style-five .hero__bg-nav-prev:hover,
-.hero--style-five .hero__bg-nav-next:hover {
-  background-color: var(--clr-deep-green);
-}
-
-.hero--style-five .hero__bg-nav-prev:hover svg path,
-.hero--style-five .hero__bg-nav-next:hover svg path {
-  fill: var(--clr-lime-green);
-}
-
-.hero--style-five .hero__bg-nav-prev svg,
-.hero--style-five .hero__bg-nav-next svg {
-  width: 25px;
-}
-
-.hero--style-five .hero__bg-nav-next {
+.portfolio--style-three button.tns-nav-active {
+  width: 30px;
+  height: 10px;
   background: var(--clr-deep-green);
 }
 
-.hero--style-five .hero__bg-shape {
+/* =============================
+* 47. Pricing Two Area
+============================= */
+.pricing--style-two .pricing__card {
+  position: relative;
+}
+
+.pricing--style-two div:not(:last-child) .pricing__card::after {
+  content: "";
   position: absolute;
-  max-width: 450px;
-  width: 100%;
-  max-height: 300px;
-  height: 100%;
-  background-size: contain !important;
-  background-repeat: no-repeat !important;
-  z-index: 1 !important;
-}
-
-.hero--style-five .hero__bg-shape--top {
-  top: -20px;
+  top: -88px;
   right: 0;
+  background-color: var(--clr-lime-green);
+  width: 45px;
+  height: 160px;
+  border-radius: 65px;
+  z-index: 1;
 }
 
-.hero--style-five .hero__bg-shape--bottom {
-  bottom: -20px;
-  left: 0;
+.pricing--style-two div:not(:last-child) .pricing__card::before {
+  content: "";
+  position: absolute;
+  top: -88px;
+  right: 45px;
+  background-color: var(--clr-lime-green);
+  width: 45px;
+  height: 190px;
+  border-radius: 65px;
+  z-index: 1;
 }
+
+/* =============================
+* 48. Testimonials Four Area
+============================= */
+.testimonials--style-four {
+  background: transparent;
+}
+
+.testimonials--style-four .testimonials__description {
+  max-width: 550px;
+  color: var(--gray);
+}
+
+.testimonials--style-four .testimonials__nav {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-top: 0;
+  justify-content: center;
+  background: transparent;
+  flex-shrink: 0;
+  padding: 0;
+}
+
+.testimonials--style-four .testimonials__nav-item {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  box-shadow: 1px 2px 4px 0 rgba(0, 0, 0, 0.08);
+  padding: 1rem 1.5rem;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.4s ease, color 0.4s ease;
+  color: var(--dark);
+}
+
+.testimonials--style-four .nav-item--active,
+.testimonials--style-four .testimonials__nav-item:hover {
+  background-color: var(--clr-deep-green);
+  color: var(--white);
+}
+
+.client-card__details {
+  min-width: fit-content;
+}
+
+.testimonials--style-four .client-card__name,
+.testimonials--style-four .testimonials__author-name {
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 1.3;
+  letter-spacing: 0.12px;
+  margin-bottom: 8px;
+}
+
+.testimonials--style-four .client-card__role,
+.testimonials--style-four .testimonials__author-role {
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1.6;
+  letter-spacing: 0.16px;
+  margin-bottom: 0;
+}
+
+.testimonials--style-four .client-card__image {
+  max-width: 80px;
+  max-height: 80px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.testimonials--style-four .testimonials__grid {
+  display: flex;
+  gap: 5rem;
+  align-items: center;
+}
+
+.testimonials--style-four .testimonials__image-col {
+  max-width: 288px;
+  max-height: 316px;
+  overflow: hidden;
+}
+
+.testimonials--style-four .testimonials__main-image {
+  border-radius: 20px;
+}
+
+.testimonials--style-four .testimonials__avatar {
+  max-width: 160px;
+  max-height: 160px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0;
+  display: none;
+}
+
+.testimonials--style-four .testimonials__main {
+  gap: 2rem;
+}
+
+.testimonials--style-four .testimonials__quote {
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1.6;
+  letter-spacing: 0.16px;
+  color: #4B4B4B;
+}
+
+.testimonials--style-four .testimonials__card {
+  background: #F1EEE6;
+  padding: 1.5rem;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2rem;
+}
+
+/* =============================
+* 49. Contact Four Area
+============================= */
+.contact--style-four .contact__form-wrapper {
+  position: static;
+  background: var(--white);
+  transform: translateY(0);
+  margin: 0 auto;
+  border: 1px solid #F1EEE6;
+}
+
+.contact--style-four .contact__info-title,
+.contact--style-four .contact__info-text {
+  max-width: 540px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.contact--style-four .contact__info {
+  background: transparent;
+}
+
+.contact--style-four .contact__info-cards {
+  background: var(--clr-deep-green);
+  padding: 2rem;
+  border-radius: 20px;
+  justify-content: center;
+}
+
+.contact--style-four .contact__info-card {
+  background: transparent;
+}
+
+/* =============================
+* 50. CTA Four Area
+============================= */
+.cta--style-four .cta__container {
+  padding-bottom: 1rem;
+}
+
+.cta--style-four .cta__title {
+  font-weight: 600;
+  line-height: 1.3;
+  color: var(--white);
+}
+
+.cta--style-four .cta__box {
+  flex-direction: row;
+  background-color: transparent;
+  max-width: 100%;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.cta--style-four .cta__form {
+  margin: 0;
+}
+
+.cta--style-four .cta__title {
+  text-align: left;
+}
+
+.cta--style-four .cta__input {
+  background-color: #192221;
+}
+
+/* =============================
+* 50. Footer Four Area
+============================= */
+.footer--style-four .footer__text-image {
+  bottom: 0;
+  right: 25%;
+  transform: translateX(-25%);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =============================
+* 2. CTA Five Area
+============================= */
+.cta--style-five {
+  background: var(--clr-base-dark);
+}
+
+.cta--style-five .cta__title {
+  text-align: center;
+  max-width: 720px;
+}
+
+.cta--style-five .cta__text {
+  padding-bottom: 7rem;
+  max-width: 840px;
+}
+
+.cta--style-five .cta__content::before {
+  background: linear-gradient(180deg, rgba(13, 22, 21, 0.18) 0%, rgba(13, 22, 21, 0.48) 55.06%, rgba(13, 22, 21, 0.60) 100%);
+}
+
+.cta--style-five .cta__content {
+  background: #161F1E;
+  position: relative;
+}
+
+.cta--style-five .cta__shape-left {
+  position: absolute;
+  top: 0;
+  left: 0;
+  max-width: 315px;
+  max-height: 330px;
+  width: 100%;
+  height: 100%;
+}
+
+.cta--style-five .cta__shape-right {
+  position: absolute;
+  top: 0 !important;
+  right: -15px !important;
+  max-width: 315px;
+  max-height: 330px;
+  width: 100%;
+  height: 100%;
+}
+
+
+
+
+/* =============================
+* 2. Team Four Area
+============================= */
+.team--style-four {
+  background: #F1EEE6;
+}
+
+.team--style-four .team__top {
+  position: relative;
+}
+
+.team--style-four .team__social-links {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: fit-content;
+  padding: 10px 2rem;
+  border-radius: 10px 10px 0 0;
+}
+
+
+
 
 /* =============================
 * 2. Hero Six Area
@@ -5519,7 +5565,7 @@ div#portfolio-three-slider-ow {
   }
 
   /* Blog One Area */
-  .blog--one .blog-card__title {
+  .blog--style-one .blog-card__title {
     font-size: 1.2rem;
   }
 
@@ -5583,7 +5629,7 @@ div#portfolio-three-slider-ow {
   }
 
   /* Footer Three Area */
-  .footer--style-three .footer__text-image {
+  .footer__text-image {
     height: 68px;
     right: 100px;
     bottom: 130px;
@@ -5945,7 +5991,7 @@ div#portfolio-three-slider-ow {
   }
 
   /* Footer Three Area */
-  .footer--style-three .footer__text-image {
+  .footer__text-image {
     height: 50px;
     width: 257px;
     right: 100px;
@@ -6164,6 +6210,12 @@ div#portfolio-three-slider-ow {
 
   .hero--style-six .hero__content {
     padding: 2rem 1.2rem;
+  }
+
+  .footer--style-four .footer__text-image {
+    bottom: 0;
+    right: 0;
+    transform: translateX(0);
   }
 }
 
