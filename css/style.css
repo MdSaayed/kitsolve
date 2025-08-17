@@ -5313,6 +5313,15 @@ div#portfolio-three-slider-ow {
     font-size: 5.5rem;
   }
 
+  /* Btn Primary */
+  .btn-primary{
+    gap: 10px;
+  }
+  .btn-primary svg{
+    width: 35px;
+    height: 35px;
+  }
+
   /* About One Area */
   .about--one .about__desc {
     max-width: 700px;

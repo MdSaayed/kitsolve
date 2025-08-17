@@ -15,12 +15,67 @@
   <link rel="stylesheet" href="./css/swiper-bundle.min.css">
   <!-- Tiny Slider CSS -->
   <link rel="stylesheet" href="./css/tiny-slider.css">
+  <!-- Menu CSS -->
+  <link rel="stylesheet" href="./css/menu.css">
   <!-- Theme Custom CSS -->
   <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body>
   <main class="main">
+
+    <!-- Starting of the Header One Area -->
+    <header class="header header--style-one">
+      <div class="header__container container">
+        <div class="header__wrap">
+          <div class="header__logo-wrap">
+            <a href="/" class="logo__link">
+              <img src="./img//logo/logo-3.png" alt="" class="logo">
+            </a>
+          </div>
+
+          <nav class="main-menu">
+            <div class="menu-close"><span class="close"></span></div>
+            <ul class="main-menu__nav">
+              <li class="item"><a href="#">Home</a></li>
+              <li class="item"><a href="#">About</a></li>
+              <li class="item"><a href="#">Services</a></li>
+              <li class="item"><a href="#">Works</a></li>
+              <li class="item"><a href="#">Contact</a></li>
+
+              <li class="item dropdownitem">
+                <a href="#" class="nav-dropdown">Help</a>
+                <div class="dropdown">
+                  <ul>
+                    <li class="item"><a href="#">Mail Settings</a></li>
+                    <li class="item"><a href="#">Hosting Selection</a></li>
+                    <li class="item"><a href="#">Admin Panel</a></li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </nav>
+
+          <div class="header__right d-flex align-items-center gap-4">
+            <div class="header__btn-wrap">
+              <a href="contact.html" class="header__btn btn-secondary">
+                <svg width="35" height="35" viewBox="0 0 48 48" fill="none">
+                  <circle cx="24" cy="24" r="24" fill="#090510"></circle>
+                  <path
+                    d="M17.5591 15.6851C17.5591 14.6086 18.8068 14.0135 19.6442 14.691L33.1447 25.6234C33.959 26.2824 33.4926 27.5989 32.4449 27.5989H24.9453C24.6771 27.599 24.4123 27.6589 24.1702 27.7745C23.9282 27.89 23.7151 28.0582 23.5464 28.2668L19.5778 33.1727C18.9043 34.0054 17.5591 33.5295 17.5591 32.4585V15.6851Z"
+                    fill="white"></path>
+                </svg>
+                <span class="header__btn-text">TET’S TALK</span>
+              </a>
+            </div>
+
+            <div class="menu-open"><span class="open"></span></div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- End of the Header One Area -->
+
     <!-- Starting of the Hero One Area -->
     <section class="hero hero--one">
       <div class="hero__overlay overlay"></div>
@@ -1735,6 +1790,8 @@
   <script src="./js//bootstrap.bundle.min.js"></script>
   <!-- Tiny Slider Js -->
   <script src="./js/tiny-slider.js"></script>
+  <!-- Menu JS -->
+  <script src="./js/menu.js"></script>
   <!-- Theme Custom JS -->
   <script src="./js/script.js"></script>
 </body>
