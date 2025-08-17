@@ -1829,7 +1829,7 @@ img.testimonials-avatar.slider__avatar--active {
   background-color: var(--clr-base-dark);
 }
 
-.contact--one::before {
+.contact--style-one::before {
   content: "";
   position: absolute;
   inset: 0;
@@ -5274,7 +5274,7 @@ div#portfolio-three-slider-ow {
   background: var(--clr-base-dark);
 }
 
-.breadcrumb__container{
+.breadcrumb__container {
   padding-top: 5rem;
   padding-bottom: 5rem;
 }
@@ -5314,10 +5314,11 @@ div#portfolio-three-slider-ow {
   }
 
   /* Btn Primary */
-  .btn-primary{
+  .btn-primary {
     gap: 10px;
   }
-  .btn-primary svg{
+
+  .btn-primary svg {
     width: 35px;
     height: 35px;
   }
@@ -5625,6 +5626,11 @@ div#portfolio-three-slider-ow {
   /* Blog One Area */
   .blog--style-one .blog-card__title {
     font-size: 1.2rem;
+  }
+
+  /* Footer One Area */
+  .footer__logo-lg {
+    max-width: 110px;
   }
 
   /* Team Two Area */
