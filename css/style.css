@@ -28,47 +28,51 @@ CSS INDEX
 15. Blog One Area
 16. Footer One Area
 
-17. Hero Two Area
-18. About Two Area
-19. Services Two Area
-20. Portfolio Two Area
-21. Process Two Area
-22. Testimonials Two Area
-23. Team Two Area
-24. Faq Two Area
-25. Contact Two Area
-26. Blog Two Area
-27. CTA Two Area
-28. Footer Two Area
+17. Header Two Area
+18. Hero Two Area
+19. About Two Area
+20. Services Two Area
+21. Portfolio Two Area
+22. Process Two Area
+23. Testimonials Two Area
+24. Team Two Area
+25. Faq Two Area
+26. Contact Two Area
+27. Blog Two Area
+28. CTA Two Area
+29. Footer Two Area
 
-29. Hero Three Area
-30. Features One Area
-31. Product Benefits Area
-32. Testimonials Three Area
-33. Pricing One Area
-34. Faq Three Area
-35. CTA Three Area
-36. Keywords Area
-37. Team Three Area
-38. Contact Three Area
-39. Blog Two Area
-40. Footer Three Area
+30. Header Three Area
+31. Hero Three Area
+32. Features One Area
+33. Product Benefits Area
+34. Testimonials Three Area
+35. Pricing One Area
+36. Faq Three Area
+37. CTA Three Area
+38. Keywords Area
+39. Team Three Area
+40. Contact Three Area
+41. Blog Two Area
+42. Footer Three Area
 
-41. Hero Five Area
-42. Services Tag Area
-43. About Three Area
-44. Keywords Two Area
-45. Process Three Area
-46. Portfolio Three Area
-47. Team Four Area
-48. Pricing Two Area
-49. Testimonials Four Area
-50. CTA Five Area
-51. Contact Four Area
-52. CTA Four Area
-53. Footer Four Area
+43. Header Four Area
+44. Hero Five Area
+45. Services Tag Area
+46. About Three Area
+47. Keywords Two Area
+48. Process Three Area
+49. Portfolio Three Area
+50. Team Four Area
+51. Pricing Two Area
+52. Testimonials Four Area
+53. CTA Five Area
+54. Contact Four Area
+55. CTA Four Area
+56. Footer Four Area
 
-54. Hero Six Area
+57. Header Five Area
+58. Hero Six Area
 
 ------------------------------------------------------------------*/
 
@@ -350,6 +354,7 @@ p {
   --bs-gutter-x: 32px;
   --bs-gutter-y: 32px;
 }
+
 
 /* =============================
 * 4. Hero One Area
@@ -2285,7 +2290,12 @@ img.testimonials-avatar.slider__avatar--active {
 }
 
 /* =============================
-* 17. Hero Two Area
+* 17. Header Two Area
+============================= */
+
+
+/* =============================
+* 18. Hero Two Area
 ============================= */
 .hero--style-two {
   background: var(--clr-base-dark);
@@ -2376,7 +2386,7 @@ img.testimonials-avatar.slider__avatar--active {
 }
 
 /* =============================
-* 18. About Two Area
+* 19. About Two Area
 ============================= */
 .about--style-two {
   position: relative;
@@ -2502,7 +2512,7 @@ img.testimonials-avatar.slider__avatar--active {
 }
 
 /* =============================
-* 19. Services Two Area
+* 20. Services Two Area
 ============================= */
 .services--style-two .services__title {
   color: var(--clr-dark);
@@ -2560,7 +2570,7 @@ img.testimonials-avatar.slider__avatar--active {
 }
 
 /* =============================
-* 20. Portfolio Two Area
+* 21. Portfolio Two Area
 ============================= */
 .portfolio--style-two .portfolio__container {
   overflow: hidden;
@@ -2618,7 +2628,7 @@ img.testimonials-avatar.slider__avatar--active {
 }
 
 /* =============================
-* 21. Process Two Area
+* 22. Process Two Area
 ============================= */
 .process--style-two {
   background: var(--clr-base-dark);
