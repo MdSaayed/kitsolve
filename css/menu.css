@@ -60,6 +60,8 @@
 
 .main-menu .main-menu__nav>li a {
   position: relative;
+  font-size: 20px;
+  font-weight: 500;
 }
 
 .main-menu .main-menu__nav>li a::before {

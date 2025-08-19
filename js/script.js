@@ -29,6 +29,7 @@ JS INDEX
 17. Portfolio Three Area
 18. About Three Area
 19. Hero Five Area
+20 Pure Counter
 
 ------------------------------------------------------------------*/
 
@@ -737,7 +738,7 @@ document.addEventListener('DOMContentLoaded', () => {
 document.addEventListener('DOMContentLoaded', function () {
   const portfolioSliderThree = document.getElementById("portfolio-three-slider");
   if (!portfolioSliderThree) return;
-  
+
   const testimonialSlider = tns({
     container: "#portfolio-three-slider",
     autoHeight: true,
@@ -843,6 +844,10 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+/* =============================
+* 20. Pure Counter
+============================= */
+const counter = new PureCounter();
 
 
 
