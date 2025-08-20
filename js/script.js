@@ -803,7 +803,7 @@ document.addEventListener("DOMContentLoaded", function () {
 ============================= */
 document.addEventListener("DOMContentLoaded", function () {
   const bgSliderContainer = document.querySelector("#hero-bg-slider");
-  const heroSection = document.querySelector(".hero--style-five");
+  const heroSection = document.querySelector(".hero--style-four");
   const prevBtn = document.querySelector(".hero__bg-nav-prev");
   const nextBtn = document.querySelector(".hero__bg-nav-next");
 
