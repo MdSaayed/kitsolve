@@ -72,7 +72,7 @@ CSS INDEX
 56. Footer Four Area
 
 57. Header Five Area
-58. Hero Six Area
+58. Hero Five Area
 
 ------------------------------------------------------------------*/
 
@@ -1520,6 +1520,26 @@ img.testimonials-avatar.slider__avatar--active {
   color: var(--clr-white);
   text-align: left;
   margin-left: 0;
+}
+
+.faq--one .faq__title {
+  max-width: 600px;
+}
+
+.faq--one .highlight {
+  position: relative;
+  display: inline-block;
+}
+
+.faq--one .highlight::before {
+  content: "";
+  position: absolute;
+  bottom:8px;
+  right: 0;
+  width: 100%;
+  height: 20px;
+  background: url("../img/faq//faq-shape-2.png");
+  z-index: -1;
 }
 
 .faq__desc {
@@ -5185,6 +5205,10 @@ div#portfolio-three-slider-ow {
 /* =============================
 * 51. Contact Four Area
 ============================= */
+.contact--style-four {
+  background-color: var(--clr-white);
+}
+
 .contact--style-four .contact__form-wrapper {
   position: static;
   background: var(--clr-white);
@@ -5198,7 +5222,6 @@ div#portfolio-three-slider-ow {
   max-width: 540px;
   text-align: center;
   margin: 0 auto;
-  color: var(--clr-white);
 }
 
 .contact--style-four .contact__info-title {
@@ -5258,13 +5281,13 @@ div#portfolio-three-slider-ow {
 * 53. Footer Four Area
 ============================= */
 .footer--style-four .footer__text-image {
-  bottom: 0;
+  bottom: 15px;
   right: 25%;
   transform: translateX(-25%);
 }
 
 /* =============================
-* 54. Hero Six Area
+* 54. Hero Five Area
 ============================= */
 .hero--style-five {
   background-color: var(--clr-base-dark);
@@ -5506,7 +5529,7 @@ div#portfolio-three-slider-ow {
     width: 20px;
   }
 
-  /* Hero Six Area */
+  /* Hero Five Area */
   .hero--style-five .hero__title {
     font-size: 4rem;
   }
@@ -5663,7 +5686,7 @@ div#portfolio-three-slider-ow {
     right: 0;
   }
 
-  /* Hero Six Area */
+  /* Hero Five Area */
   .hero--style-five .hero__title {
     font-size: 3rem;
   }
@@ -5850,7 +5873,7 @@ div#portfolio-three-slider-ow {
     display: none;
   }
 
-  /* Hero Six Area */
+  /* Hero Five Area */
   .hero--style-five .hero__title {
     font-size: 2.5rem;
   }
@@ -6390,7 +6413,12 @@ div#portfolio-three-slider-ow {
     transform: rotate(342deg);
   }
 
-  /* Hero Six Area */
+  /* CTA Four Area */
+  .cta--style--two .cta__form {
+    width: 100%;
+  }
+
+  /* Hero Five Area */
   .hero--style-five .hero__title {
     font-size: 2rem;
   }
