@@ -1534,7 +1534,7 @@ img.testimonials-avatar.slider__avatar--active {
 .faq--one .highlight::before {
   content: "";
   position: absolute;
-  bottom:8px;
+  bottom: 8px;
   right: 0;
   width: 100%;
   height: 20px;
@@ -2214,7 +2214,7 @@ img.testimonials-avatar.slider__avatar--active {
 }
 
 .footer__logo-lg {
-  max-width: 180px;
+  max-width: 150px;
   width: 100%;
   height: auto;
 }
@@ -2314,6 +2314,10 @@ img.testimonials-avatar.slider__avatar--active {
 
 .footer__cta-link:hover {
   color: var(--clr-lime-green);
+}
+
+.footer--style-one .footer__bottom {
+  margin-top: 0;
 }
 
 .footer__bottom {
@@ -5280,6 +5284,10 @@ div#portfolio-three-slider-ow {
 /* =============================
 * 53. Footer Four Area
 ============================= */
+.footer-pt {
+  padding-top: 2rem !important;
+}
+
 .footer--style-four .footer__text-image {
   bottom: 15px;
   right: 25%;
