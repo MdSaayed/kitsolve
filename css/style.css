@@ -209,6 +209,26 @@ p {
   padding: 8px 12px;
   padding-right: 1.5rem;
   text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+
+.btn-primary span {
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.5;
+  letter-spacing: 0.16px;
+  color: var(--clr-white);
+}
+
+.btn-primary:hover {
+  background: var(--clr-white);
+}
+
+
+.btn-primary:hover span {
+  color: var(--clr-white);
+  transition: 0.3s ease;
 }
 
 .btn-secondary {
@@ -220,15 +240,14 @@ p {
   padding: 8px 12px;
   padding-right: 1.5rem;
   text-decoration: none;
+  transition: background 0.3s ease;
 }
 
-.btn-primary span {
-  font-size: 1rem;
-  font-weight: 600;
-  line-height: 1.5;
-  letter-spacing: 0.16px;
+.btn-secondary:hover {
+  background: var(--clr-deep-green);
   color: var(--clr-white);
 }
+
 
 .btn-secondary span {
   font-size: 1rem;
@@ -236,6 +255,11 @@ p {
   line-height: 1.5;
   letter-spacing: 0.16px;
   color: var(--clr-dark);
+}
+
+.btn-secondary:hover span {
+  transition: color 0.3s ease;
+
 }
 
 /* Button Square */
@@ -538,6 +562,10 @@ p {
 /* =============================
 * 5. Portfolio One Area
 ============================= */
+.portfolio {
+  background: var(--clr-cream);
+}
+
 .portfolio__heading {
   display: flex;
   justify-content: space-between;
@@ -2148,6 +2176,10 @@ img.testimonials-avatar.slider__avatar--active {
 /* =============================
 * 15. Blog One Area
 ============================= */
+.blog--style-one {
+  background: var(--clr-cream);
+}
+
 .blog--style-one .blog__title {
   text-align: left;
 }
@@ -2668,6 +2700,16 @@ img.testimonials-avatar.slider__avatar--active {
   50% {
     transform: scale(1.1);
   }
+}
+
+.keywords.horizontal {
+  transform: rotate(90deg);
+  transform-origin: bottom right;
+  position: absolute;
+  right: 120px;
+  bottom: 0;
+  z-index: 10;
+  max-width: 880px;
 }
 
 /* =============================
@@ -4205,7 +4247,7 @@ img.testimonials-avatar.slider__avatar--active {
 * 34. Faq Three Area
 ============================= */
 .faq--three {
-  background-color: var(--clr-lime-green);
+  background-color: var(--clr-cream);
   position: relative;
 }
 
@@ -4261,7 +4303,7 @@ img.testimonials-avatar.slider__avatar--active {
 * 37. Team Three Area
 ============================= */
 .team--style-three {
-  background: var(--clr-lime-green);
+  background: var(--clr-cream);
   overflow: hidden;
 }
 
@@ -4671,7 +4713,7 @@ img.testimonials-avatar.slider__avatar--active {
 * 43. About Three Area
 ============================= */
 .about--style-three {
-  background-color: var(--clr-lime-green);
+  background-color: var(--clr-cream);
   overflow: hidden;
 }
 
@@ -5099,7 +5141,7 @@ div#portfolio-three-slider-ow {
 * 47. Team Four Area
 ============================= */
 .team--style-four {
-  background: var(--clr-lime-green);
+  background: var(--clr-cream);
 }
 
 .team--style-four .team__top {
@@ -5795,6 +5837,14 @@ div#portfolio-three-slider-ow {
   .keywords svg {
     width: 2rem;
     height: 2rem;
+  }
+
+  .keywords.horizontal {
+    transform: rotate(0);
+    transform-origin: none;
+    position: static;
+    max-width: 100%;
+    margin-top: 4rem;
   }
 
   /* Footer One Area */
