@@ -103,7 +103,7 @@ function initAllAnimations() {
   /* =============================
   * 3. About One Area
   ============================= */
-  animateOnScroll(['.about__desc', '.about__stat', '.about__flip', '.about__btn','.about__action']);
+  animateOnScroll(['.about__desc', '.about__stat', '.about__flip', '.about__btn', '.about__action']);
   animateZoom(['.about__background', '.about__flip-img', '.about__image-main']);
   animateArrowButton('.about__image-arrow');
 
@@ -495,7 +495,12 @@ function initAllAnimations() {
   initHeroSixAnimation();
 
   /* =============================
-  * 30. Global Animation
+  * 31. Breadcrumb Area
+  ============================= */
+  animateOnScroll(['.breadcrumb__links']);
+
+  /* =============================
+  * 32. Global Animation
   ============================= */
   animateOnScroll([
     '.title-xl',
@@ -513,7 +518,7 @@ document.addEventListener("DOMContentLoaded", initAllAnimations);
 
 
 /* =============================
-* 6. Process One Area
+* 33. Process One Area
 ============================= */
 function initProcessGridAnimation() {
   const grid = document.querySelector(".process__grid");
