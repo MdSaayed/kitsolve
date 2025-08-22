@@ -103,7 +103,7 @@ function initAllAnimations() {
   /* =============================
   * 3. About One Area
   ============================= */
-  animateOnScroll(['.about__desc', '.about__stat', '.about__flip', '.about__btn']);
+  animateOnScroll(['.about__desc', '.about__stat', '.about__flip', '.about__btn','.about__action']);
   animateZoom(['.about__background', '.about__flip-img', '.about__image-main']);
   animateArrowButton('.about__image-arrow');
 

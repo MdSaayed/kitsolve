@@ -77,21 +77,7 @@ CSS INDEX
 ------------------------------------------------------------------*/
 
 @import url("https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap");
-
-:root {
-  --clr-deep-green: #1c5540;
-  --clr-deep-teal: #131C1B;
-  --clr-base-dark: #0d1615;
-  --clr-lime-green: #bce955;
-  --clr-cream: #f1eee6;
-  --clr-white: #fff;
-  --clr-dark: #000;
-  --clr-gray: #626262;
-  --clr-green-black: #182120;
-  --clr-midnight: #192221;
-  --font-primary: "Inter Tight", sans-serif;
-}
-
+@import url("./variable.css");
 
 /* =============================
 * 1. Reset Style
@@ -153,9 +139,11 @@ p {
   isolation: isolate;
 }
 
+
 /* =============================
 * 2. Basic Style
 ============================= */
+
 .container {
   max-width: 1920px;
   padding: 120px 200px;
@@ -212,7 +200,6 @@ p {
   transition: background 0.3s ease;
 }
 
-
 .btn-primary span {
   font-size: 1rem;
   font-weight: 600;
@@ -224,7 +211,6 @@ p {
 .btn-primary:hover {
   background: var(--clr-white);
 }
-
 
 .btn-primary:hover span {
   color: var(--clr-white);
@@ -248,7 +234,6 @@ p {
   color: var(--clr-white);
 }
 
-
 .btn-secondary span {
   font-size: 1rem;
   font-weight: 600;
@@ -259,10 +244,11 @@ p {
 
 .btn-secondary:hover span {
   transition: color 0.3s ease;
-
 }
 
+
 /* Button Square */
+
 .btn-square {
   display: inline-flex;
   align-items: center;
@@ -332,7 +318,9 @@ p {
   transform: translateY(-50%);
 }
 
+
 /* Button Square Black */
+
 .btn-square-black {
   background: var(--clr-dark) !important;
   color: var(--clr-white) !important;
@@ -355,7 +343,6 @@ p {
   fill: var(--clr-white);
 }
 
-
 /* Subtitle */
 .subtitle {
   display: block;
@@ -364,7 +351,6 @@ p {
   margin-bottom: 1rem;
   position: relative;
 }
-
 
 /* Utility Class */
 .spacing-t {
@@ -380,10 +366,10 @@ p {
   --bs-gutter-y: 32px;
 }
 
-
 /* =============================
 * 4. Hero One Area
 ============================= */
+
 .hero--one {
   background-size: cover;
   background-size: cover;
@@ -396,9 +382,7 @@ p {
   left: 0;
   height: 100%;
   width: 100%;
-  background: linear-gradient(270deg,
-      rgba(13, 22, 21, 0.75) 0%,
-      rgba(13, 22, 21, 0.95) 77.99%);
+  background: linear-gradient(270deg, rgba(13, 22, 21, 0.75) 0%, rgba(13, 22, 21, 0.95) 77.99%);
   z-index: 1;
 }
 
@@ -535,7 +519,9 @@ p {
   margin-bottom: 2rem;
 }
 
+
 /* Slider */
+
 .hero--one .tns-nav {
   position: absolute;
   top: 50%;
@@ -559,9 +545,11 @@ p {
   background: var(--clr-deep-green) !important;
 }
 
+
 /* =============================
 * 5. Portfolio One Area
 ============================= */
+
 .portfolio {
   background: var(--clr-cream);
 }
@@ -702,9 +690,11 @@ p {
   object-fit: cover;
 }
 
+
 /* =============================
 * 6. Services One Area
 ============================= */
+
 .service--one {
   background-color: var(--clr-lime-green);
 }
@@ -744,8 +734,8 @@ p {
   transition: opacity 0.4s ease;
 }
 
-.service--one .services__item:first-child {
-  background: var(--clr-base-dark) url("../img/services/services-shape-1.png") no-repeat top left;
+.service--one .services__item:nth-child(2) {
+  background: var(--clr-base-dark) url("../img/services/services-shape-3.png") no-repeat top center / contain;
 }
 
 .service--one .services__item:last-child {
@@ -799,7 +789,6 @@ p {
   opacity: 1;
 }
 
-
 .service--one .services__item-icon-wrap {
   display: flex;
   justify-content: space-between;
@@ -819,8 +808,7 @@ p {
   text-decoration: none;
   color: var(--clr-white);
   background-color: transparent;
-  transition: background-color 0.4s ease, transform 0.4s ease,
-    max-width 0.6s ease, padding 0.6s ease;
+  transition: background-color 0.4s ease, transform 0.4s ease, max-width 0.6s ease, padding 0.6s ease;
   position: relative;
   max-width: 48px;
   overflow: hidden;
@@ -886,7 +874,9 @@ p {
   letter-spacing: 0.2px;
 }
 
+
 /* Services Flip */
+
 .service--one .services__flip {
   background-color: var(--clr-lime-green);
   padding: 1.5rem;
@@ -921,9 +911,11 @@ p {
   margin-top: 1rem;
 }
 
+
 /* =============================
 * 7. About One Area
 ============================= */
+
 .about--one {
   background: var(--clr-base-dark);
   position: relative;
@@ -1185,7 +1177,6 @@ p {
   font-weight: 600;
 }
 
-
 .about--one .action__line-shape {
   width: 100%;
   height: 1px;
@@ -1201,6 +1192,7 @@ p {
 /* =============================
 * 8. Process One Area
 ============================= */
+
 .process--one {
   background-color: var(--clr-base-dark);
   overflow-x: hidden;
@@ -1288,7 +1280,6 @@ p {
   border-radius: 300px;
 }
 
-
 .process--one .process__number-wrap {
   position: absolute;
   bottom: -60px;
@@ -1326,6 +1317,7 @@ p {
   font-weight: 600;
   letter-spacing: 0.12px;
 }
+
 
 /* =============================
 * 9. Testimonials One Area
@@ -1445,10 +1437,7 @@ img.testimonials-avatar.slider__avatar--active {
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(180deg,
-      rgba(13, 22, 21, 0.3) 0%,
-      rgba(13, 22, 21, 0.8) 55.06%,
-      #0d1615 100%);
+  background: linear-gradient(180deg, rgba(13, 22, 21, 0.3) 0%, rgba(13, 22, 21, 0.8) 55.06%, #0d1615 100%);
   z-index: 5;
 }
 
@@ -1563,9 +1552,11 @@ img.testimonials-avatar.slider__avatar--active {
   width: 45px;
 }
 
+
 /* =============================
 * 10. Faq One Area
 ============================= */
+
 .faq {
   background-color: var(--clr-base-dark);
   position: relative;
@@ -1589,10 +1580,7 @@ img.testimonials-avatar.slider__avatar--active {
   height: 100%;
   top: 0;
   left: 0;
-  background: linear-gradient(180deg,
-      rgba(13, 22, 21, 0.3) 0%,
-      rgba(13, 22, 21, 0.8) 55.06%,
-      #0d1615 100%);
+  background: linear-gradient(180deg, rgba(13, 22, 21, 0.3) 0%, rgba(13, 22, 21, 0.8) 55.06%, #0d1615 100%);
   z-index: 2;
 }
 
@@ -1681,8 +1669,7 @@ img.testimonials-avatar.slider__avatar--active {
   margin-top: 0;
   font-size: 1rem;
   color: var(--clr-dark);
-  transition: height 0.4s ease, opacity 0.4s ease, margin-top 0.4s ease,
-    color 0.4s ease;
+  transition: height 0.4s ease, opacity 0.4s ease, margin-top 0.4s ease, color 0.4s ease;
 }
 
 .faq__item--active .faq__answer {
@@ -1768,9 +1755,11 @@ img.testimonials-avatar.slider__avatar--active {
   transform: rotate(315deg);
 }
 
+
 /* =============================
 * 11. CTA One Area
 ============================= */
+
 .cta {
   background-color: var(--clr-lime-green);
   position: relative;
@@ -1804,10 +1793,7 @@ img.testimonials-avatar.slider__avatar--active {
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(180deg,
-      rgba(13, 22, 21, 0.3) 0%,
-      rgba(13, 22, 21, 0.8) 55.06%,
-      #0d1615 100%);
+  background: linear-gradient(180deg, rgba(13, 22, 21, 0.3) 0%, rgba(13, 22, 21, 0.8) 55.06%, #0d1615 100%);
   z-index: 2;
 }
 
@@ -1858,6 +1844,7 @@ img.testimonials-avatar.slider__avatar--active {
 }
 
 .cta__social-link {
+  display: inline-block;
   position: relative;
   font-size: 1.5rem;
   font-weight: normal;
@@ -1875,6 +1862,7 @@ img.testimonials-avatar.slider__avatar--active {
 .cta__social-link:nth-child(3),
 .cta__social-link:nth-child(4) {
   border-color: var(--clr-white);
+  color: var(--clr-white);
 }
 
 .cta--style--two .cta__social-link {
@@ -1893,13 +1881,23 @@ img.testimonials-avatar.slider__avatar--active {
   border-radius: 50%;
 }
 
-.cta--style--two .cta__social-link::before {
+.cta__social-links>.cta__social-link:nth-last-child(-n+2)::before {
   background-color: var(--clr-white);
+}
+
+.cta--style--two .cta__social-links>.cta__social-link:nth-last-child(-n+4)::before {
+  background-color: var(--clr-white);
+}
+
+.cta--style--two .cta__social-link {
+  border: 0.5px solid var(--clr-white);
+
 }
 
 /* =============================
 * 12. Team One Area
 ============================= */
+
 .team--one {
   background: var(--clr-base-dark);
 }
@@ -2006,9 +2004,11 @@ img.testimonials-avatar.slider__avatar--active {
   transition: 0.6s ease;
 }
 
+
 /* =============================
 * 13. Contact One Area
 ============================= */
+
 .contact {
   position: relative;
   background-color: var(--clr-base-dark);
@@ -2019,10 +2019,7 @@ img.testimonials-avatar.slider__avatar--active {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg,
-      transparent 0%,
-      rgba(94, 90, 90, 0.415) 25%,
-      rgba(13, 22, 21, 1) 65%);
+  background: linear-gradient(180deg, transparent 0%, rgba(94, 90, 90, 0.415) 25%, rgba(13, 22, 21, 1) 65%);
   z-index: 2;
   pointer-events: none;
 }
@@ -2039,7 +2036,7 @@ img.testimonials-avatar.slider__avatar--active {
   width: 100%;
 }
 
-.container {
+.contact__container {
   position: relative;
   z-index: 2;
 }
@@ -2094,6 +2091,7 @@ img.testimonials-avatar.slider__avatar--active {
   letter-spacing: 0.16px;
 }
 
+
 /* =============================
 * 14. Keywords Area
 ============================= */
@@ -2142,7 +2140,9 @@ img.testimonials-avatar.slider__avatar--active {
   font-weight: bold;
 }
 
+
 /* Keyword Cta */
+
 .keyword--cta {
   background-color: transparent !important;
   z-index: 6;
@@ -2162,7 +2162,9 @@ img.testimonials-avatar.slider__avatar--active {
   fill: var(--clr-lime-green);
 }
 
+
 /* Animation */
+
 @keyframes scroll {
   0% {
     transform: translateX(0%);
@@ -2173,9 +2175,11 @@ img.testimonials-avatar.slider__avatar--active {
   }
 }
 
+
 /* =============================
 * 15. Blog One Area
 ============================= */
+
 .blog--style-one {
   background: var(--clr-cream);
 }
@@ -2218,10 +2222,7 @@ img.testimonials-avatar.slider__avatar--active {
   content: "";
   width: 100%;
   height: 100%;
-  background: linear-gradient(180deg,
-      rgba(13, 22, 21, 0.3) 0%,
-      rgba(13, 22, 21, 0.8) 55.06%,
-      #0d1615 100%);
+  background: linear-gradient(180deg, rgba(13, 22, 21, 0.3) 0%, rgba(13, 22, 21, 0.8) 55.06%, #0d1615 100%);
   transition: background 0.4s ease;
   z-index: 10;
 }
@@ -2312,9 +2313,11 @@ img.testimonials-avatar.slider__avatar--active {
   font-size: 0.95rem;
 }
 
+
 /* =============================
 * 16. Footer One Area
 ============================= */
+
 .footer {
   background-color: var(--clr-base-dark);
 }
@@ -2477,6 +2480,7 @@ img.testimonials-avatar.slider__avatar--active {
   display: block;
 }
 
+
 /* =============================
 * 17. Header Two Area
 ============================= */
@@ -2485,12 +2489,17 @@ img.testimonials-avatar.slider__avatar--active {
 /* =============================
 * 18. Hero Two Area
 ============================= */
+
 .hero--style-two {
   background: var(--clr-base-dark);
   position: relative;
 }
 
 .hero--style-two .hero__container {
+  position: relative;
+}
+
+.hero--style-two .hero__slider-container {
   position: relative;
 }
 
@@ -2572,13 +2581,20 @@ img.testimonials-avatar.slider__avatar--active {
   border: 3px solid var(--clr-white);
 }
 
+
 /* =============================
 * 19. About Two Area
 ============================= */
+
 .about--style-two {
   position: relative;
   background: var(--clr-cream);
   overflow: hidden;
+}
+
+.about--style-two .about__container {
+  position: relative;
+  z-index: 10;
 }
 
 .about--style-two::after {
@@ -2712,9 +2728,11 @@ img.testimonials-avatar.slider__avatar--active {
   max-width: 880px;
 }
 
+
 /* =============================
 * 20. Services Two Area
 ============================= */
+
 .services--style-two .services__title {
   color: var(--clr-dark);
   text-align: center;
@@ -2770,9 +2788,11 @@ img.testimonials-avatar.slider__avatar--active {
   transition: fill 0.4s ease;
 }
 
+
 /* =============================
 * 21. Portfolio Two Area
 ============================= */
+
 .portfolio--style-two .portfolio__container {
   overflow: hidden;
 }
@@ -2814,7 +2834,6 @@ img.testimonials-avatar.slider__avatar--active {
   color: var(--clr-white);
 }
 
-
 .portfolio__card-num {
   display: block;
   font-size: 1.5rem;
@@ -2832,9 +2851,11 @@ img.testimonials-avatar.slider__avatar--active {
   letter-spacing: 0.16px;
 }
 
+
 /* =============================
 * 22. Process Two Area
 ============================= */
+
 .process--style-two {
   background: var(--clr-base-dark);
 }
@@ -2902,9 +2923,11 @@ img.testimonials-avatar.slider__avatar--active {
   margin-top: 0 !important;
 }
 
+
 /* =============================
 * 22. Testimonials Two Area
 ============================= */
+
 .testimonials--style-two {
   background-color: var(--clr-cream);
 }
@@ -3009,9 +3032,11 @@ img.testimonials-avatar.slider__avatar--active {
   transform: translateY(-3rem);
 }
 
+
 /* =============================
 * 23. Team Two Area
 ============================= */
+
 .team--style-two {
   background-color: var(--clr-dark);
   color: var(--clr-white);
@@ -3060,7 +3085,6 @@ img.testimonials-avatar.slider__avatar--active {
   height: 0.5px;
   background: var(--clr-white);
   margin: 0 2rem;
-
 }
 
 .team--style-two .team__content {
@@ -3089,7 +3113,6 @@ img.testimonials-avatar.slider__avatar--active {
   width: 100%;
   margin-bottom: 0;
 }
-
 
 .team__main-expert-image {
   width: 100%;
@@ -3197,9 +3220,11 @@ img.testimonials-avatar.slider__avatar--active {
   padding-top: 1.5rem;
 }
 
+
 /* =============================
 * 24. Faq Two Area
 ============================= */
+
 .faq--style-two .faq__title {
   max-width: 550px;
 }
@@ -3233,9 +3258,11 @@ img.testimonials-avatar.slider__avatar--active {
   z-index: -1 !important;
 }
 
+
 /* =============================
 * 25. Contact Two Area
 ============================= */
+
 .contact--style-two {
   background: var(--clr-lime-green);
   overflow: hidden;
@@ -3326,9 +3353,11 @@ img.testimonials-avatar.slider__avatar--active {
   max-width: 100%;
 }
 
+
 /* =============================
 * 26. Blog Two Area
 ============================= */
+
 .blog--style-two {
   background: var(--clr-cream);
 }
@@ -3449,7 +3478,6 @@ img.testimonials-avatar.slider__avatar--active {
   display: flex;
   align-items: center;
   gap: 1rem;
-
 }
 
 .blog--style-two .blog__author-img {
@@ -3513,9 +3541,11 @@ img.testimonials-avatar.slider__avatar--active {
   max-width: 14px;
 }
 
+
 /* =============================
 * 27. CTA Two Area
 ============================= */
+
 .cta--style--two {
   position: relative;
   background-color: var(--clr-base-dark);
@@ -3597,9 +3627,11 @@ img.testimonials-avatar.slider__avatar--active {
   z-index: 10;
 }
 
+
 /* =============================
 * 28. Footer Two Area
 ============================= */
+
 .footer--style-two .footer__container {
   position: relative;
 }
@@ -3633,9 +3665,11 @@ img.testimonials-avatar.slider__avatar--active {
   left: 0;
 }
 
+
 /* =============================
 * 29. Hero Three Area
 ============================= */
+
 .hero--style-three {
   background: var(--clr-base-dark);
 }
@@ -3699,9 +3733,11 @@ img.testimonials-avatar.slider__avatar--active {
   width: 100%;
 }
 
+
 /* =============================
 * 30. Features One
 ============================= */
+
 .features__title {
   color: var(--clr-dark);
   text-align: center;
@@ -3814,7 +3850,6 @@ img.testimonials-avatar.slider__avatar--active {
   transform: translate(-50%, -50%);
   z-index: 10;
   transition: all 0.4s ease;
-
 }
 
 .card__action-btn svg {
@@ -3822,9 +3857,11 @@ img.testimonials-avatar.slider__avatar--active {
   transition: all 0.4s ease;
 }
 
+
 /* =============================
 * 31. Product Benefits Area
 ============================= */
+
 .product-benefits {
   overflow: hidden;
 }
@@ -3966,7 +4003,6 @@ img.testimonials-avatar.slider__avatar--active {
   color: var(--clr-white);
 }
 
-
 .product-benefits__item:hover .btn-square::after,
 .product-benefits__item:hover .btn-square::before,
 .product-benefits__item:hover .line-right,
@@ -4016,9 +4052,11 @@ img.testimonials-avatar.slider__avatar--active {
   text-align: center;
 }
 
+
 /* =============================
 * 32. Testimonials Three Area
 ============================= */
+
 .testimonials--style-three .testimonials__desc {
   font-size: 20px;
   font-weight: 500;
@@ -4049,9 +4087,11 @@ img.testimonials-avatar.slider__avatar--active {
   right: 10px;
 }
 
+
 /* =============================
 * 33. Pricing One Area
 ============================= */
+
 .pricing {
   background-color: var(--clr-base-dark);
   font-family: 'Inter', sans-serif;
@@ -4122,6 +4162,10 @@ img.testimonials-avatar.slider__avatar--active {
   gap: 2rem;
   position: relative;
   overflow: hidden;
+}
+
+.pricing__card--bottom {
+  background: var(--clr-lime-green);
 }
 
 .pricing__card.card-highlight::after {
@@ -4221,6 +4265,9 @@ img.testimonials-avatar.slider__avatar--active {
   font-weight: 500;
   transition: background 0.4s ease, color 0.4s ease;
   margin-top: 3rem;
+  text-decoration: none;
+  display: block;
+  text-align: center;
 }
 
 .pricing__btn:hover {
@@ -4243,9 +4290,31 @@ img.testimonials-avatar.slider__avatar--active {
   max-width: 130px;
 }
 
+
+/* Card Bottom */
+
+.pricing__card--bottom .pricing__duration,
+.pricing__card--bottom .pricing__price,
+.pricing__card--bottom .pricing__description,
+.pricing__card--bottom .pricing__plan-name,
+.pricing__card--bottom .pricing__feature,
+.pricing__card--bottom .pricing__feature-title {
+  color: var(--clr-dark);
+}
+
+.pricing__card--bottom svg path {
+  fill: var(--clr-dark);
+}
+
+.pricing__card--bottom .pricing__btn {
+  margin-top: 0;
+}
+
+
 /* =============================
 * 34. Faq Three Area
 ============================= */
+
 .faq--three {
   background-color: var(--clr-cream);
   position: relative;
@@ -4283,9 +4352,11 @@ img.testimonials-avatar.slider__avatar--active {
   flex-direction: row;
 }
 
+
 /* =============================
 * 35. CTA Three Area
 ============================= */
+
 .cta--style-three {
   background: var(--clr-base-dark);
 }
@@ -4302,6 +4373,7 @@ img.testimonials-avatar.slider__avatar--active {
 /* =============================
 * 37. Team Three Area
 ============================= */
+
 .team--style-three {
   background: var(--clr-cream);
   overflow: hidden;
@@ -4400,9 +4472,11 @@ img.testimonials-avatar.slider__avatar--active {
   margin-top: 8px;
 }
 
+
 /* =============================
 * 38. Contact Three Area
 ============================= */
+
 .contact--style-three {
   background: var(--clr-white);
 }
@@ -4440,17 +4514,21 @@ img.testimonials-avatar.slider__avatar--active {
   fill: var(--clr-lime-green);
 }
 
+
 /* =============================
 * 39. Blog Three Area
 ============================= */
+
 .blog .card--style-three .blog__thumb {
   max-width: 100%;
   max-height: 362px;
 }
 
+
 /* =============================
 * 40. Footer Three Area
 ============================= */
+
 .footer--style-three .footer__container {
   position: relative;
 }
@@ -4520,9 +4598,11 @@ img.testimonials-avatar.slider__avatar--active {
   padding-bottom: 0;
 }
 
+
 /* =============================
 * 41. Hero Five Area
 ============================= */
+
 .hero--style-four {
   position: relative;
   padding: 4rem 0;
@@ -4611,7 +4691,6 @@ img.testimonials-avatar.slider__avatar--active {
   cursor: pointer;
 }
 
-
 .hero--style-four .hero__bg-nav-prev:hover,
 .hero--style-four .hero__bg-nav-next:hover {
   background-color: var(--clr-deep-green);
@@ -4652,9 +4731,11 @@ img.testimonials-avatar.slider__avatar--active {
   left: 0;
 }
 
+
 /* =============================
 * 42. Services Tag Area
 ============================= */
+
 .services-tag .tag__list {
   display: flex;
   flex-wrap: wrap;
@@ -4709,9 +4790,11 @@ img.testimonials-avatar.slider__avatar--active {
   letter-spacing: 0.16px;
 }
 
+
 /* =============================
 * 43. About Three Area
 ============================= */
+
 .about--style-three {
   background-color: var(--clr-cream);
   overflow: hidden;
@@ -4867,9 +4950,11 @@ img.testimonials-avatar.slider__avatar--active {
   transform: rotate(330deg);
 }
 
+
 /* =============================
 * 44. Keywords Two Area
 ============================= */
+
 .keywords--style-two {
   background: var(--clr-lime-green);
 }
@@ -4886,9 +4971,11 @@ img.testimonials-avatar.slider__avatar--active {
   fill: var(--clr-dark);
 }
 
+
 /* =============================
 * 45. Process Three Area
 ============================= */
+
 .process--style-three {
   background: var(--clr-base-dark);
 }
@@ -4977,7 +5064,6 @@ img.testimonials-avatar.slider__avatar--active {
   transform: translate(0, -50%);
 }
 
-
 .process--style-three .step__content {
   max-width: 1200px;
   margin-left: auto;
@@ -5039,9 +5125,11 @@ img.testimonials-avatar.slider__avatar--active {
   object-fit: cover;
 }
 
+
 /* =============================
 * 46. Portfolio Three Area
 ============================= */
+
 .portfolio--style-three {
   background: var(--clr-lime-green);
   overflow: hidden;
@@ -5108,7 +5196,6 @@ img.testimonials-avatar.slider__avatar--active {
 
 div#portfolio-three-slider-ow {
   position: relative;
-
 }
 
 .portfolio--style-three .tns-nav {
@@ -5137,9 +5224,11 @@ div#portfolio-three-slider-ow {
   background: var(--clr-deep-green);
 }
 
+
 /* =============================
 * 47. Team Four Area
 ============================= */
+
 .team--style-four {
   background: var(--clr-cream);
 }
@@ -5161,6 +5250,7 @@ div#portfolio-three-slider-ow {
 /* =============================
 * 48. Pricing Two Area
 ============================= */
+
 .pricing--style-two .pricing__card {
   position: relative;
 }
@@ -5189,9 +5279,11 @@ div#portfolio-three-slider-ow {
   z-index: 1;
 }
 
+
 /* =============================
 * 49. Testimonials Four Area
 ============================= */
+
 .testimonials--style-four {
   background: transparent;
 }
@@ -5311,9 +5403,11 @@ div#portfolio-three-slider-ow {
   gap: 2rem;
 }
 
+
 /* =============================
 * 50. CTA Five Area
 ============================= */
+
 .cta--style-five {
   background: var(--clr-base-dark);
 }
@@ -5357,9 +5451,11 @@ div#portfolio-three-slider-ow {
   height: 100%;
 }
 
+
 /* =============================
 * 51. Contact Four Area
 ============================= */
+
 .contact--style-four {
   background-color: var(--clr-white);
 }
@@ -5398,9 +5494,11 @@ div#portfolio-three-slider-ow {
   background: transparent;
 }
 
+
 /* =============================
 * 52. CTA Four Area
 ============================= */
+
 .cta--style-four .cta__container {
   padding-bottom: 1rem;
 }
@@ -5432,9 +5530,11 @@ div#portfolio-three-slider-ow {
   background-color: var(--clr-midnight);
 }
 
+
 /* =============================
 * 53. Footer Four Area
 ============================= */
+
 .footer-pt {
   padding-top: 2rem !important;
 }
@@ -5445,9 +5545,11 @@ div#portfolio-three-slider-ow {
   transform: translateX(-25%);
 }
 
+
 /* =============================
 * 54. Hero Five Area
 ============================= */
+
 .hero--style-five {
   background-color: var(--clr-base-dark);
 }
@@ -5527,9 +5629,11 @@ div#portfolio-three-slider-ow {
   height: 100%;
 }
 
+
 /* =============================
 * 2. Breadcrumb
 ============================= */
+
 .breadcrumb {
   background: var(--clr-base-dark);
   position: relative;
@@ -5562,7 +5666,6 @@ div#portfolio-three-slider-ow {
   color: var(--clr-white);
 }
 
-
 .breadcrumb .shape__left,
 .breadcrumb .shape__right {
   max-width: 260px;
@@ -5584,6 +5687,7 @@ div#portfolio-three-slider-ow {
   top: 0;
   right: 0;
 }
+
 
 /* =============================
 * 2. Responsive
@@ -5715,7 +5819,7 @@ div#portfolio-three-slider-ow {
 
 @media (max-width: 1400px) {
   .container {
-    padding: 100px 120px;
+    padding: 100px 100px;
   }
 
   /* Title xxl */
@@ -6018,7 +6122,6 @@ div#portfolio-three-slider-ow {
     width: 100%;
   }
 
-
   /* Hero Three Area */
   .hero--style-three .o-shape {
     width: 80px;
@@ -6094,7 +6197,6 @@ div#portfolio-three-slider-ow {
 }
 
 @media (max-width: 768px) {
-
 
   /* Title xxl */
   .title-xxl {
@@ -6549,7 +6651,6 @@ div#portfolio-three-slider-ow {
   /* CTA Two Area */
   .cta--style--two .cta__input {
     min-width: 100%;
-
   }
 
   .cta__button-text {

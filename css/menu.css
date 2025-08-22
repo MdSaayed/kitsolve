@@ -1,16 +1,25 @@
-:root {
-  --clr-deep-green: #1c5540;
-  --clr-deep-teal: #131C1B;
-  --clr-base-dark: #0d1615;
-  --clr-lime-green: #bce955;
-  --clr-cream: #f1eee6;
-  --clr-white: #fff;
-  --clr-dark: #000;
-  --clr-gray: #626262;
-  --clr-green-black: #182120;
-  --clr-midnight: #192221;
-  --font-primary: "Inter Tight", sans-serif;
-}
+/*------------------------------------------------------------------
+Template Name: Kitsolve – Business Solution HTML Template
+Template URL: https://kitsolve.netlify.app
+Description: Kitsolve is a clean, modern, and fully responsive HTML template designed for corporate businesses, startups, creative agencies, IT services, consulting firms, SaaS platforms, software showcases, app landing pages, marketing agencies, and digital service providers. Built on a 1920px grid, it offers a clear visual hierarchy, organized sections, and reusable components for easy editing and rapid customization.
+Author: KitDokan
+Author URL: https://themeforest.net/user/kitdokan
+Version: 1.0
+-------------------------------------------------------------------
+
+CSS INDEX
+===================
+
+1. Header One Area
+2. Header Two Area
+3. Header Three Area
+4. Header Four Area
+5. Header Five Area
+6. Responsive
+
+------------------------------------------------------------------*/
+
+@import url("./variable.css");
 
 /* =============================
 * 1. Header One Area
@@ -146,7 +155,6 @@
   display: none;
 }
 
-
 /* =============================
 * 2. Header Two Area
 ============================= */
@@ -255,7 +263,7 @@
 }
 
 /* =============================
-* 3. Header Four Area
+* 4. Header Four Area
 ============================= */
 .header__top {
   position: relative;
@@ -292,7 +300,7 @@
 }
 
 /* =============================
-* 3. Header Five Area
+* 5. Header Five Area
 ============================= */
 .header--style-five {
   background: transparent;
@@ -317,7 +325,7 @@
 
 
 /* =============================
-* 3. Responsive
+* 6. Responsive
 ============================= */
 
 @media (max-width:1800px) {
@@ -809,4 +817,3 @@
     height: 28px;
   }
 }
-

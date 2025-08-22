@@ -88,9 +88,9 @@
                         <li class="item dropdownitem"><a class="nav-dropdown" href="#">Home</a>
                             <div class="dropdown">
                                 <ul>
-                                    <li class="item"><a href="./index.html">Home 01</a></li>
+                                    <li class="item item__active"><a href="./index.html">Home 01</a></li>
                                     <li class="item"><a href="./index-2.html">Home 02</a></li>
-                                    <li class="item  item__active"><a href="./index-3.html">Home 03</a></li>
+                                    <li class="item"><a href="./index-3.html">Home 03</a></li>
                                     <li class="item"><a href="./index-4.html">Home 04</a></li>
                                     <li class="item"><a href="./index-5.html">Home 05</a></li>
                                 </ul>
@@ -112,15 +112,15 @@
                                 </ul>
                             </div>
                         </li>
-                        <li class="item dropdownitem"><a class="nav-dropdown" href="#">Works</a>
+
+                        <li class="item dropdownitem"><a class="nav-dropdown" href="./works.html">Works</a>
                             <div class="dropdown">
                                 <ul>
-                                    <li class="item"><a href="./work.html">Works 01</a></li>
-                                    <li class="item"><a href="./work-2.html">Works 02</a></li>
+                                    <li class="item"><a href="./works.html">Works 01</a></li>
+                                    <li class="item"><a href="./works-2.html">Works 02</a></li>
                                 </ul>
                             </div>
                         </li>
-                        <li class="item"><a href="./contact.html">Contact</a></li>
                         <li class="item dropdownitem">
                             <a href="#" class="nav-dropdown">Pages</a>
                             <div class="dropdown">
@@ -132,6 +132,7 @@
                                     <li class="item"><a href="./team.html">Team</a></li>
                                     <li class="item"><a href="./blog.html">Blog 01</a></li>
                                     <li class="item"><a href="./blog-2.html">Team 02</a></li>
+                                    <li class="item"><a href="./faq.html">Faq</a></li>
                                 </ul>
                             </div>
                         </li>
@@ -605,7 +606,7 @@
                                 </ul>
                             </div>
                             <div class="pricing__card-footer">
-                                <button class="pricing__btn">Get Started</button>
+                                <a href="./contact.html" class="pricing__btn">Get Started</a>
                             </div>
 
                             <div class="pricing__bg-shape" data-bg-img="./img/pricing/card-bg-1.png"></div>
@@ -667,7 +668,7 @@
                                 </ul>
                             </div>
                             <div class="pricing__card-footer">
-                                <button class="pricing__btn">Get Started</button>
+                                <a href="./contact.html" class="pricing__btn">Get Started</a>
                             </div>
 
                             <div class="pricing__bg-shape shape--small" data-bg-img="./img/pricing/card-bg-2.png"></div>
@@ -737,10 +738,64 @@
                                 </ul>
                             </div>
                             <div class="pricing__card-footer">
-                                <button class="pricing__btn">Get Started</button>
+                                <a href="./contact.html" class="pricing__btn">Get Started</a>
                             </div>
 
                             <div class="pricing__bg-shape" data-bg-img="./img/pricing/card-bg-3.png"></div>
+                        </div>
+                    </div>
+
+                    <div class="col-12">
+                        <div class="pricing__card pricing__card--bottom">
+                            <div
+                                class="pricing__card-header d-flex justify-content-between flex-row align-items-center flex-wrap">
+                                <div class="pricing__card-header-left">
+                                    <span class="pricing__duration">Monthly</span>
+                                    <p class="pricing__description">Perfect for individuals starting journey.</p>
+                                </div>
+                                <div class="pricing__card-header-right">
+                                    <span class="pricing__price">
+                                        <span class="price" data-monthly="14.99" data-yearly="8.99">$14.99</span>
+                                    </span>
+                                    <span class="pricing__plan-name">/ Basic</span>
+                                </div>
+                            </div>
+
+                            <div class="d-flex justify-content-between align-items-start flex-wrap gap-3">
+                                <div class="pricing__features">
+                                    <p class="pricing__feature-title mb-4 mb-xxl-5">Features:</p>
+
+                                    <ul class="pricing__feature-list flex-row flex-wrap">
+                                        <li class="pricing__feature">
+                                            <svg width="16" height="17" viewBox="0 0 16 17" fill="none">
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                    d="M0 8.6333C0 4.2149 3.5816 0.633301 8 0.633301C9.58225 0.633301 11.129 1.10249 12.4446 1.98154C13.7602 2.86059 14.7855 4.11002 15.391 5.57183C15.9965 7.03364 16.155 8.64217 15.8463 10.194C15.5376 11.7459 14.7757 13.1713 13.6569 14.2902C12.538 15.409 11.1126 16.1709 9.56072 16.4796C8.00887 16.7883 6.40034 16.6298 4.93853 16.0243C3.47672 15.4188 2.22729 14.3935 1.34824 13.0779C0.469192 11.7623 0 10.2155 0 8.6333ZM6.968 11.6013L11.768 6.8013C11.9186 6.65066 12.0033 6.44634 12.0033 6.2333C12.0033 6.02026 11.9186 5.81594 11.768 5.6653C11.6174 5.51466 11.413 5.43003 11.2 5.43003C10.987 5.43003 10.7826 5.51466 10.632 5.6653L6.4 9.9053L5.368 8.8653C5.29341 8.79071 5.20486 8.73154 5.1074 8.69117C5.00994 8.6508 4.90549 8.63003 4.8 8.63003C4.69451 8.63003 4.59006 8.6508 4.4926 8.69117C4.39514 8.73154 4.30659 8.79071 4.232 8.8653C4.15741 8.93989 4.09824 9.02844 4.05787 9.1259C4.0175 9.22336 3.99673 9.32781 3.99673 9.4333C3.99673 9.53879 4.0175 9.64324 4.05787 9.7407C4.09824 9.83816 4.15741 9.92671 4.232 10.0013L5.832 11.6013C5.90637 11.6763 5.99485 11.7358 6.09234 11.7764C6.18982 11.817 6.29439 11.8379 6.4 11.8379C6.50561 11.8379 6.61017 11.817 6.70766 11.7764C6.80515 11.7358 6.89363 11.6763 6.968 11.6013Z"
+                                                    fill="white" />
+                                            </svg>
+                                            Customized Financial Plans
+                                        </li>
+                                        <li class="pricing__feature">
+                                            <svg width="16" height="17" viewBox="0 0 16 17" fill="none">
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                    d="M0 8.6333C0 4.2149 3.5816 0.633301 8 0.633301C9.58225 0.633301 11.129 1.10249 12.4446 1.98154C13.7602 2.86059 14.7855 4.11002 15.391 5.57183C15.9965 7.03364 16.155 8.64217 15.8463 10.194C15.5376 11.7459 14.7757 13.1713 13.6569 14.2902C12.538 15.409 11.1126 16.1709 9.56072 16.4796C8.00887 16.7883 6.40034 16.6298 4.93853 16.0243C3.47672 15.4188 2.22729 14.3935 1.34824 13.0779C0.469192 11.7623 0 10.2155 0 8.6333ZM6.968 11.6013L11.768 6.8013C11.9186 6.65066 12.0033 6.44634 12.0033 6.2333C12.0033 6.02026 11.9186 5.81594 11.768 5.6653C11.6174 5.51466 11.413 5.43003 11.2 5.43003C10.987 5.43003 10.7826 5.51466 10.632 5.6653L6.4 9.9053L5.368 8.8653C5.29341 8.79071 5.20486 8.73154 5.1074 8.69117C5.00994 8.6508 4.90549 8.63003 4.8 8.63003C4.69451 8.63003 4.59006 8.6508 4.4926 8.69117C4.39514 8.73154 4.30659 8.79071 4.232 8.8653C4.15741 8.93989 4.09824 9.02844 4.05787 9.1259C4.0175 9.22336 3.99673 9.32781 3.99673 9.4333C3.99673 9.53879 4.0175 9.64324 4.05787 9.7407C4.09824 9.83816 4.15741 9.92671 4.232 10.0013L5.832 11.6013C5.90637 11.6763 5.99485 11.7358 6.09234 11.7764C6.18982 11.817 6.29439 11.8379 6.4 11.8379C6.50561 11.8379 6.61017 11.817 6.70766 11.7764C6.80515 11.7358 6.89363 11.6763 6.968 11.6013Z"
+                                                    fill="white" />
+                                            </svg>
+                                            Dedicated Financial Advisor
+                                        </li>
+                                        <li class="pricing__feature">
+                                            <svg width="16" height="17" viewBox="0 0 16 17" fill="none">
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                    d="M0 8.6333C0 4.2149 3.5816 0.633301 8 0.633301C9.58225 0.633301 11.129 1.10249 12.4446 1.98154C13.7602 2.86059 14.7855 4.11002 15.391 5.57183C15.9965 7.03364 16.155 8.64217 15.8463 10.194C15.5376 11.7459 14.7757 13.1713 13.6569 14.2902C12.538 15.409 11.1126 16.1709 9.56072 16.4796C8.00887 16.7883 6.40034 16.6298 4.93853 16.0243C3.47672 15.4188 2.22729 14.3935 1.34824 13.0779C0.469192 11.7623 0 10.2155 0 8.6333ZM6.968 11.6013L11.768 6.8013C11.9186 6.65066 12.0033 6.44634 12.0033 6.2333C12.0033 6.02026 11.9186 5.81594 11.768 5.6653C11.6174 5.51466 11.413 5.43003 11.2 5.43003C10.987 5.43003 10.7826 5.51466 10.632 5.6653L6.4 9.9053L5.368 8.8653C5.29341 8.79071 5.20486 8.73154 5.1074 8.69117C5.00994 8.6508 4.90549 8.63003 4.8 8.63003C4.69451 8.63003 4.59006 8.6508 4.4926 8.69117C4.39514 8.73154 4.30659 8.79071 4.232 8.8653C4.15741 8.93989 4.09824 9.02844 4.05787 9.1259C4.0175 9.22336 3.99673 9.32781 3.99673 9.4333C3.99673 9.53879 4.0175 9.64324 4.05787 9.7407C4.09824 9.83816 4.15741 9.92671 4.232 10.0013L5.832 11.6013C5.90637 11.6763 5.99485 11.7358 6.09234 11.7764C6.18982 11.817 6.29439 11.8379 6.4 11.8379C6.50561 11.8379 6.61017 11.817 6.70766 11.7764C6.80515 11.7358 6.89363 11.6763 6.968 11.6013Z"
+                                                    fill="white" />
+                                            </svg>
+                                            Tax Planning Assistance
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="pricing__card-footer">
+                                    <a href="./contact.html" class="pricing__btn">Get Started</a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
