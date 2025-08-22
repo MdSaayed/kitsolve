@@ -13,66 +13,62 @@ CSS INDEX
 1. Reset Styles
 2. Basic Style
 
-3. Header One Area
-4. Hero One Area
-5. Portfolio One Area
+3. Hero One Area
+4. Portfolio One Area
+5. Services One Area
 6. Services One Area
-7. About One Area
-8. Process One Area
-9. Testimonials One Area
-10. Faq One Area
-11. CTA One Area
-12. Team One Area
-13. Contact One Area
-14. Keywords Area
+9. Process One Area
+10. Testimonials One Area
+9. Faq One Area
+10. CTA One Area
+11. Team One Area
+12. Contact One Area
+13. Keywords Area
+14. Blog One Area
 15. Blog One Area
-16. Footer One Area
 
-17. Header Two Area
-18. Hero Two Area
-19. About Two Area
-20. Services Two Area
-21. Portfolio Two Area
-22. Process Two Area
-23. Testimonials Two Area
-24. Team Two Area
-25. Faq Two Area
-26. Contact Two Area
-27. Blog Two Area
-28. CTA Two Area
-29. Footer Two Area
+16. Hero Two Area
+17. About Two Area
+18. Services Two Area
+19. Portfolio Two Area
+20. Process Two Area
+21. Testimonials Two Area
+22. Team Two Area
+23. Faq Two Area
+24. Contact Two Area
+25. Blog Two Area
+26. CTA Two Area
+27. Footer Two Area
 
-30. Header Three Area
-31. Hero Three Area
-32. Features One Area
-33. Product Benefits Area
-34. Testimonials Three Area
-35. Pricing One Area
-36. Faq Three Area
-37. CTA Three Area
-38. Keywords Area
-39. Team Three Area
-40. Contact Three Area
-41. Blog Two Area
-42. Footer Three Area
+28. Hero Three Area
+29. Features One Area
+30. Product Benefits Area
+31. Testimonials Three Area
+32. Pricing One Area
+33. Faq Three Area
+34. CTA Three Area
+35. Team Three Area
+36. Contact Three Area
+37. Blog Three Area
+38. Footer Three Area
 
-43. Header Four Area
-44. Hero Five Area
-45. Services Tag Area
-46. About Three Area
-47. Keywords Two Area
-48. Process Three Area
-49. Portfolio Three Area
-50. Team Four Area
-51. Pricing Two Area
-52. Testimonials Four Area
-53. CTA Five Area
-54. Contact Four Area
-55. CTA Four Area
-56. Footer Four Area
+39. Hero Four Area
+40. Services Tag Area
+41. About Three Area
+42. Keywords Two Area
+43. Process Three Area
+44. Portfolio Three Area
+45. Team Four Area
+46. Pricing Two Area
+47. Testimonials Four Area
+48. CTA Five Area
+49. Contact Four Area
+50. CTA Four Area
+51. Footer Four Area
 
-57. Header Five Area
-58. Hero Five Area
+52. Hero Five Area
+53. Breadcrumb
+54. Responsive 
 
 ------------------------------------------------------------------*/
 
@@ -209,7 +205,18 @@ p {
 }
 
 .btn-primary:hover {
-  background: var(--clr-white);
+  background: var(--clr-dark);
+  transition: background 0.3s ease;
+}
+
+.btn-primary:hover svg path {
+  fill: var(--clr-dark);
+  transition: fill 0.3s ease;
+}
+
+.btn-primary:hover svg circle {
+  fill: var(--clr-white);
+  transition: fill 0.3s ease;
 }
 
 .btn-primary:hover span {
@@ -367,7 +374,7 @@ p {
 }
 
 /* =============================
-* 4. Hero One Area
+* 3. Hero One Area
 ============================= */
 
 .hero--one {
@@ -547,7 +554,7 @@ p {
 
 
 /* =============================
-* 5. Portfolio One Area
+* 4. Portfolio One Area
 ============================= */
 
 .portfolio {
@@ -692,7 +699,7 @@ p {
 
 
 /* =============================
-* 6. Services One Area
+* 5. Services One Area
 ============================= */
 
 .service--one {
@@ -913,7 +920,7 @@ p {
 
 
 /* =============================
-* 7. About One Area
+* 6. Services One Area
 ============================= */
 
 .about--one {
@@ -1190,7 +1197,7 @@ p {
 
 
 /* =============================
-* 8. Process One Area
+* 9. Process One Area
 ============================= */
 
 .process--one {
@@ -1320,7 +1327,7 @@ p {
 
 
 /* =============================
-* 9. Testimonials One Area
+* 10. Testimonials One Area
 ============================= */
 
 .testimonials {
@@ -1554,7 +1561,7 @@ img.testimonials-avatar.slider__avatar--active {
 
 
 /* =============================
-* 10. Faq One Area
+* 9. Faq One Area
 ============================= */
 
 .faq {
@@ -1757,7 +1764,7 @@ img.testimonials-avatar.slider__avatar--active {
 
 
 /* =============================
-* 11. CTA One Area
+* 10. CTA One Area
 ============================= */
 
 .cta {
@@ -1895,7 +1902,7 @@ img.testimonials-avatar.slider__avatar--active {
 }
 
 /* =============================
-* 12. Team One Area
+* 11. Team One Area
 ============================= */
 
 .team--one {
@@ -2006,7 +2013,7 @@ img.testimonials-avatar.slider__avatar--active {
 
 
 /* =============================
-* 13. Contact One Area
+* 12. Contact One Area
 ============================= */
 
 .contact {
@@ -2093,7 +2100,7 @@ img.testimonials-avatar.slider__avatar--active {
 
 
 /* =============================
-* 14. Keywords Area
+* 13. Keywords Area
 ============================= */
 
 .keywords {
@@ -2177,7 +2184,7 @@ img.testimonials-avatar.slider__avatar--active {
 
 
 /* =============================
-* 15. Blog One Area
+* 14. Blog One Area
 ============================= */
 
 .blog--style-one {
@@ -2315,7 +2322,7 @@ img.testimonials-avatar.slider__avatar--active {
 
 
 /* =============================
-* 16. Footer One Area
+* 15. Blog One Area
 ============================= */
 
 .footer {
@@ -2487,7 +2494,7 @@ img.testimonials-avatar.slider__avatar--active {
 
 
 /* =============================
-* 18. Hero Two Area
+* 16. Hero Two Area
 ============================= */
 
 .hero--style-two {
@@ -2583,7 +2590,7 @@ img.testimonials-avatar.slider__avatar--active {
 
 
 /* =============================
-* 19. About Two Area
+* 17. About Two Area
 ============================= */
 
 .about--style-two {
@@ -2730,7 +2737,7 @@ img.testimonials-avatar.slider__avatar--active {
 
 
 /* =============================
-* 20. Services Two Area
+* 18. Services Two Area
 ============================= */
 
 .services--style-two .services__title {
@@ -2790,7 +2797,7 @@ img.testimonials-avatar.slider__avatar--active {
 
 
 /* =============================
-* 21. Portfolio Two Area
+* 19. Portfolio Two Area
 ============================= */
 
 .portfolio--style-two .portfolio__container {
@@ -2853,7 +2860,7 @@ img.testimonials-avatar.slider__avatar--active {
 
 
 /* =============================
-* 22. Process Two Area
+* 20. Process Two Area
 ============================= */
 
 .process--style-two {
@@ -2925,7 +2932,7 @@ img.testimonials-avatar.slider__avatar--active {
 
 
 /* =============================
-* 22. Testimonials Two Area
+* 21. Testimonials Two Area
 ============================= */
 
 .testimonials--style-two {
@@ -3034,7 +3041,7 @@ img.testimonials-avatar.slider__avatar--active {
 
 
 /* =============================
-* 23. Team Two Area
+* 22. Team Two Area
 ============================= */
 
 .team--style-two {
@@ -3222,7 +3229,7 @@ img.testimonials-avatar.slider__avatar--active {
 
 
 /* =============================
-* 24. Faq Two Area
+* 23. Faq Two Area
 ============================= */
 
 .faq--style-two .faq__title {
@@ -3260,7 +3267,7 @@ img.testimonials-avatar.slider__avatar--active {
 
 
 /* =============================
-* 25. Contact Two Area
+* 24. Contact Two Area
 ============================= */
 
 .contact--style-two {
@@ -3355,7 +3362,7 @@ img.testimonials-avatar.slider__avatar--active {
 
 
 /* =============================
-* 26. Blog Two Area
+* 25. Blog Two Area
 ============================= */
 
 .blog--style-two {
@@ -3543,7 +3550,7 @@ img.testimonials-avatar.slider__avatar--active {
 
 
 /* =============================
-* 27. CTA Two Area
+* 26. CTA Two Area
 ============================= */
 
 .cta--style--two {
@@ -3629,7 +3636,7 @@ img.testimonials-avatar.slider__avatar--active {
 
 
 /* =============================
-* 28. Footer Two Area
+* 27. Footer Two Area
 ============================= */
 
 .footer--style-two .footer__container {
@@ -3667,7 +3674,7 @@ img.testimonials-avatar.slider__avatar--active {
 
 
 /* =============================
-* 29. Hero Three Area
+* 28. Hero Three Area
 ============================= */
 
 .hero--style-three {
@@ -3703,6 +3710,10 @@ img.testimonials-avatar.slider__avatar--active {
   letter-spacing: 0.16px;
 }
 
+.hero--style-three .hero__right {
+  position: relative;
+}
+
 .hero--style-five .hero__bottom,
 .hero--style-three .hero__bottom {
   max-width: 1070px;
@@ -3729,13 +3740,28 @@ img.testimonials-avatar.slider__avatar--active {
   line-height: 1.6;
 }
 
+.hero--style-three .hero__rating-arrow {
+  position: absolute;
+  top: -4rem;
+  right: calc(-12rem);
+}
+
+.hero--style-three .hero__text-shape {
+  max-width: 350px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 10;
+  margin-top: 2rem;
+}
+
 .hero--style-three .hero__image-slider img {
   width: 100%;
 }
 
 
 /* =============================
-* 30. Features One
+* 29. Features One Area
 ============================= */
 
 .features__title {
@@ -3859,7 +3885,7 @@ img.testimonials-avatar.slider__avatar--active {
 
 
 /* =============================
-* 31. Product Benefits Area
+* 30. Product Benefits Area
 ============================= */
 
 .product-benefits {
@@ -4054,7 +4080,7 @@ img.testimonials-avatar.slider__avatar--active {
 
 
 /* =============================
-* 32. Testimonials Three Area
+* 31. Testimonials Three Area
 ============================= */
 
 .testimonials--style-three .testimonials__desc {
@@ -4089,7 +4115,7 @@ img.testimonials-avatar.slider__avatar--active {
 
 
 /* =============================
-* 33. Pricing One Area
+* 32. Pricing One Area
 ============================= */
 
 .pricing {
@@ -4166,6 +4192,7 @@ img.testimonials-avatar.slider__avatar--active {
 
 .pricing__card--bottom {
   background: var(--clr-lime-green);
+  gap: 0;
 }
 
 .pricing__card.card-highlight::after {
@@ -4290,9 +4317,7 @@ img.testimonials-avatar.slider__avatar--active {
   max-width: 130px;
 }
 
-
 /* Card Bottom */
-
 .pricing__card--bottom .pricing__duration,
 .pricing__card--bottom .pricing__price,
 .pricing__card--bottom .pricing__description,
@@ -4310,9 +4335,18 @@ img.testimonials-avatar.slider__avatar--active {
   margin-top: 0;
 }
 
+.pricing__card--bottom .pricing__btn{
+  background:var(--clr-white);
+  color: var(--clr-dark);
+}
+
+.pricing__card--bottom .pricing__btn:hover{
+  color:var(--clr-white);
+  background: var(--clr-dark);
+}
 
 /* =============================
-* 34. Faq Three Area
+* 33. Faq Three Area
 ============================= */
 
 .faq--three {
@@ -4352,9 +4386,8 @@ img.testimonials-avatar.slider__avatar--active {
   flex-direction: row;
 }
 
-
 /* =============================
-* 35. CTA Three Area
+* 34. CTA Three Area
 ============================= */
 
 .cta--style-three {
@@ -4369,9 +4402,8 @@ img.testimonials-avatar.slider__avatar--active {
   padding-bottom: 7rem;
 }
 
-
 /* =============================
-* 37. Team Three Area
+* 35. Team Three Area
 ============================= */
 
 .team--style-three {
@@ -4474,7 +4506,7 @@ img.testimonials-avatar.slider__avatar--active {
 
 
 /* =============================
-* 38. Contact Three Area
+* 36. Contact Three Area
 ============================= */
 
 .contact--style-three {
@@ -4514,9 +4546,8 @@ img.testimonials-avatar.slider__avatar--active {
   fill: var(--clr-lime-green);
 }
 
-
 /* =============================
-* 39. Blog Three Area
+* 37. Blog Three Area
 ============================= */
 
 .blog .card--style-three .blog__thumb {
@@ -4526,9 +4557,8 @@ img.testimonials-avatar.slider__avatar--active {
 
 
 /* =============================
-* 40. Footer Three Area
+* 38. Footer Three Area
 ============================= */
-
 .footer--style-three .footer__container {
   position: relative;
 }
@@ -4582,7 +4612,7 @@ img.testimonials-avatar.slider__avatar--active {
   height: 68px;
   right: 150px;
   bottom: 200px;
-  z-index: -1 !important;
+  z-index: 1 !important;
 }
 
 .footer--style-three .footer__social {
@@ -4600,7 +4630,7 @@ img.testimonials-avatar.slider__avatar--active {
 
 
 /* =============================
-* 41. Hero Five Area
+* 39. Hero Four Area
 ============================= */
 
 .hero--style-four {
@@ -4733,7 +4763,7 @@ img.testimonials-avatar.slider__avatar--active {
 
 
 /* =============================
-* 42. Services Tag Area
+* 40. Services Tag Area
 ============================= */
 
 .services-tag .tag__list {
@@ -4792,7 +4822,7 @@ img.testimonials-avatar.slider__avatar--active {
 
 
 /* =============================
-* 43. About Three Area
+* 41. About Three Area
 ============================= */
 
 .about--style-three {
@@ -4950,9 +4980,8 @@ img.testimonials-avatar.slider__avatar--active {
   transform: rotate(330deg);
 }
 
-
 /* =============================
-* 44. Keywords Two Area
+* 42. Keywords Two Area
 ============================= */
 
 .keywords--style-two {
@@ -4973,7 +5002,7 @@ img.testimonials-avatar.slider__avatar--active {
 
 
 /* =============================
-* 45. Process Three Area
+* 43. Process Three Area
 ============================= */
 
 .process--style-three {
@@ -5127,7 +5156,7 @@ img.testimonials-avatar.slider__avatar--active {
 
 
 /* =============================
-* 46. Portfolio Three Area
+* 44. Portfolio Three Area
 ============================= */
 
 .portfolio--style-three {
@@ -5224,9 +5253,8 @@ div#portfolio-three-slider-ow {
   background: var(--clr-deep-green);
 }
 
-
 /* =============================
-* 47. Team Four Area
+* 45. Team Four Area
 ============================= */
 
 .team--style-four {
@@ -5248,7 +5276,7 @@ div#portfolio-three-slider-ow {
 
 
 /* =============================
-* 48. Pricing Two Area
+* 46. Pricing Two Area
 ============================= */
 
 .pricing--style-two .pricing__card {
@@ -5281,7 +5309,7 @@ div#portfolio-three-slider-ow {
 
 
 /* =============================
-* 49. Testimonials Four Area
+* 47. Testimonials Four Area
 ============================= */
 
 .testimonials--style-four {
@@ -5405,7 +5433,7 @@ div#portfolio-three-slider-ow {
 
 
 /* =============================
-* 50. CTA Five Area
+* 48. CTA Five Area
 ============================= */
 
 .cta--style-five {
@@ -5451,9 +5479,8 @@ div#portfolio-three-slider-ow {
   height: 100%;
 }
 
-
 /* =============================
-* 51. Contact Four Area
+* 49. Contact Four Area
 ============================= */
 
 .contact--style-four {
@@ -5496,7 +5523,7 @@ div#portfolio-three-slider-ow {
 
 
 /* =============================
-* 52. CTA Four Area
+* 50. CTA Four Area
 ============================= */
 
 .cta--style-four .cta__container {
@@ -5530,10 +5557,12 @@ div#portfolio-three-slider-ow {
   background-color: var(--clr-midnight);
 }
 
-
 /* =============================
-* 53. Footer Four Area
+* 51. Footer Four Area
 ============================= */
+.footer--style-four .footer__container {
+  position: relative;
+}
 
 .footer-pt {
   padding-top: 2rem !important;
@@ -5545,9 +5574,8 @@ div#portfolio-three-slider-ow {
   transform: translateX(-25%);
 }
 
-
 /* =============================
-* 54. Hero Five Area
+* 52. Hero Five Area
 ============================= */
 
 .hero--style-five {
@@ -5631,7 +5659,7 @@ div#portfolio-three-slider-ow {
 
 
 /* =============================
-* 2. Breadcrumb
+* 53. Breadcrumb
 ============================= */
 
 .breadcrumb {
@@ -5690,7 +5718,7 @@ div#portfolio-three-slider-ow {
 
 
 /* =============================
-* 2. Responsive
+* 54. Responsive
 ============================= */
 
 @media (max-width: 1750px) {
@@ -6127,6 +6155,10 @@ div#portfolio-three-slider-ow {
     width: 80px;
     height: 42px;
     border: 11px solid var(--clr-lime-green);
+  }
+
+  .hero--style-three .hero__rating-arrow {
+    display: none;
   }
 
   /* Team Three Area */
