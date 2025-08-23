@@ -3641,6 +3641,8 @@ img.testimonials-avatar.slider__avatar--active {
 
 .footer--style-two .footer__container {
   position: relative;
+    z-index: 10;
+
 }
 
 .footer--style-two .footer__social,
