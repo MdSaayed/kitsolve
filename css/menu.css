@@ -155,6 +155,8 @@ CSS INDEX
   display: none;
 }
 
+
+
 /* =============================
 * 2. Header Two Area
 ============================= */
@@ -601,7 +603,8 @@ CSS INDEX
     margin-left: 10px;
   }
 
-  .main-menu li.item__active::before {
+  .main-menu li.item__active::before,
+  .main-menu .dropdown li.item__active::before {
     content: "";
     position: absolute;
     left: -10px;
@@ -611,6 +614,10 @@ CSS INDEX
     background: var(--clr-white);
     transform: translateY(-50%);
     border-radius: 50%;
+  }
+
+  .main-menu .dropdown li.item__active::before {
+    background: var(--clr-dark);
   }
 
 
@@ -769,9 +776,12 @@ CSS INDEX
     background: var(--clr-white);
   }
 
-  .header--style-three .main-menu li.item__active::before,
-  .header--style-three .main-menu .main-menu__nav>li a::before {
+  .header--style-three .main-menu li.item__active::before {
     background: var(--clr-lime-green);
+  }
+
+  .header--style-three .main-menu .dropdownitem li.item__active::before {
+    background: var(--clr-dark);
   }
 
   .header--style-three .main-menu__nav>li a:hover {

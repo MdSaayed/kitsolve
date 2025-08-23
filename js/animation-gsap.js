@@ -1,3 +1,52 @@
+/*------------------------------------------------------------------
+Template Name: Kitsolve – Business Solution HTML Template
+Template URL: https://kitsolve.netlify.app
+Description: Kitsolve is a clean, modern, and fully responsive HTML template designed for corporate businesses, startups, creative agencies, IT services, consulting firms, SaaS platforms, software showcases, app landing pages, marketing agencies, and digital service providers. Built on a 1920px grid, it offers a clear visual hierarchy, organized sections, and reusable components for easy editing and rapid customization.
+Author: KitDokan
+Author URL: https://themeforest.net/user/kitdokan
+Version: 1.0
+-------------------------------------------------------------------
+
+JS INDEX
+===================
+
+1. Hero One Area
+2. Services One Area
+3. About One Area
+4. Portfolio One Area
+5. Testimonials One Area
+6. Faq One Area
+7. CTA One Area
+8. Team One Area
+9. Contact One Area
+10. Blog One Area
+11. Hero Two Area
+12. About Two Area
+13. Services Two Area
+14. Process Two Area
+15. Team Two Area
+16. Contact Two Area
+17. Blog Two Area
+18. CTA Two Area
+19. Here Three Area
+20. Features Three Area
+21. Product Benefits Area
+22. Testimonials Three Area
+23. Pricing One Area
+24. Hero Four Area
+25. Services Tag Area
+26. About Three Area
+27. Process Three Area
+28. Portfolio Three Area
+29. Testimonials Four Area
+30. Hero Five Area
+31. Breadcrumb Area
+32. Global Animation
+33. Process One Area
+
+------------------------------------------------------------------*/
+
+
 "use strict";
 
 gsap.registerPlugin(ScrollTrigger);

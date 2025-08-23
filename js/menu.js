@@ -1,9 +1,29 @@
+/*------------------------------------------------------------------
+Template Name: Kitsolve – Business Solution HTML Template
+Template URL: https://kitsolve.netlify.app
+Description: Kitsolve is a clean, modern, and fully responsive HTML template designed for corporate businesses, startups, creative agencies, IT services, consulting firms, SaaS platforms, software showcases, app landing pages, marketing agencies, and digital service providers. Built on a 1920px grid, it offers a clear visual hierarchy, organized sections, and reusable components for easy editing and rapid customization.
+Author: KitDokan
+Author URL: https://themeforest.net/user/kitdokan
+Version: 1.0
+-------------------------------------------------------------------
+
+JS INDEX
+===================
+
+1. Main Menu
+
+------------------------------------------------------------------*/
+
+
 /*
  * JavaScript - CSS Responsive Dropdown Menu
  * Author : Oğuzhan Avcı
- * https://github.com/oziavci
+ * https://github.com/oziavci 
 */
 
+/* =============================
+* 1. Main Menu
+============================= */
 const openMenu = document.querySelector(".menu-open");
 const closeMenu = document.querySelector(".menu-close");
 const menuDiv = document.querySelector(".main-menu");
@@ -26,14 +46,15 @@ function menuToggle() {
 
 for (var i = 0; i < dropDownsChild.length; i++) {
     dropDownsChild[i].classList.add('child');
-    dropDownsChild[i].addEventListener("click", function() {
+    dropDownsChild[i].addEventListener("click", function () {
         this.classList.toggle('opened');
     });
 }
+
 for (var i = 0; i < dropDowns.length; i++) {
-    if(!dropDowns[i].classList.contains("child")){
+    if (!dropDowns[i].classList.contains("child")) {
         dropDowns[i].classList.add('parent');
-        dropDowns[i].addEventListener("click", function() {
+        dropDowns[i].addEventListener("click", function () {
             this.classList.toggle('opened');
         });
     }
