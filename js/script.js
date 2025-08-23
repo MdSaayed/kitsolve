@@ -29,7 +29,8 @@ JS INDEX
 17. Portfolio Three Area
 18. About Three Area
 19. Hero Five Area
-20 Pure Counter
+20. Pure Counter
+21. Preloader
 
 ------------------------------------------------------------------*/
 
@@ -849,6 +850,18 @@ document.addEventListener("DOMContentLoaded", function () {
 ============================= */
 const counter = new PureCounter();
 
+/* =============================
+* 21. Preloader
+============================= */
+document.addEventListener('DOMContentLoaded', function () {
+  var preloader = document.querySelector(".preloader");
+
+  if (!preloader) return;
+
+  setTimeout(() => {
+    preloader.style.display = "none";
+  }, 500);
+});
 
 
 
