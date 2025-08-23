@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Half-Circle 3D Auto Slider</title>
+<style>
+  *{margin:0; padding:0; box-sizing:border-box;}
+  body{
+    background:#111;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    overflow:hidden;
+  }
+
+  .slider-container{
+    width: 500px;
+    height: 300px;
+    perspective: 1200px;
+    position: relative;
+  }
+
+  .slider{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transform-style: preserve-3d;
+    transition: transform 1s ease-in-out;
+  }
+
+  .slider .item{
+    position: absolute;
+    top:0; left:0;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 1s, opacity 1s, z-index 1s;
+  }
+
+  .slider .item img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+  }
+
+  @media screen and (max-width: 767px){
+    .slider-container{ width: 300px; height: 200px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="slider-container">
+  <div class="slider">
+    <div class="item"><img src="https://source.unsplash.com/random/400x500?sig=1" alt=""></div>
+    <div class="item"><img src="https://source.unsplash.com/random/400x500?sig=2" alt=""></div>
+    <div class="item"><img src="https://source.unsplash.com/random/400x500?sig=3" alt=""></div>
+    <div class="item"><img src="https://source.unsplash.com/random/400x500?sig=4" alt=""></div>
+    <div class="item"><img src="https://source.unsplash.com/random/400x500?sig=5" alt=""></div>
+    <div class="item"><img src="https://source.unsplash.com/random/400x500?sig=6" alt=""></div>
+  </div>
+</div>
+
+<script>
+const slider = document.querySelector('.slider');
+const items = document.querySelectorAll('.slider .item');
+const quantity = items.length;
+let angle = 180 / (quantity - 1);
+let radius = 220;
+let current = 0;
+
+function updateSlider(){
+  items.forEach((item,i)=>{
+    // calculate position relative to current
+    let pos = i - current;
+    let theta = pos * angle - 90;
+    let rad = theta * Math.PI / 180;
+    let x = radius * Math.sin(rad);
+    let z = radius * Math.cos(rad);
+
+    // scale & opacity based on z
+    let scale = 0.5 + (z/radius)*0.5;
+    let opacity = 0.3 + (z/radius)*0.7;
+
+    item.style.transform = `translateX(${x}px) translateZ(${-z}px) scale(${scale})`;
+    item.style.opacity = opacity;
+    item.style.zIndex = Math.floor(z);
+  });
+}
+
+// initial
+updateSlider();
+
+// auto slide
+setInterval(()=>{
+  current++;
+  if(current >= quantity) current = 0;
+  updateSlider();
+},2000);
+</script>
+
+</body>
+</html>

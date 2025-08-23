@@ -668,34 +668,19 @@ document.addEventListener("DOMContentLoaded", function () {
 ============================= */
 const hero_three_slider = new Swiper('#hero-three-slider', {
   loop: true,
-  effect: 'coverflow',
   grabCursor: true,
   centeredSlides: true,
   slidesPerView: 'auto',
-  spaceBetween: 32,
+  spaceBetween: 20,
   autoplay: true,
-  coverflowEffect: {
-    rotate: 45,
-    stretch: 0,
-    depth: 100,
-    modifier: 1,
-    slideShadows: false,
-  },
-
   pagination: false,
   navigation: false,
   breakpoints: {
     768: {
       slidesPerView: 2,
-      coverflowEffect: {
-        rotate: 30,
-      },
     },
     992: {
       slidesPerView: 5,
-      coverflowEffect: {
-        rotate: 15,
-      },
     },
   }
 });
@@ -862,6 +847,8 @@ document.addEventListener('DOMContentLoaded', function () {
     preloader.style.display = "none";
   }, 500);
 });
+
+
 
 
 
